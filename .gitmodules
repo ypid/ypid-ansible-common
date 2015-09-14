@@ -1,12 +1,123 @@
 [submodule "debops.postfix"]
-	path = debops.postfix
+	path = roles/debops.postfix
 	url = https://github.com/debops/ansible-postfix.git
 [submodule "debops.libvirt"]
-	path = debops.libvirt
+	path = roles/debops.libvirt
 	url = https://github.com/debops/ansible-libvirt.git
 [submodule "debops.libvirtd"]
-	path = debops.libvirtd
+	path = roles/debops.libvirtd
 	url = https://github.com/debops/ansible-libvirtd.git
 [submodule "debops.docker"]
-	path = debops.docker
+	path = roles/debops.docker
 	url = https://github.com/debops/ansible-docker.git
+[submodule "debops.apt"]
+	path = roles/debops.apt
+	url = https://github.com/debops/ansible-apt.git
+[submodule "debops.apt_preferences"]
+	path = roles/debops.apt_preferences
+	url = https://github.com/debops/ansible-apt_preferences.git
+[submodule "debops.auth"]
+	path = roles/debops.auth
+	url = https://github.com/debops/ansible-auth.git
+[submodule "debops.bootstrap"]
+	path = roles/debops.bootstrap
+	url = https://github.com/debops/ansible-bootstrap.git
+[submodule "debops.boxbackup"]
+	path = roles/debops.boxbackup
+	url = https://github.com/debops/ansible-boxbackup.git
+[submodule "debops.console"]
+	path = roles/debops.console
+	url = https://github.com/debops/ansible-console.git
+[submodule "debops.core"]
+	path = roles/debops.core
+	url = https://github.com/debops/ansible-core.git
+[submodule "debops.debug"]
+	path = roles/debops.debug
+	url = https://github.com/debops/ansible-debug.git
+[submodule "debops.directories"]
+	path = roles/debops.directories
+	url = https://github.com/debops/ansible-directories.git
+[submodule "debops.dnsmasq"]
+	path = roles/debops.dnsmasq
+	url = https://github.com/debops/ansible-dnsmasq.git
+[submodule "debops.etc_services"]
+	path = roles/debops.etc_services
+	url = https://github.com/debops/ansible-etc_services.git
+[submodule "debops.ferm"]
+	path = roles/debops.ferm
+	url = https://github.com/debops/ansible-ferm.git
+[submodule "debops.grub"]
+	path = roles/debops.grub
+	url = https://github.com/debops/ansible-grub.git
+[submodule "debops.ifupdown"]
+	path = roles/debops.ifupdown
+	url = https://github.com/debops/ansible-ifupdown.git
+[submodule "debops.librenms"]
+	path = roles/debops.librenms
+	url = https://github.com/debops/ansible-librenms.git
+[submodule "debops.lxc"]
+	path = roles/debops.lxc
+	url = https://github.com/debops/ansible-lxc.git
+[submodule "debops.mariadb"]
+	path = roles/debops.mariadb
+	url = https://github.com/debops/ansible-mariadb.git
+[submodule "debops.mariadb_server"]
+	path = roles/debops.mariadb_server
+	url = https://github.com/debops/ansible-mariadb_server.git
+[submodule "debops.mysql"]
+	path = roles/debops.mysql
+	url = https://github.com/debops/ansible-mysql.git
+[submodule "debops.nginx"]
+	path = roles/debops.nginx
+	url = https://github.com/debops/ansible-nginx.git
+[submodule "debops.nodejs"]
+	path = roles/debops.nodejs
+	url = https://github.com/debops/ansible-nodejs.git
+[submodule "debops.ntp"]
+	path = roles/debops.ntp
+	url = https://github.com/debops/ansible-ntp.git
+[submodule "debops.openvz"]
+	path = roles/debops.openvz
+	url = https://github.com/debops/ansible-openvz.git
+[submodule "debops.owncloud"]
+	path = roles/debops.owncloud
+	url = https://github.com/debops/ansible-owncloud.git
+[submodule "debops.php5"]
+	path = roles/debops.php5
+	url = https://github.com/debops/ansible-php5.git
+[submodule "debops.pki"]
+	path = roles/debops.pki
+	url = https://github.com/debops/ansible-pki.git
+[submodule "debops.postgresql"]
+	path = roles/debops.postgresql
+	url = https://github.com/debops/ansible-postgresql.git
+[submodule "debops.preseed"]
+	path = roles/debops.preseed
+	url = https://github.com/debops/ansible-preseed.git
+[submodule "debops.rsnapshot"]
+	path = roles/debops.rsnapshot
+	url = https://github.com/debops/ansible-rsnapshot.git
+[submodule "debops.rsyslog"]
+	path = roles/debops.rsyslog
+	url = https://github.com/debops/ansible-rsyslog.git
+[submodule "debops.samba"]
+	path = roles/debops.samba
+	url = https://github.com/debops/ansible-samba.git
+[submodule "debops.secret"]
+	path = roles/debops.secret
+	url = https://github.com/debops/ansible-secret.git
+[submodule "debops.sftpusers"]
+	path = roles/debops.sftpusers
+	url = https://github.com/debops/ansible-sftpusers.git
+[submodule "debops.sshd"]
+	path = roles/debops.sshd
+	url = https://github.com/debops/ansible-sshd.git
+[submodule "debops.sshkeys"]
+	path = roles/debops.sshkeys
+	url = https://github.com/debops/ansible-sshkeys.git
+[submodule "debops.tcpwrappers"]
+	path = roles/debops.tcpwrappers
+	url = https://github.com/debops/ansible-tcpwrappers.git
+[submodule "debops.users"]
+	path = roles/debops.users
+	url = https://github.com/debops/ansible-users.git
