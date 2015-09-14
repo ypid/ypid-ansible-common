@@ -1,0 +1,6 @@
+[submodule "debops.postfix"]
+	path = debops.postfix
+	url = https://github.com/debops/ansible-postfix.git
+[submodule "debops.libvirt"]
+	path = debops.libvirt
+	url = https://github.com/debops/ansible-libvirt.git
