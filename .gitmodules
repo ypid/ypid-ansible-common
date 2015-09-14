@@ -4,3 +4,9 @@
 [submodule "debops.libvirt"]
 	path = debops.libvirt
 	url = https://github.com/debops/ansible-libvirt.git
+[submodule "debops.libvirtd"]
+	path = debops.libvirtd
+	url = https://github.com/debops/ansible-libvirtd.git
+[submodule "debops.docker"]
+	path = debops.docker
+	url = https://github.com/debops/ansible-docker.git
