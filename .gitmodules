@@ -130,3 +130,15 @@
 [submodule "roles/debops.gitlab"]
 	path = roles/debops.gitlab
 	url = https://github.com/debops/ansible-gitlab.git
+[submodule "roles/debops.redis"]
+	path = roles/debops.redis
+	url = https://github.com/debops/ansible-redis.git
+[submodule "roles/debops.ruby"]
+	path = roles/debops.ruby
+	url = https://github.com/debops/ansible-ruby.git
+[submodule "roles/debops.backporter"]
+	path = roles/debops.backporter
+	url = https://github.com/debops/ansible-backporter.git
+[submodule "roles/rvm_io.rvm1-ruby"]
+	path = roles/rvm_io.rvm1-ruby
+	url = https://github.com/rvm/rvm1-ansible.git
