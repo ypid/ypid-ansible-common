@@ -121,3 +121,12 @@
 [submodule "debops.users"]
 	path = roles/debops.users
 	url = https://github.com/debops/ansible-users.git
+[submodule "roles/tersmitten.logcheck"]
+	path = roles/tersmitten.logcheck
+	url = https://github.com/Oefenweb/ansible-logcheck.git
+[submodule "roles/tersmitten.updatedb"]
+	path = roles/tersmitten.updatedb
+	url = https://github.com/Oefenweb/ansible-updatedb.git
+[submodule "roles/debops.gitlab"]
+	path = roles/debops.gitlab
+	url = https://github.com/debops/ansible-gitlab.git
