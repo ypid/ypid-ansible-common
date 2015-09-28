@@ -142,3 +142,9 @@
 [submodule "roles/rvm_io.rvm1-ruby"]
 	path = roles/rvm_io.rvm1-ruby
 	url = https://github.com/rvm/rvm1-ansible.git
+[submodule "roles/nusenu.relayor"]
+	path = roles/nusenu.relayor
+	url = https://github.com/nusenu/ansible-relayor.git
+[submodule "roles/debops.etherpad"]
+	path = roles/debops.etherpad
+	url = https://github.com/debops/ansible-etherpad.git
