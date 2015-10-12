@@ -163,3 +163,6 @@
 [submodule "roles/debops.salt"]
 	path = roles/debops.salt
 	url = https://github.com/debops/ansible-salt.git
+[submodule "playbooks/debops-wordpress"]
+	path = playbooks/debops-wordpress
+	url = https://github.com/carlalexander/debops-wordpress.git
