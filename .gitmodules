@@ -157,3 +157,9 @@
 [submodule "roles/tersmitten.swapfile"]
 	path = roles/tersmitten.swapfile
 	url = https://github.com/Oefenweb/ansible-swapfile.git
+[submodule "roles/debops.monit"]
+	path = roles/debops.monit
+	url = https://github.com/debops/ansible-monit.git
+[submodule "roles/debops.salt"]
+	path = roles/debops.salt
+	url = https://github.com/debops/ansible-salt.git
