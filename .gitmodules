@@ -166,3 +166,6 @@
 [submodule "playbooks/debops-wordpress"]
 	path = playbooks/debops-wordpress
 	url = https://github.com/carlalexander/debops-wordpress.git
+[submodule "roles/debops.docker_gen"]
+	path = roles/debops.docker_gen
+	url = https://github.com/debops/ansible-docker_gen.git
