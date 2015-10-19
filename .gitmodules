@@ -169,3 +169,12 @@
 [submodule "roles/debops.docker_gen"]
 	path = roles/debops.docker_gen
 	url = https://github.com/debops/ansible-docker_gen.git
+[submodule "roles/debops.nat"]
+	path = roles/debops.nat
+	url = https://github.com/debops/ansible-nat.git
+[submodule "roles/debops.swapfile"]
+	path = roles/debops.swapfile
+	url = https://github.com/debops/ansible-swapfile.git
+[submodule "roles/debops.subnetwork"]
+	path = roles/debops.subnetwork
+	url = https://github.com/debops/ansible-subnetwork.git
