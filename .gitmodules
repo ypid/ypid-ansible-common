@@ -179,7 +179,7 @@
 	path = roles/debops.subnetwork
 	url = https://github.com/debops/ansible-subnetwork.git
 [submodule "playbooks/ansible-os-hardening"]
-	path = playbooks/ansible-os-hardening
+	path = roles/hardening.os-hardening
 	url = https://github.com/hardening-io/ansible-os-hardening.git
 [submodule "playbooks/debops-playbooks"]
 	path = playbooks/debops-playbooks
