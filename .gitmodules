@@ -155,7 +155,7 @@
 	path = roles/carlalexander.wordpress
 	url = https://github.com/carlalexander/debops-wordpress
 [submodule "roles/tersmitten.swapfile"]
-	path = roles/tersmitten.swapfile
+	path = roles/deprecated/tersmitten.swapfile
 	url = https://github.com/Oefenweb/ansible-swapfile.git
 [submodule "roles/debops.monit"]
 	path = roles/debops.monit
@@ -292,3 +292,6 @@
 [submodule "roles/debops.tinc"]
 	path = roles/debops.tinc
 	url = https://github.com/debops/ansible-tinc.git
+[submodule "roles/debops.dhparam"]
+	path = roles/debops.dhparam
+	url = https://github.com/debops/ansible-dhparam.git
