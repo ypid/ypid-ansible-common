@@ -77,7 +77,7 @@
 	path = roles/debops.ntp
 	url = https://github.com/debops/ansible-ntp.git
 [submodule "debops.openvz"]
-	path = roles/debops.openvz
+	path = roles/deprecated/debops.openvz
 	url = https://github.com/debops/ansible-openvz.git
 [submodule "debops.owncloud"]
 	path = roles/debops.owncloud
