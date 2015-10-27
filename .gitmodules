@@ -23,7 +23,7 @@
 	path = roles/debops.bootstrap
 	url = https://github.com/debops/ansible-bootstrap.git
 [submodule "debops.boxbackup"]
-	path = roles/debops.boxbackup
+	path = roles/unverified_yet/debops.boxbackup
 	url = https://github.com/debops/ansible-boxbackup.git
 [submodule "debops.console"]
 	path = roles/debops.console
