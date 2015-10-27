@@ -95,7 +95,7 @@
 	path = roles/debops.preseed
 	url = https://github.com/debops/ansible-preseed.git
 [submodule "debops.rsnapshot"]
-	path = roles/unverified_yet/debops.rsnapshot
+	path = roles/debops.rsnapshot
 	url = https://github.com/debops/ansible-rsnapshot.git
 [submodule "debops.rsyslog"]
 	path = roles/unverified_yet/debops.rsyslog
