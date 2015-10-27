@@ -89,7 +89,7 @@
 	path = roles/debops.pki
 	url = https://github.com/debops/ansible-pki.git
 [submodule "debops.postgresql"]
-	path = roles/debops.postgresql
+	path = roles/unverified_yet/debops.postgresql
 	url = https://github.com/debops/ansible-postgresql.git
 [submodule "debops.preseed"]
 	path = roles/debops.preseed
@@ -98,7 +98,7 @@
 	path = roles/unverified_yet/debops.rsnapshot
 	url = https://github.com/debops/ansible-rsnapshot.git
 [submodule "debops.rsyslog"]
-	path = roles/debops.rsyslog
+	path = roles/unverified_yet/debops.rsyslog
 	url = https://github.com/debops/ansible-rsyslog.git
 [submodule "debops.samba"]
 	path = roles/debops.samba
@@ -137,7 +137,7 @@
 	path = roles/unverified_yet/debops.ruby
 	url = https://github.com/debops/ansible-ruby.git
 [submodule "roles/debops.backporter"]
-	path = roles/debops.backporter
+	path = roles/unverified_yet/debops.backporter
 	url = https://github.com/debops/ansible-backporter.git
 [submodule "roles/rvm_io.rvm1-ruby"]
 	path = roles/rvm_io.rvm1-ruby
@@ -254,10 +254,10 @@
 	path = roles/unverified_yet/debops.phpmyadmin
 	url = https://github.com/debops/ansible-phpmyadmin.git
 [submodule "roles/debops.postgresql_server"]
-	path = roles/debops.postgresql_server
+	path = roles/unverified_yet/debops.postgresql_server
 	url = https://github.com/debops/ansible-postgresql_server.git
 [submodule "roles/debops.radvd"]
-	path = roles/debops.radvd
+	path = roles/unverified_yet/debops.radvd
 	url = https://github.com/debops/ansible-radvd.git
 [submodule "roles/debops.rails_deploy"]
 	path = roles/unverified_yet/debops.rails_deploy
@@ -275,7 +275,7 @@
 	path = roles/unverified_yet/debops.slapd
 	url = https://github.com/debops/ansible-slapd.git
 [submodule "roles/debops.smstools"]
-	path = roles/debops.smstools
+	path = roles/unverified_yet/debops.smstools
 	url = https://github.com/debops/ansible-smstools.git
 [submodule "roles/debops.snmpd"]
 	path = roles/debops.snmpd
@@ -290,7 +290,7 @@
 	path = roles/unverified_yet/debops.tgt
 	url = https://github.com/debops/ansible-tgt.git
 [submodule "roles/debops.tinc"]
-	path = roles/debops.tinc
+	path = roles/unverified_yet/debops.tinc
 	url = https://github.com/debops/ansible-tinc.git
 [submodule "roles/debops.dhparam"]
 	path = roles/debops.dhparam
