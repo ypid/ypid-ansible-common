@@ -1,5 +1,5 @@
 [submodule "debops.postfix"]
-	path = roles/unverified_yet/debops.postfix
+	path = roles/debops.postfix
 	url = https://github.com/debops/ansible-postfix.git
 [submodule "debops.libvirt"]
 	path = roles/debops.libvirt
@@ -295,3 +295,6 @@
 [submodule "roles/debops.dhparam"]
 	path = roles/debops.dhparam
 	url = https://github.com/debops/ansible-dhparam.git
+[submodule "roles/unverified_yet/ansible-roundcube"]
+	path = roles/unverified_yet/ansible-roundcube
+	url = https://github.com/debops-contrib/ansible-roundcube.git
