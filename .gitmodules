@@ -98,7 +98,7 @@
 	path = roles/debops.rsnapshot
 	url = https://github.com/debops/ansible-rsnapshot.git
 [submodule "debops.rsyslog"]
-	path = roles/unverified_yet/debops.rsyslog
+	path = roles/debops.rsyslog
 	url = https://github.com/debops/ansible-rsyslog.git
 [submodule "debops.samba"]
 	path = roles/debops.samba
@@ -296,5 +296,5 @@
 	path = roles/debops.dhparam
 	url = https://github.com/debops/ansible-dhparam.git
 [submodule "roles/unverified_yet/ansible-roundcube"]
-	path = roles/unverified_yet/ansible-roundcube
+	path = roles/unverified_yet/debops.roundcube
 	url = https://github.com/debops-contrib/ansible-roundcube.git
