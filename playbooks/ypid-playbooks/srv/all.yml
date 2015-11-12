@@ -1,0 +1,10 @@
+---
+
+- name: Configure OpenVPN as Docker container
+  hosts: 'ypid_docker_openvpn'
+  become: True
+
+  roles:
+
+    - role: ypid.docker-openvpn
+      tags: [ 'role::docker-openvpn', 'docker-openvpn' ]

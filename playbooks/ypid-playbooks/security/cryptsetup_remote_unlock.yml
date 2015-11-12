@@ -1,0 +1,10 @@
+---
+
+- name: Configure cryptsetup remote unlock
+  hosts: 'debops_cryptsetup_remote_unlock'
+  become: True
+
+  roles:
+
+    - role: ypid.cryptsetup_remote_unlock
+      tags: [ 'role::cryptsetup_remote_unlock', 'cryptsetup_remote_unlock' ]

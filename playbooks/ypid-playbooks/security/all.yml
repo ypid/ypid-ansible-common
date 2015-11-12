@@ -1,0 +1,16 @@
+---
+
+- include: cryptsetup.yml
+
+- include: apparmor.yml
+
+- include: sudo.yml
+
+- include: initramfs_message.yml
+
+- include: ssh-hardening.yml
+
+- include: cryptsetup_remote_unlock.yml
+
+- include: logcheck.yml
+

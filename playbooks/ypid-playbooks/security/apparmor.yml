@@ -1,0 +1,10 @@
+---
+
+- name: Configure Apparmor
+  hosts: 'all:!no_apparmor'
+  become: True
+
+  roles:
+
+    - role: ypid.apparmor
+      tags: [ 'role::apparmor', 'apparmor' ]

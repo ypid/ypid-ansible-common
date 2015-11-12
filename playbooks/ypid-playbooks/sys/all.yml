@@ -1,0 +1,50 @@
+---
+
+- name: Configure Snapper for BTRFS snapshots
+  hosts: 'debops_snapshot_snapper'
+  become: True
+
+  roles:
+
+    - role: ypid.snapshot_snapper
+      tags: [ 'role::snapshot_snapper', 'snapshot_snapper' ]
+
+
+- name: Configure cron
+  hosts: 'debops_cron'
+  become: True
+
+  roles:
+
+    - role: ypid.cron
+      tags: [ 'role::cron', 'cron' ]
+
+
+- name: Configure kernel parameters
+  hosts: 'all:!ypid_no_sysctl'
+  become: True
+
+  roles:
+
+    - role: picotrading.sysctl
+      tags: [ 'role::sysctl', 'sysctl' ]
+
+
+- name: Configure smartd
+  hosts: 'debops_smartd'
+  become: True
+
+  roles:
+
+    - role: ypid.smartd
+      tags: [ 'role::smartd', 'smartd' ]
+
+
+- name: Configure shutdown if battery low
+  hosts: 'ypid_shutdown_if_battery_low'
+  become: True
+
+  roles:
+
+    - role: ypid.shutdown_if_battery_low
+      tags: [ 'role::smartd', 'smartd' ]
