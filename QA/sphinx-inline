@@ -5,4 +5,21 @@
 # Convert repeative used programs or commands to Sphinx inline syntax.
 # http://sphinx-doc.org/markup/inline.html
 
-git ls-files | xargs sed --in-place 's/``\(\/[^`]\+\)``/:file:`\1`/g;s/`rsnapshot``/:program:`rsnapshot`/g;s/``rsync``/:command:`rsync`/g;s/``ssh``/:command:`ssh`/g'
+# Don’t use:
+# * :option:`--tags`: https://github.com/debops/ansible-atd/pull/3#issuecomment-152024188
+#
+# Use:
+# * :file:`/etc/issue`
+# * :command:`rm`: The name of an OS-level command, such as rm. Used when referring to a program primely used in the shell by sysadmins and/or users.
+# * :program:`rsnapshot`: The name of an executable program. This may differ
+#   from the file name for the executable for some platforms. In particular, the
+#   .exe (or other) extension should be omitted for Windows programs.
+#   Used when referring to programs (GUI, or programs not intended as shell
+#   command) or services (not intended for user/admin execution directly but
+#   via a init system).
+# * :rfc:`number#anchor`
+# * :manpage:`ls(1)`
+# * :regexp:`^WARN.*$`
+
+
+git ls-files | xargs sed --in-place --regexp-extended 's/``(\/[^`]\+)``/:file:`\1`/g;s/``(rsnapshot|xinetd)``/:program:`\1`/g;s/``(rsync|ssh|ip6?tables)``/:command:`\1`/g;'
