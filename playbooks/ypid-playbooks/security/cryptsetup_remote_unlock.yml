@@ -7,4 +7,4 @@
   roles:
 
     - role: ypid.cryptsetup_remote_unlock
-      tags: [ 'role::cryptsetup_remote_unlock', 'cryptsetup_remote_unlock' ]
+      tags: [ 'role::cryptsetup_remote_unlock' ]

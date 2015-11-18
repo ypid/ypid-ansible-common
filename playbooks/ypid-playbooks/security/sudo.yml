@@ -7,4 +7,4 @@
   roles:
 
     - role: picotrading.sudo
-      tags: [ 'role::sudo', 'sudo' ]
+      tags: [ 'role::sudo' ]

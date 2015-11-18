@@ -7,4 +7,4 @@
   roles:
 
     - role: ypid.udev-usbmon
-      tags: [ 'role::udev-usbmon', 'udev-usbmon' ]
+      tags: [ 'role::udev-usbmon' ]

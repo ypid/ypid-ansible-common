@@ -7,4 +7,4 @@
   roles:
 
     - role: ypid.vnstat
-      tags: [ 'role::vnstat', 'vnstat' ]
+      tags: [ 'role::vnstat' ]

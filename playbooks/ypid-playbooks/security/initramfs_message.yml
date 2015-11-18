@@ -7,4 +7,4 @@
   roles:
 
     - role: ypid.initramfs_settings
-      tags: [ 'role::initramfs_settings', 'initramfs_settings' ]
+      tags: [ 'role::initramfs_settings' ]

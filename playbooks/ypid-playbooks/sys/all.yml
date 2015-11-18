@@ -7,7 +7,7 @@
   roles:
 
     - role: ypid.snapshot_snapper
-      tags: [ 'role::snapshot_snapper', 'snapshot_snapper' ]
+      tags: [ 'role::snapshot_snapper' ]
 
 
 - name: Configure cron
@@ -16,8 +16,8 @@
 
   roles:
 
-    - role: ypid.cron
-      tags: [ 'role::cron', 'cron' ]
+    - role: franklinkim.cron
+      tags: [ 'role::cron' ]
 
 
 - name: Configure kernel parameters
@@ -27,7 +27,7 @@
   roles:
 
     - role: picotrading.sysctl
-      tags: [ 'role::sysctl', 'sysctl' ]
+      tags: [ 'role::sysctl' ]
 
 
 - name: Configure smartd
@@ -37,7 +37,7 @@
   roles:
 
     - role: ypid.smartd
-      tags: [ 'role::smartd', 'smartd' ]
+      tags: [ 'role::smartd' ]
 
 
 - name: Configure shutdown if battery low
@@ -47,4 +47,4 @@
   roles:
 
     - role: ypid.shutdown_if_battery_low
-      tags: [ 'role::smartd', 'smartd' ]
+      tags: [ 'role::smartd' ]

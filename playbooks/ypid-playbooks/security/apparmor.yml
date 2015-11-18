@@ -7,4 +7,4 @@
   roles:
 
     - role: ypid.apparmor
-      tags: [ 'role::apparmor', 'apparmor' ]
+      tags: [ 'role::apparmor' ]

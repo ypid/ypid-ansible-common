@@ -7,4 +7,4 @@
   roles:
 
     - role: tersmitten.logcheck
-      tags: [ 'role::logcheck', 'logcheck' ]
+      tags: [ 'role::logcheck' ]
