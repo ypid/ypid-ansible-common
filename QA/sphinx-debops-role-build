@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Export as environment variables.
+
+if [ ! -d "docs" ]
+then
+    echo "You need to create the docs directory in the role." 1>&2
+    exit 1
+fi
+
+cp -f "${ROLESPEC_TEST_SUITE_LOCATION}/sphinx-docs-template"/* ./docs/
+cd docs
+test -d _static || mkdir -p _static
+test -f ../defaults/main.yml && yaml2rst ../defaults/main.yml defaults.rst
+touch index.rst
+sphinx-build -n -W -b html -d _build/doctrees . _build/html

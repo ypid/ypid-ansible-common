@@ -8,3 +8,6 @@
 
     - role: ypid.apparmor
       tags: [ 'role::apparmor' ]
+
+    - role: ypid.apparmor_local_config
+      tags: [ 'role::apparmor_local_config' ]
