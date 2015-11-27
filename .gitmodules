@@ -272,7 +272,7 @@
 	path = roles/unverified_yet/debops.sks
 	url = https://github.com/debops/ansible-sks.git
 [submodule "roles/debops.slapd"]
-	path = roles/unverified_yet/debops.slapd
+	path = roles/debops.slapd
 	url = https://github.com/debops/ansible-slapd.git
 [submodule "roles/debops.smstools"]
 	path = roles/unverified_yet/debops.smstools

@@ -1,5 +1,16 @@
 ---
 
+- name: Configure Apparmor
+  hosts: 'all:!no_apparmor'
+  become: True
+
+  roles:
+	- role: debops.ferm
+	  tags: [ 'role::ferm' ]
+	  ferm_dependent_rules:
+		- '{{ ntp_ferm_dependent_rules }}'
+		- '{{ sshd_ferm_dependent_rules }}'
+
 - include: apparmor.yml
 
 - include: sudo.yml
