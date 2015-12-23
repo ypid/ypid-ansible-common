@@ -2,7 +2,7 @@
 ## @license AGPLv3 <https://www.gnu.org/licenses/agpl-3.0.html>
 ## @author Copyright (C) 2015 Robin Schneider <ypid@riseup.net>
 
-# Convert repeative used programs or commands to Sphinx inline syntax.
+# Convert repetitively used programs or commands to Sphinx inline syntax.
 # http://sphinx-doc.org/markup/inline.html
 
 # Don’t use:
@@ -22,4 +22,8 @@
 # * :regexp:`^WARN.*$`
 
 
-git ls-files | xargs sed --in-place --regexp-extended 's/``(\/[^`]\+)``/:file:`\1`/g;s/``(ntpd|rsnapshot|xinetd)``/:program:`\1`/g;s/``(rsync|ssh|ip6?tables)``/:command:`\1`/g;'
+git ls-files | xargs sed --in-place --regexp-extended '
+	s/``(\/[^`]\+)``/:file:`\1`/g;
+	s/``(check_mk|collectd|ntpd|rsnapshot|xinetd)``/:program:`\1`/g;
+	s/``(rsync|ssh|ip6?tables)``/:command:`\1`/g;
+'
