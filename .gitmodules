@@ -65,7 +65,7 @@
 	path = roles/debops.mariadb_server
 	url = https://github.com/debops/ansible-mariadb_server.git
 [submodule "debops.mysql"]
-	path = roles/debops.mysql
+	path = roles/deprecated/debops.mysql
 	url = https://github.com/debops/ansible-mysql.git
 [submodule "debops.nginx"]
 	path = roles/debops.nginx
