@@ -310,3 +310,48 @@
 [submodule "roles_ypid/ypid.kernel_module"]
 	path = roles_ypid/ypid.kernel_module
 	url = https://github.com/ypid/ansible-kernel_module.git
+[submodule "roles_ypid/ypid.copy"]
+	path = roles_ypid/ypid.copy
+	url = https://github.com/ypid/ansible-copy.git
+[submodule "roles_ypid/ypid.cryptsetup_remote_unlock"]
+	path = roles_ypid/ypid.cryptsetup_remote_unlock
+	url = https://github.com/ypid/ansible-cryptsetup_remote_unlock.git
+[submodule "roles_ypid/ypid.divert"]
+	path = roles_ypid/ypid.divert
+	url = https://github.com/ypid/ansible-divert.git
+[submodule "roles_ypid/ypid.docker-openvpn"]
+	path = roles_ypid/ypid.docker-openvpn
+	url = https://github.com/ypid/ansible-docker-openvpn.git
+[submodule "roles_ypid/ypid.import_pgp_public_keys"]
+	path = roles_ypid/ypid.import_pgp_public_keys
+	url = https://github.com/ypid/ansible-import_pgp_public_keys.git
+[submodule "roles_ypid/ypid.initramfs_message"]
+	path = roles_ypid/ypid.initramfs_message
+	url = https://github.com/ypid/ansible-initramfs_message.git
+[submodule "roles_ypid/ypid.linuxmuster_net-client-customize"]
+	path = roles_ypid/ypid.linuxmuster_net-client-customize
+	url = https://github.com/ypid/ansible-linuxmuster_net-client-customize.git
+[submodule "roles_ypid/ypid.linuxmuster_net-client-epoptes_via_postsync"]
+	path = roles_ypid/ypid.linuxmuster_net-client-epoptes_via_postsync
+	url = https://github.com/ypid/ansible-linuxmuster_net-client-epoptes_via_postsync.git
+[submodule "roles_ypid/ypid.linuxmuster_net-server-customize"]
+	path = roles_ypid/ypid.linuxmuster_net-server-customize
+	url = https://github.com/ypid/ansible-linuxmuster_net-server-customize.git
+[submodule "roles_ypid/ypid.linuxmuster_net-server-epoptes_via_postsync"]
+	path = roles_ypid/ypid.linuxmuster_net-server-epoptes_via_postsync
+	url = https://github.com/ypid/ansible-linuxmuster_net-server-epoptes_via_postsync.git
+[submodule "roles_ypid/ypid.rsyslog"]
+	path = roles_ypid/ypid.rsyslog
+	url = https://github.com/ypid/ansible-rsyslog.git
+[submodule "roles_ypid/ypid.shutdown_if_battery_low"]
+	path = roles_ypid/ypid.shutdown_if_battery_low
+	url = https://github.com/ypid/ansible-shutdown_if_battery_low.git
+[submodule "roles_ypid/ypid.snapshot_snapper"]
+	path = roles_ypid/ypid.snapshot_snapper
+	url = https://github.com/ypid/ansible-snapshot_snapper.git
+[submodule "roles_ypid/ypid.synchronize"]
+	path = roles_ypid/ypid.synchronize
+	url = https://github.com/ypid/ansible-synchronize.git
+[submodule "roles_ypid/ypid.vnstat"]
+	path = roles_ypid/ypid.vnstat
+	url = https://github.com/ypid/ansible-vnstat.git
