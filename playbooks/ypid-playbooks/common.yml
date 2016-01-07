@@ -1,0 +1,37 @@
+---
+
+- name: Prepare core environment
+  hosts: 'all:!ypid_no_common'
+  become: False
+
+  roles:
+
+    - role: debops.core
+      tags: [ 'role::core' ]
+      become: True
+
+- include: facts_pre_tasks.yml
+
+- name: Common configuration for all hosts
+  hosts: 'all:!ypid_no_common'
+  become: True
+
+  roles:
+
+    - role: ypid.packages
+      tags: [ 'role::packages' ]
+
+    - role: ypid.rsyslog
+      tags: [ 'role::ypid.rsyslog' ]
+
+    - role: ypid.kernel_module
+      tags: [ 'role::kernel_module' ]
+
+    - role: tersmitten.updatedb
+      tags: [ 'role::updatedb' ]
+
+    - role: ypid.divert
+      tags: [ 'role::divert' ]
+
+    - role: ypid.copy
+      tags: [ 'role::copy' ]

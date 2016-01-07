@@ -1,1 +1,1 @@
-../playbooks/debops-wordpress/roles/wordpress
+../submodules/debops-wordpress/roles/wordpress

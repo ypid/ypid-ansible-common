@@ -1,0 +1,1 @@
+../../playbooks/debops-playbooks/lookup_plugins/template_src.py

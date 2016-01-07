@@ -164,7 +164,7 @@
 	path = roles/unverified_yet/debops.salt
 	url = https://github.com/debops/ansible-salt.git
 [submodule "playbooks/debops-wordpress"]
-	path = playbooks/debops-wordpress
+	path = submodules/debops-wordpress
 	url = https://github.com/carlalexander/debops-wordpress.git
 [submodule "roles/debops.docker_gen"]
 	path = roles/debops.docker_gen
@@ -182,7 +182,7 @@
 	path = roles/hardening.os-hardening
 	url = https://github.com/hardening-io/ansible-os-hardening.git
 [submodule "playbooks/debops-playbooks"]
-	path = playbooks/debops-playbooks
+	path = submodules/debops-playbooks
 	url = https://github.com/debops/debops-playbooks.git
 [submodule "roles/debops.atd"]
 	path = roles/debops.atd
@@ -304,3 +304,9 @@
 [submodule "roles/hardening.ssh-hardening"]
 	path = roles/hardening.ssh-hardening
 	url = https://github.com/hardening-io/ansible-ssh-hardening.git
+[submodule "submodules/ansible-qubes"]
+	path = submodules/ansible-qubes
+	url = https://github.com/Rudd-O/ansible-qubes.git
+[submodule "roles_ypid/ypid.kernel_module"]
+	path = roles_ypid/ypid.kernel_module
+	url = https://github.com/ypid/ansible-kernel_module.git

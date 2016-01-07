@@ -24,6 +24,6 @@
 
 git ls-files | xargs sed --in-place --regexp-extended '
 	s/``(\/[^`]\+)``/:file:`\1`/g;
+	s/``(apt|rsync|ssh|ip6?tables)``/:command:`\1`/g;
 	s/``(check_mk|collectd|ntpd|rsnapshot|xinetd)``/:program:`\1`/g;
-	s/``(rsync|ssh|ip6?tables)``/:command:`\1`/g;
 '

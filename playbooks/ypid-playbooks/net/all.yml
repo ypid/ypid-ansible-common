@@ -1,7 +1,7 @@
 ---
 
 - name: Configure vnStat
-  hosts: 'debops_vnstat'
+  hosts: 'debops_service_vnstat'
   become: True
 
   roles:
