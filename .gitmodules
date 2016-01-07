@@ -355,3 +355,6 @@
 [submodule "roles_ypid/ypid.vnstat"]
 	path = roles_ypid/ypid.vnstat
 	url = https://github.com/ypid/ansible-vnstat.git
+[submodule "roles_ypid/ypid.psad"]
+	path = roles_ypid/ypid.psad
+	url = https://github.com/ypid/ansible-psad.git
