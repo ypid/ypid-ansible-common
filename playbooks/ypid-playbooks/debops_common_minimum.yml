@@ -1,5 +1,15 @@
 ---
 
+- name: Prepare core environment
+  hosts: [ 'debops_all_hosts_minimum', '!debops_no_common' ]
+  become: False
+
+  roles:
+
+    - role: debops.core
+      tags: [ 'role::core' ]
+      become: True
+
 - name: Common configuration for all hosts
   hosts: [ 'debops_all_hosts_minimum', '!debops_no_common' ]
   gather_facts: True

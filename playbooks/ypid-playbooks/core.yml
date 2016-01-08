@@ -1,0 +1,10 @@
+---
+
+- name: Common configuration for all hosts
+  hosts: 'all:!ypid_no_common'
+  become: True
+
+  roles:
+
+    - role: debops.contrib-etckeeper
+      tags: [ 'role::etckeeper' ]

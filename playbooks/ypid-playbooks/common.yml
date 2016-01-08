@@ -1,15 +1,5 @@
 ---
 
-- name: Prepare core environment
-  hosts: 'all:!ypid_no_common'
-  become: False
-
-  roles:
-
-    - role: debops.core
-      tags: [ 'role::core' ]
-      become: True
-
 - include: facts_pre_tasks.yml
 
 - name: Common configuration for all hosts

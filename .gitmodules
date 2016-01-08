@@ -358,3 +358,9 @@
 [submodule "roles_ypid/ypid.psad"]
 	path = roles_ypid/ypid.psad
 	url = https://github.com/ypid/ansible-psad.git
+[submodule "roles_ypid/debops.cryptsetup"]
+	path = roles_ypid/debops.cryptsetup
+	url = https://github.com/debops/ansible-cryptsetup.git
+[submodule "roles_ypid/debops.contrib-foodsoft"]
+	path = roles_ypid/debops.contrib-foodsoft
+	url = https://github.com/debops-contrib/ansible-foodsoft.git

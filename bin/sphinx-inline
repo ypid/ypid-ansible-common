@@ -16,7 +16,7 @@
 #   .exe (or other) extension should be omitted for Windows programs.
 #   Used when referring to programs (GUI, or programs not intended as shell
 #   command) or services (not intended for user/admin execution directly but
-#   via a init system).
+#   via a init system/cron/something).
 # * :rfc:`number#anchor`
 # * :manpage:`ls(1)`
 # * :regexp:`^WARN.*$`
@@ -24,6 +24,6 @@
 
 git ls-files | xargs sed --in-place --regexp-extended '
 	s/``(\/[^`]+)``/:file:`\1`/g;
-	s/``(apt|rsync|ssh|ip6?tables)``/:command:`\1`/g;
-	s/``(check_mk|mysqld|collectd|ntpd|rsnapshot|xinetd)``/:program:`\1`/g;
+	s/``(git|hg|bzr|darcs|apt|dpkg|rpm|pacman|pacman-g2|pacman-g2|yum|dnf|zypper|rsync|ssh|ip6?tables)``/:command:`\1`/g;
+	s/``(check_mk|mysqld|ferment|collectd|ntpd|etckeeper|rsnapshot|xinetd)``/:program:`\1`/g;
 '
