@@ -376,6 +376,9 @@
 [submodule "roles_ypid/debops.contrib-fuse"]
 	path = roles_ypid/debops.contrib-fuse
 	url = https://github.com/debops-contrib/ansible-fuse.git
-[submodule "roles_ypid/ypid.udev-usbmon"]
-	path = roles_ypid/ypid.udev-usbmon
-	url = https://github.com/debops-contrib/ansible-fuse
+[submodule "roles_ypid/debops.contrib-apparmor"]
+	path = roles_ypid/debops.contrib-apparmor
+	url = https://github.com/debops-contrib/ansible-apparmor.git
+[submodule "roles/deprecated/silpion.etckeeper"]
+	path = roles/deprecated/silpion.etckeeper
+	url = https://github.com/silpion/ansible-etckeeper.git
