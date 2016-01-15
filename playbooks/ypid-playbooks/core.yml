@@ -1,6 +1,6 @@
 ---
 
-- name: Common configuration for all hosts
+- name: Put /etc under version control using etckeeper
   hosts: 'all:!ypid_no_common'
   become: True
 

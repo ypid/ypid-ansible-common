@@ -10,7 +10,7 @@
 #
 # Use:
 # * :file:`/etc/issue`
-# * :command:`rm`: The name of an OS-level command, such as rm. Used when referring to a program primely used in the shell by sysadmins and/or users.
+# * :command:`rm`: The name of an OS-level command, such as `rm`. Used when referring to a program primely used in the shell by sysadmins and/or users.
 # * :program:`rsnapshot`: The name of an executable program. This may differ
 #   from the file name for the executable for some platforms. In particular, the
 #   .exe (or other) extension should be omitted for Windows programs.
@@ -24,6 +24,6 @@
 
 git ls-files | xargs sed --in-place --regexp-extended '
 	s/``(\/[^`]+)``/:file:`\1`/g;
-	s/``(git|hg|bzr|darcs|apt|dpkg|rpm|pacman|pacman-g2|pacman-g2|yum|dnf|zypper|rsync|ssh|ip6?tables)``/:command:`\1`/g;
-	s/``(check_mk|mysqld|ferment|collectd|ntpd|etckeeper|rsnapshot|xinetd)``/:program:`\1`/g;
+	s/``(check_mk|docker|git|hg|bzr|darcs|apt|dpkg|rpm|pacman|pacman-g2|yum|dnf|zypper|rsync|ssh|ip6?tables)``/:command:`\1`/g;
+	s/``(etckeeper|rsnapshot|mysqld|collectd|ntpd|xinetd|ferm|ferment)``/:program:`\1`/g;
 '

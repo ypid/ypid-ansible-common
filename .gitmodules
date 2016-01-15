@@ -364,3 +364,18 @@
 [submodule "roles_ypid/debops.contrib-foodsoft"]
 	path = roles_ypid/debops.contrib-foodsoft
 	url = https://github.com/debops-contrib/ansible-foodsoft.git
+[submodule "playbooks/debops-contrib-playbooks"]
+	path = playbooks/debops-contrib-playbooks
+	url = https://github.com/debops-contrib/debops-contrib-playbooks.git
+[submodule "roles/debops.encfs"]
+	path = roles/debops.encfs
+	url = https://github.com/debops/ansible-encfs
+[submodule "roles_ypid/debops.contrib-etckeeper"]
+	path = roles_ypid/debops.contrib-etckeeper
+	url = https://github.com/debops-contrib/ansible-etckeeper.git
+[submodule "roles_ypid/debops.contrib-fuse"]
+	path = roles_ypid/debops.contrib-fuse
+	url = https://github.com/debops-contrib/ansible-fuse.git
+[submodule "roles_ypid/ypid.udev-usbmon"]
+	path = roles_ypid/ypid.udev-usbmon
+	url = https://github.com/debops-contrib/ansible-fuse
