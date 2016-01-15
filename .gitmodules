@@ -382,3 +382,15 @@
 [submodule "roles/deprecated/silpion.etckeeper"]
 	path = roles/deprecated/silpion.etckeeper
 	url = https://github.com/silpion/ansible-etckeeper.git
+[submodule "ypid.udev-usbmon"]
+	path = roles_ypid/ypid.udev-usbmon
+	url = https://github.com/ypid/ansible-udev-usbmon
+[submodule "roles/picotrading.sysctl"]
+	path = roles/picotrading.sysctl
+	url = https://github.com/ypid/ansible-sysctl.git
+[submodule "roles/picotrading.sudo"]
+	path = roles/picotrading.sudo
+	url = https://github.com/ypid/ansible-sudo-2.git
+[submodule "roles/franklinkim.cron"]
+	path = roles/franklinkim.cron
+	url = https://github.com/ypid/ansible-cron.git
