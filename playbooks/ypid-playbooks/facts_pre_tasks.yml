@@ -13,3 +13,6 @@
       with_items:
         - '{{ "distribution_" + ansible_distribution }}'
         - '{{ "distribution_" + ansible_distribution + "_" + ansible_distribution_release }}'
+      tags:
+        - 'all'
+        - 'role::apt_preferences'
