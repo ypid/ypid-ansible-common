@@ -1,7 +1,5 @@
 ---
 
-- include: apparmor.yml
-
 - include: sudo.yml
 
 - include: initramfs_message.yml
