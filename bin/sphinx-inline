@@ -24,6 +24,7 @@
 # * :regexp:`^WARN.*$`
 
 
+#  | grep --invert-match --line-regexp '.*.md'
 git ls-files | xargs sed --in-place --regexp-extended '
 	s/``(\/[^`]+)``/:file:`\1`/g;
 	s/``(firejail|xpra|occ|check_mk|docker|git|hg|bzr|darcs|apt|dpkg|rpm|pacman|pacman-g2|yum|dnf|zypper|rsync|ssh|ip|ip6?tables)``/:command:`\1`/g;

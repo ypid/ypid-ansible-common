@@ -394,3 +394,9 @@
 [submodule "roles/franklinkim.cron"]
 	path = roles/franklinkim.cron
 	url = https://github.com/ypid/ansible-cron.git
+[submodule "roles_ypid/ypid.packages"]
+	path = roles_ypid/ypid.packages
+	url = https://github.com/ypid/ansible-packages.git
+[submodule "roles_ypid/ypid.whereami"]
+	path = roles_ypid/ypid.whereami
+	url = https://github.com/ypid/ansible-whereami.git

@@ -1,0 +1,10 @@
+---
+
+- name: Configure vnStat
+  hosts: 'debops_service_vnstat'
+  become: True
+
+  roles:
+
+    - role: ypid.vnstat
+      tags: [ 'role::vnstat' ]

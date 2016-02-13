@@ -1,10 +1,5 @@
 ---
 
-- name: Configure vnStat
-  hosts: 'debops_service_vnstat'
-  become: True
+- include: vnstat.yml
 
-  roles:
-
-    - role: ypid.vnstat
-      tags: [ 'role::vnstat' ]
+- include: whereami.yml
