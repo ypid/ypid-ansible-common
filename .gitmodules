@@ -346,9 +346,6 @@
 [submodule "roles_ypid/ypid.shutdown_if_battery_low"]
 	path = roles_ypid/ypid.shutdown_if_battery_low
 	url = https://github.com/ypid/ansible-shutdown_if_battery_low.git
-[submodule "roles_ypid/ypid.snapshot_snapper"]
-	path = roles_ypid/debops.contrib-snapshot_snapper
-	url = https://github.com/debops-contrib/ansible-snapshot_snapper.git
 [submodule "roles_ypid/ypid.synchronize"]
 	path = roles_ypid/ypid.synchronize
 	url = https://github.com/ypid/ansible-synchronize.git
