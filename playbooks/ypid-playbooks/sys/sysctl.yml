@@ -1,0 +1,10 @@
+---
+
+- name: Configure kernel parameters
+  hosts: 'all:!ypid_no_sysctl'
+  become: True
+
+  roles:
+
+    - role: picotrading.sysctl
+      tags: [ 'role::sysctl' ]

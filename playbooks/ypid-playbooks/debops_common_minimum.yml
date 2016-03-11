@@ -16,10 +16,10 @@
   become: True
 
   roles:
-    - role: debops.apt_preferences
-      tags: [ 'apt_preferences', 'role::apt_preferences' ]
-      apt_preferences_dependent_list:
-        - '{{ sshd_apt_preferences_dependent_list }}'
+    # - role: debops.apt_preferences
+    #   tags: [ 'apt_preferences', 'role::apt_preferences' ]
+    #   apt_preferences_dependent_list:
+    #     - '{{ sshd_apt_preferences_dependent_list }}'
 
     - role: debops.apt
       tags: [ 'role::apt' ]
@@ -30,10 +30,10 @@
     - role: debops.atd
       tags: [ 'role::atd' ]
 
-    - role: debops.tcpwrappers
-      tags: [ 'role::tcpwrappers' ]
-      tcpwrappers_dependent_allow:
-        - '{{ sshd_tcpwrappers_dependent_allow }}'
+    # - role: debops.tcpwrappers
+    #   tags: [ 'role::tcpwrappers' ]
+    #   tcpwrappers_dependent_allow:
+    #     - '{{ sshd_tcpwrappers_dependent_allow }}'
 
     - role: debops.console
       tags: [ 'role::console' ]

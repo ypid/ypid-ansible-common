@@ -1,0 +1,10 @@
+---
+
+- name: Configure smartd
+  hosts: 'debops_smartd'
+  become: True
+
+  roles:
+
+    - role: ypid.smartd
+      tags: [ 'role::smartd' ]

@@ -1,0 +1,10 @@
+---
+
+- name: Configure shutdown if battery low
+  hosts: 'ypid_shutdown_if_battery_low'
+  become: True
+
+  roles:
+
+    - role: ypid.shutdown_if_battery_low
+      tags: [ 'role::shutdown_if_battery_low' ]
