@@ -1,0 +1,20 @@
+---
+# Default variables
+# =================
+
+# .. contents:: Sections
+#    :local:
+#
+# .. Required packages (((
+#
+# ---------------------
+#   Required packages
+# ---------------------
+
+# .. envvar:: udev_usbmon__base_packages
+#
+# List of base packages to install.
+udev_usbmon__base_packages:
+  - 'cryptsetup'
+
+# .. )))

@@ -1,0 +1,16 @@
+---
+
+- name: Combine udev_usbmon device lists
+  set_fact:
+    udev_usbmon__devices_combined: '{{
+      (udev_usbmon__devices       | d([]) | list) +
+      (udev_usbmon__group_devices | d([]) | list) +
+      (udev_usbmon__host_devices  | d([]) | list) }}'
+  tags: [ 'role::udev_usbmon:backup' ]
+
+- name: Ensure required packages are installed
+  apt:
+    name: '{{ item }}'
+    state: 'latest'
+    install_recommends: False
+  with_flattened: '{{ udev_usbmon__base_packages }}'

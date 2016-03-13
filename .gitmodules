@@ -400,3 +400,6 @@
 [submodule "roles/debops.unattended_upgrades"]
 	path = roles/debops.unattended_upgrades
 	url = https://github.com/debops/ansible-unattended_upgrades.git
+[submodule "roles_ypid/debops.contrib-snapshot_snapper"]
+	path = roles_ypid/debops.contrib-snapshot_snapper
+	url = https://github.com/debops-contrib/ansible-snapshot_snapper.git
