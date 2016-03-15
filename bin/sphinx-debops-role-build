@@ -1,6 +1,8 @@
 #!/bin/bash
 
-# Export as environment variables.
+# Export ROLESPEC_TEST_SUITE_LOCATION as environment variables.
+
+TEMPLATE_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )/../template_role/" && pwd )"
 
 if [ ! -d "docs" ]
 then
@@ -9,6 +11,7 @@ then
 fi
 
 cp -f "${ROLESPEC_TEST_SUITE_LOCATION}/sphinx-docs-template"/* ./docs/
+test -e .gitignore || cp "${TEMPLATE_DIR}/.gitignore" .gitignore
 cd docs
 test -d _static || mkdir -p _static
 test -f ../defaults/main.yml && yaml2rst ../defaults/main.yml defaults.rst
