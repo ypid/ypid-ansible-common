@@ -403,3 +403,6 @@
 [submodule "roles_ypid/debops.contrib-snapshot_snapper"]
 	path = roles_ypid/debops.contrib-snapshot_snapper
 	url = https://github.com/debops-contrib/ansible-snapshot_snapper.git
+[submodule "roles_ypid/debops.apt_cacher_ng"]
+	path = roles_ypid/debops.apt_cacher_ng
+	url = https://github.com/debops/ansible-apt_cacher_ng.git
