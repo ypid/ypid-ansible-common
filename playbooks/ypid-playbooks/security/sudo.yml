@@ -1,7 +1,7 @@
 ---
 
 - name: Configure sudo
-  hosts: 'all:!no_sudo'
+  hosts: [ 'all:!no_sudo' ]
   become: True
 
   roles:

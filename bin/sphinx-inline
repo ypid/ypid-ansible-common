@@ -24,10 +24,12 @@
 # * :regexp:`^WARN.*$`
 
 
-#  | grep --invert-match --line-regexp '.*.md'
-git ls-files | xargs sed --in-place --regexp-extended '
-	s/``(\/[^`]+)``/:file:`\1`/g;
-	s/``((:?firejail|xpra|occ|check_mk|docker|git|hg|bzr|darcs|apt|dpkg|rpm|pacman|pacman-g2|yum|dnf|zypper|rsync|ssh|ip|ip6?tables|netstat)\b[^`]*?[^_])``/:command:`\1`/g;
-	s/``([[:lower:]_-]+\([[:digit:]]\))``/:manpage:`\1`/g;
-	s/``((:?whereami|etckeeper|rsnapshot|mysqld|collectd|ntpd|xinetd|ferm|ferment)[^`]*)``/:program:`\1`/g;
-'
+# echo '``apt-cache.{{ ansible_domain }}``. This subdomain should be configured in the' | \
+	# sed --regexp-extended '
+git ls-files -z | xargs --null -I '{}' find '{}' -type f -regextype posix-extended -regex '(:?defaults/.*\.yml|.*\.rst)$' -print0 | \
+	xargs --null sed --in-place --regexp-extended '
+		s/``(\/[^`]+)``/:file:`\1`/g;
+		s/``((:?whereami|apt-(:?cacher-ng|proxy)|nginx|etckeeper|rsnapshot|mysqld|collectd|ntpd|xinetd|ferm|ferment)\b[^`{]*?[^_]?)``/:program:`\1`/g;
+		s/``((:?firejail|xpra|occ|check_mk|docker|git|hg|bzr|darcs|apt|dpkg|rpm|pacman|pacman-g2|yum|dnf|zypper|rsync|ssh|ip|ip6?tables|netstat)\b[^`{]*?[^_]?)``/:command:`\1`/g;
+		s/([[:lower:]_-]+\([[:digit:]]\))/:manpage:`\1`/g;
+	'
