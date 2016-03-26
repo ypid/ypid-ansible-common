@@ -406,3 +406,6 @@
 [submodule "roles_ypid/debops.apt_cacher_ng"]
 	path = roles_ypid/debops.apt_cacher_ng
 	url = https://github.com/debops/ansible-apt_cacher_ng.git
+[submodule "submodules/debops"]
+	path = submodules/debops
+	url = https://github.com/debops/debops.git

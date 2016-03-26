@@ -1,0 +1,11 @@
+---
+
+- name: Show host groups
+  hosts: [ 'all' ]
+  become: False
+
+  tasks:
+
+    - name: Show host groups
+      debug:
+        msg: '{{ hostvars[inventory_hostname]["group_names"] | sort }}'

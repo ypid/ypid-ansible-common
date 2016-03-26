@@ -3,7 +3,7 @@
 ## Based on DebOps playbooks site.yml except that I divided the common
 ## playbook.
 
-## - include: ../debops-playbooks/common.yml
+- include: ../debops-playbooks/common.yml
 - include: debops_common_minimum.yml
 
 - include: ../debops-playbooks/sys/all.yml

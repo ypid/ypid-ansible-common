@@ -1,10 +1,10 @@
 ---
 
-- name: Configure initramfs settings
-  hosts: 'ypid_initramfs_settings'
+- name: Define a message which is shown at boot from the init script
+  hosts: 'ypid_initramfs_message'
   become: True
 
   roles:
 
-    - role: ypid.initramfs_settings
-      tags: [ 'role::initramfs_settings' ]
+    - role: ypid.initramfs_message
+      tags: [ 'role::initramfs_message' ]

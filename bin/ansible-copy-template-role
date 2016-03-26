@@ -17,7 +17,8 @@
 
 template_dir="$HOME/.ansible/ypid-ansible-common/template_role/"
 
-if [ ! -d "$template_dir" ]; then
+if [ ! -d "$template_dir" ]
+then
     echo "Template directory does not exist."
     exit 1
 fi
@@ -26,4 +27,8 @@ rsync --recursive --verbose "$template_dir" .
 role_name="${PWD##*/*.}"
 role_full_name="$(basename "$PWD")"
 echo "Replace to old name with '$role_name' ($role_full_name)"
-find . -type f -exec sed -i "s/ypid.udev-usbmon/$role_full_name/g;s/udev[_-]usbmon/$role_name/g" {} \;
+find . -type f -exec sed --in-place "
+    s/ypid.udev-usbmon/$role_full_name/g;
+    s/udev[_-]usbmon/$role_name/g;
+    s/cryptsetup/$role_name/g;
+" {} \;

@@ -4,7 +4,9 @@
 
 - include: initramfs_message.yml
 
-# - include: ssh-hardening.yml
+- include: initramfs_message.yml
+
+- include: ssh-hardening.yml
 
 - include: cryptsetup_remote_unlock.yml
 

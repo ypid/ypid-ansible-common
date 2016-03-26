@@ -19,9 +19,9 @@
 
     - role: debops.apt_preferences
       tags: [ 'apt_preferences', 'role::apt_preferences' ]
-      apt_preferences_dependent_list:
-        - '{{ sshd__apt_preferences__dependent_list|d([]) }}'
-        - '{{ apt__apt_preferences__dependent_list|d([]) }}'
+      apt_preferences__dependent_list:
+        - '{{ sshd__apt_preferences__dependent_list }}'
+        - '{{ apt__apt_preferences__dependent_list }}'
 
     - role: debops.apt
       tags: [ 'role::apt' ]
@@ -32,16 +32,31 @@
     - role: debops.atd
       tags: [ 'role::atd' ]
 
-    # - role: debops.tcpwrappers
-    #   tags: [ 'role::tcpwrappers' ]
-    #   tcpwrappers_dependent_allow:
-    #     - '{{ sshd_tcpwrappers_dependent_allow }}'
+    - role: debops.tcpwrappers
+      tags: [ 'role::tcpwrappers' ]
+      tcpwrappers_dependent_allow:
+        - '{{ sshd__tcpwrappers__dependent_allow }}'
+
+    - role: debops.ntp
+      tags: [ 'role::ntp' ]
+
+    - role: debops.ifupdown
+      tags: [ 'role::ifupdown' ]
 
     - role: debops.console
       tags: [ 'role::console' ]
 
     - role: debops.rsyslog
       tags: [ 'role::rsyslog' ]
+
+    - role: debops.users
+      tags: [ 'role::users' ]
+
+    - role: debops.sshkeys
+      tags: [ 'role::sshkeys' ]
+
+    - role: debops.sshd
+      tags: [ 'role::sshd' ]
 
     - role: debops.directories
       tags: [ 'role::directories' ]
