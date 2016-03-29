@@ -30,7 +30,7 @@ git ls-files -z | xargs --null -I '{}' find '{}' -type f -regextype posix-extend
 	xargs --null sed --in-place --regexp-extended '
 		s/``(\/[^`]+[^`0-9])``/:file:`\1`/g;
 		s/``((:?whereami|libvirtd|apt-(:?cacher-ng|proxy)|nginx|etckeeper|rsnapshot|mysqld|collectd|ntpd|xinetd|ferm|ferment)\b[^`{]*?[^_]?)``/:program:`\1`/g;
-		s/``((:?firejail|xpra|occ|check_mk|docker|git|hg|bzr|darcs|apt|dpkg|rpm|pacman|pacman-g2|yum|dnf|zypper|rsync|ssh|ip|ip6?tables|netstat)\b[^`{]*?[^_]?)``/:command:`\1`/g;
+		s/``((:?firejail|xpra|occ|check_mk|docker|xmllint|git|hg|bzr|darcs|apt|dpkg|rpm|pacman|pacman-g2|yum|dnf|zypper|rsync|ssh|ip|ip6?tables|netstat)\b[^`{]*?[^_]?)``/:command:`\1`/g;
 		s/``([[:lower:]_-]+\([[:digit:]]\))``/:manpage:`\1`/g;
 		s/([[:lower:]_-]+\([[:digit:]]\))(\s)/:manpage:`\1`\2/g;
 	'

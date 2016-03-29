@@ -8,6 +8,9 @@
 
   roles:
 
+    - role: debops.apt_preferences
+      tags: [ 'role::packages', 'role::apt_preferences' ]
+
     - role: ypid.packages
       tags: [ 'role::packages' ]
 
