@@ -33,4 +33,8 @@ git ls-files -z | xargs --null -I '{}' find '{}' -type f -regextype posix-extend
 		s/``((:?fsck|mkfs|vgcreate|firejail|xpra|occ|check_mk|docker|xmllint|git|hg|bzr|darcs|apt|dpkg|rpm|pacman|pacman-g2|yum|dnf|zypper|rsync|ssh|ip|ip6?tables|netstat)\b[^`{]*?[^_]?)``/:command:`\1`/g;
 		s/``([[:lower:]_-]+\([[:digit:]]\))``/:manpage:`\1`/g;
 		s/([[:lower:]_-]+\([[:digit:]]\))(\s)/:manpage:`\1`\2/g;
+		s/\<e.g./e. g./g;
 	'
+
+## Use NARROW NO-BREAK SPACE: https://en.wikipedia.org/wiki/Thin_space
+## If you can’t handle Unicode, that’s your problem. Deal with it!
