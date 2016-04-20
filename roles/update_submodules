@@ -1,3 +1,4 @@
 #!/bin/sh
 
-git submodule foreach git checkout master && git pull --ff-only origin master
+git submodule foreach git checkout master
+git submodule foreach git pull --ff-only origin master

@@ -329,8 +329,8 @@
 	path = roles_ypid/ypid.initramfs_message
 	url = https://github.com/ypid/ansible-initramfs_message.git
 [submodule "roles_ypid/ypid.linuxmuster_net-client-customize"]
-	path = roles_ypid/ypid.linuxmuster_net-client-customize
-	url = https://github.com/ypid/ansible-linuxmuster_net-client-customize.git
+	path = roles_ypid/ypid.linuxmuster_net_client
+	url = https://github.com/ypid/ansible-linuxmuster_net_client.git
 [submodule "roles_ypid/ypid.linuxmuster_net-client-epoptes_via_postsync"]
 	path = roles_ypid/ypid.linuxmuster_net-client-epoptes_via_postsync
 	url = https://github.com/ypid/ansible-linuxmuster_net-client-epoptes_via_postsync.git
