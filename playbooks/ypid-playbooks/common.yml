@@ -14,8 +14,9 @@
     - role: ypid.packages
       tags: [ 'role::packages' ]
 
-    - role: ypid.rsyslog
-      tags: [ 'role::ypid.rsyslog' ]
+    ## Merge move to debops.rsyslog and debops.logrotate
+    # - role: ypid.rsyslog
+    #   tags: [ 'role::ypid.rsyslog' ]
 
     - role: ypid.kernel_module
       tags: [ 'role::kernel_module' ]

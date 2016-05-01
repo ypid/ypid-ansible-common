@@ -1,7 +1,7 @@
 ---
 
 - name: Configure smartd
-  hosts: 'debops_smartd'
+  hosts: 'debops_service_smartd'
   become: True
 
   roles:

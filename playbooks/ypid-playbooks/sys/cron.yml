@@ -1,7 +1,7 @@
 ---
 
 - name: Configure cron
-  hosts: 'debops_cron'
+  hosts: 'debops_service_cron'
   become: True
 
   roles:
