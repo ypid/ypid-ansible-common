@@ -412,3 +412,9 @@
 [submodule "roles/unverified_yet/debops.gitlab_runner"]
 	path = roles/unverified_yet/debops.gitlab_runner
 	url = https://github.com/debops/ansible-gitlab_runner.git
+[submodule "docs/debops"]
+	path = docs/debops
+	url = https://github.com/debops/docs.git
+[submodule "integration_testing/debops"]
+	path = integration_testing/debops
+	url = https://github.com/debops/test-suite.git
