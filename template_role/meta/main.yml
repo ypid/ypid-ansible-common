@@ -3,6 +3,7 @@
 dependencies: []
 
 galaxy_info:
+
   company: 'DebOps'
   author: 'Robin Schneider'
   description: 'Setup and manage encrypted filesystems.'

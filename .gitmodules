@@ -418,3 +418,9 @@
 [submodule "integration_testing/debops"]
 	path = integration_testing/debops
 	url = https://github.com/debops/test-suite.git
+[submodule "roles_ypid/ypid.file_attributes"]
+	path = roles_ypid/ypid.file_attributes
+	url = https://github.com/ypid/ansible-file_attributes.git
+[submodule "roles_ypid/ypid.dhclient"]
+	path = roles_ypid/ypid.dhclient
+	url = https://github.com/ypid/ansible-dhclient.git

@@ -1,5 +1,6 @@
 ---
 
 - include: vnstat.yml
+- include: dhclient.yml
 
 - include: whereami.yml

@@ -1,0 +1,10 @@
+---
+
+  - name: Set file attributes, configurable via Ansible’s inventory
+    hosts: 'ypid_service_file_attributes'
+    become: True
+
+    roles:
+
+      - role: ypid.file_attributes
+        tags: [ 'role::file_attributes' ]
