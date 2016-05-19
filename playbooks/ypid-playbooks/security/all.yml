@@ -2,7 +2,7 @@
 
 - include: sudo.yml
 
-- include: initramfs_message.yml
+- include: initramfs_settings.yml
 
 - include: initramfs_message.yml
 
