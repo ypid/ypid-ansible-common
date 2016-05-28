@@ -1,0 +1,10 @@
+---
+
+- name: Configure udev usbmon
+  hosts: 'ypid_udev_usbmon'
+  become: True
+
+  roles:
+
+    - role: ypid.udev-usbmon
+      tags: [ 'role::udev-usbmon' ]

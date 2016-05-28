@@ -10,9 +10,6 @@
       tags: [ 'role::core' ]
       become: True
 
-# .. Needed for apt_preferences.
-- include: facts_pre_tasks.yml
-
 - name: Common configuration for all hosts
   hosts: [ 'debops_all_hosts_minimum', '!debops_no_common' ]
   gather_facts: True

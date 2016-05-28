@@ -1,0 +1,10 @@
+---
+
+- name: Configure logcheck
+  hosts: 'ypid_logckech'
+  become: True
+
+  roles:
+
+    - role: tersmitten.logcheck
+      tags: [ 'role::logcheck' ]

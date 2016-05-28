@@ -1,0 +1,10 @@
+---
+
+- name: Configure cron
+  hosts: 'debops_service_cron'
+  become: True
+
+  roles:
+
+    - role: franklinkim.cron
+      tags: [ 'role::cron' ]

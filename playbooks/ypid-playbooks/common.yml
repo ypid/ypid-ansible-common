@@ -1,7 +1,5 @@
 ---
 
-- include: facts_pre_tasks.yml
-
 - name: Common configuration for all hosts
   hosts: 'all:!ypid_no_common'
   become: True

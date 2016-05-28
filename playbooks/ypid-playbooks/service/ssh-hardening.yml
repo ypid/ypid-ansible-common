@@ -1,0 +1,10 @@
+---
+
+- name: Configure ssh-hardening
+  hosts: 'ypid_ssh_hardening'
+  become: True
+
+  roles:
+
+    - role: hardening.ssh-hardening
+      tags: [ 'role::ssh-hardening' ]
