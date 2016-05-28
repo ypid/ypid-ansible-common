@@ -1,0 +1,11 @@
+---
+
+  - name: Configure the GNOME Display Manager.
+    hosts: [ 'ypid_service_gdm' ]
+    become: True
+
+    roles:
+
+      - role: ypid.gdm
+        tags: [ 'role::gdm' ]
+

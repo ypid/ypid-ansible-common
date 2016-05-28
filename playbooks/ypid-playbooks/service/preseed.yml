@@ -1,11 +1,11 @@
 ---
 
-  - name: Provide Debian Preseed configuration files over HTTP
-    hosts: [ 'debops_service_preseed_no_nginx' ]
-    become: True
+- name: Provide Debian Preseed configuration files over HTTP
+  hosts: [ 'debops_service_preseed_no_nginx' ]
+  become: True
 
-    roles:
+  roles:
 
-      - role: debops.preseed
-        tags: [ 'role::preseed' ]
+    - role: debops.preseed
+      tags: [ 'role::preseed' ]
 

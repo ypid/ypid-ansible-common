@@ -430,3 +430,12 @@
 [submodule "submodules/ansible-btrfs-subvolume"]
 	path = submodules/ansible-btrfs-subvolume
 	url = https://github.com/surpr1ze/ansible-btrfs-subvolume.git
+[submodule "roles_ypid/ypid.gdm"]
+	path = roles_ypid/ypid.gdm
+	url = https://github.com/ypid/ansible-gdm.git
+[submodule "roles_ypid/debops.contrib-btrfs"]
+	path = roles_ypid/debops.contrib-btrfs
+	url = https://github.com/debops-contrib/ansible-btrfs.git
+[submodule "roles/debops.apt_install"]
+	path = roles/debops.apt_install
+	url = https://github.com/debops/ansible-apt_install

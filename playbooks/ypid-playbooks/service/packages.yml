@@ -1,0 +1,15 @@
+---
+
+- include: ../facts_pre_tasks.yml
+
+- name: Common configuration for all hosts
+  hosts: [ 'all:!ypid_no_common', 'ypid_service_packages' ]
+  become: True
+
+  roles:
+
+    - role: debops.apt_preferences
+      tags: [ 'role::packages', 'role::apt_preferences' ]
+
+    - role: ypid.packages
+      tags: [ 'role::packages' ]
