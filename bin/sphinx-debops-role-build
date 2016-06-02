@@ -12,8 +12,8 @@ fi
 
 cp -f "${ROLESPEC_TEST_SUITE_LOCATION}/sphinx-docs-template"/* ./docs/
 test -e .gitignore || cp "${TEMPLATE_DIR}/.gitignore" .gitignore
-cd docs
+cd docs || exit
 test -d _static || mkdir -p _static
-test -f ../defaults/main.yml && yaml2rst ../defaults/main.yml defaults.rst
+test -f ../defaults/main.yml && yaml2rst ../defaults/main.yml defaults.rst --strip-regex '\s*(:?\[{3}|\]{3})\d?$'
 touch index.rst
 sphinx-build -n -W -b html -d _build/doctrees . _build/html

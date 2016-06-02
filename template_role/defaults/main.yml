@@ -1,15 +1,14 @@
 ---
 # .. vim: foldmarker=[[[,]]]:foldmethod=marker
-#
+
 # Default variables
 # =================
 
 # .. contents:: Sections
 #    :local:
-#
-# ---------------------
-#   Required packages [[[1
-# ---------------------
+
+# Required packages [[[1
+# -----------------
 
 # .. envvar:: udev_usbmon__base_packages
 #
