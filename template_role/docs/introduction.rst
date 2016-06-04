@@ -1,6 +1,10 @@
+.. include:: global.rst.inc
+
+
 Introduction
 ============
 
+The ``debops.contrib-cryptsetup`` role is meant for
 
 
 Installation

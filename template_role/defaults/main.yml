@@ -6,8 +6,11 @@
 
 # .. contents:: Sections
 #    :local:
+#
+# .. include:: global.rst.inc
+#;
 
-# Required packages [[[1
+# Required packages [[[
 # -----------------
 
 # .. envvar:: udev_usbmon__base_packages
@@ -16,3 +19,4 @@
 udev_usbmon__base_packages:
   - 'cryptsetup'
 
+# .. ]]]

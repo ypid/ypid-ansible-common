@@ -1,0 +1,10 @@
+---
+
+- name: Simple role to copy files from the Ansible controller to target systems
+  hosts: [ 'all:!ypid_no_common', 'ypid_service_copy' ]
+  become: True
+
+  roles:
+
+    - role: ypid.copy
+      tags: [ 'role::copy' ]

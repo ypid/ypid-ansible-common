@@ -387,7 +387,7 @@
 	url = https://github.com/ypid/ansible-sysctl.git
 [submodule "roles/picotrading.sudo"]
 	path = roles/picotrading.sudo
-	url = https://github.com/ypid/ansible-sudo-2.git
+	url = https://github.com/ypid/ansible-sudo
 [submodule "roles/franklinkim.cron"]
 	path = roles/franklinkim.cron
 	url = https://github.com/ypid/ansible-cron.git
@@ -439,3 +439,6 @@
 [submodule "roles/debops.apt_install"]
 	path = roles/debops.apt_install
 	url = https://github.com/debops/ansible-apt_install
+[submodule "docs/debops-contrib"]
+	path = docs/debops-contrib
+	url = https://github.com/debops-contrib/debops-contrib.git

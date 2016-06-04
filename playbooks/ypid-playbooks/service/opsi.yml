@@ -1,0 +1,10 @@
+---
+
+- name: 'Manage Opsi products using Ansible :)'
+  hosts: [ 'ypid_service_opsi' ]
+  become: True
+
+  roles:
+
+    - role: ypid.opsi
+      tags: [ 'role::opsi' ]

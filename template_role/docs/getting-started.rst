@@ -1,3 +1,6 @@
+.. include:: global.rst.inc
+
+
 Getting started
 ===============
 
@@ -13,22 +16,24 @@ To configure encrypted filesystems on host given in
 
 .. code:: ini
 
-    [debops_service_cryptsetup]
-    hostname
+   [debops_service_cryptsetup]
+   hostname
 
 Example playbook
 ----------------
 
-Here's an example playbook that can be used to manage cryptsetup::
+Here's an example playbook that can be used to run this role against all hosts
+in the ``debops_service_cryptsetup`` Ansible host group::
 
-    ---
-    - hosts: debops_service_cryptsetup
-      become: True
+   ---
+   - name: Configure encrypted filesystems
+     hosts: debops_service_cryptsetup
+     become: True
 
-      roles:
+     roles:
 
-        - role: ypid.udev-usbmon
-          tags: [ 'role::cryptsetup' ]
+       - role: ypid.udev-usbmon
+         tags: [ 'role::cryptsetup' ]
 
 Ansible tags
 ------------
@@ -45,4 +50,4 @@ Available role tags:
   tasks as well as role dependencies.
 
 ``role::cryptsetup:backup``
-  LUKS header backup related tasks.
+  Tasks related to LUKS header backup.
