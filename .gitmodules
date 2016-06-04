@@ -359,7 +359,7 @@
 	path = roles_ypid/debops.cryptsetup
 	url = https://github.com/debops/ansible-cryptsetup.git
 [submodule "roles_ypid/debops.contrib-foodsoft"]
-	path = roles_ypid/debops.contrib-foodsoft
+	path = roles_ypid/debops-contrib.foodsoft
 	url = https://github.com/debops-contrib/ansible-foodsoft.git
 [submodule "playbooks/debops-contrib-playbooks"]
 	path = playbooks/debops-contrib-playbooks
@@ -368,13 +368,13 @@
 	path = roles/debops.encfs
 	url = https://github.com/debops/ansible-encfs
 [submodule "roles_ypid/debops.contrib-etckeeper"]
-	path = roles_ypid/debops.contrib-etckeeper
+	path = roles_ypid/debops-contrib.etckeeper
 	url = https://github.com/debops-contrib/ansible-etckeeper.git
 [submodule "roles_ypid/debops.contrib-fuse"]
-	path = roles_ypid/debops.contrib-fuse
+	path = roles_ypid/debops-contrib.fuse
 	url = https://github.com/debops-contrib/ansible-fuse.git
 [submodule "roles_ypid/debops.contrib-apparmor"]
-	path = roles_ypid/debops.contrib-apparmor
+	path = roles_ypid/debops-contrib.apparmor
 	url = https://github.com/debops-contrib/ansible-apparmor.git
 [submodule "roles/deprecated/silpion.etckeeper"]
 	path = roles/deprecated/silpion.etckeeper
@@ -401,7 +401,7 @@
 	path = roles/debops.unattended_upgrades
 	url = https://github.com/debops/ansible-unattended_upgrades.git
 [submodule "roles_ypid/debops.contrib-snapshot_snapper"]
-	path = roles_ypid/debops.contrib-snapshot_snapper
+	path = roles_ypid/debops-contrib.snapshot_snapper
 	url = https://github.com/debops-contrib/ansible-snapshot_snapper.git
 [submodule "roles_ypid/debops.apt_cacher_ng"]
 	path = roles_ypid/debops.apt_cacher_ng
@@ -434,7 +434,7 @@
 	path = roles_ypid/ypid.gdm
 	url = https://github.com/ypid/ansible-gdm.git
 [submodule "roles_ypid/debops.contrib-btrfs"]
-	path = roles_ypid/debops.contrib-btrfs
+	path = roles_ypid/debops-contrib.btrfs
 	url = https://github.com/debops-contrib/ansible-btrfs.git
 [submodule "roles/debops.apt_install"]
 	path = roles/debops.apt_install

@@ -4,7 +4,7 @@
 Introduction
 ============
 
-The ``debops.contrib-cryptsetup`` role is meant for
+The ``debops-contrib.cryptsetup`` role is meant for
 
 
 Installation
