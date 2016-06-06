@@ -6,6 +6,8 @@
 - include: ../debops-playbooks/common.yml
 - include: debops_common_minimum.yml
 
+- include: ../debops-playbooks/service/pki.yml
+
 - include: ../debops-playbooks/sys/all.yml
 - include: ../debops-playbooks/env/all.yml
 - include: ../debops-playbooks/net/all.yml

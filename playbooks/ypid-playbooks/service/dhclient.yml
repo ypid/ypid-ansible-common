@@ -1,7 +1,7 @@
 ---
 
-- name: Configure dhclient.
-  hosts: 'ypid_service_dhclient'
+- name: Configure dhclient
+  hosts: [ 'ypid_service_dhclient' ]
   become: True
 
   roles:

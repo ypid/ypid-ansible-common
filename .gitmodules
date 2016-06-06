@@ -299,7 +299,7 @@
 	path = roles/unverified_yet/debops.roundcube
 	url = https://github.com/debops-contrib/ansible-roundcube.git
 [submodule "roles/debops.contrib-checkmk_agent"]
-	path = roles/debops.contrib-checkmk_agent
+	path = roles/debops-contrib.checkmk_agent
 	url = https://github.com/debops-contrib/ansible-checkmk_agent.git
 [submodule "roles/hardening.ssh-hardening"]
 	path = roles/hardening.ssh-hardening

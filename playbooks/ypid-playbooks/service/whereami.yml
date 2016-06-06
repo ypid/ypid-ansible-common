@@ -1,7 +1,7 @@
 ---
 
 - name: Configure whereami
-  hosts: 'ypid_service_whereami'
+  hosts: [ 'ypid_service_whereami' ]
   become: True
 
   roles:
