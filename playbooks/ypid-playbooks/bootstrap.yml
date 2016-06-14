@@ -30,7 +30,7 @@
 
 
 - name: Bootstrap host for Ansible management
-  hosts: [ 'debops_all_hosts', 'debops_all_hosts_minimum' ]
+  hosts: [ 'debops_all_hosts', 'debops_all_hosts_minimum', 'debops_service_bootstrap' ]
   gather_facts: False
 
   roles:

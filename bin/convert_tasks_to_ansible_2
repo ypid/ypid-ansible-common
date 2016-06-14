@@ -2,4 +2,4 @@
 ## @author Copyright (C) 2016 Robin Schneider <ypid@riseup.net>
 ## @license AGPLv3 <https://www.gnu.org/licenses/agpl-3.0.html>
 
-sed --regexp-extended --in-place "s/(with_[a-z_]*: )([^'[(].*)/\1'{{ \2 }}'/" ./*.yml
+sed --regexp-extended --in-place "s/(with_[a-z_]*: )([^'[(].*)/\1'{{ \2 }}'/;s/sudo_user:/become_user:/g;s/sudo:/become:/g;" ./*.yml
