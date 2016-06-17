@@ -1,0 +1,60 @@
+#!/bin/bash
+## @author Copyright (C) 2016 Robin Schneider <ypid@riseup.net>
+## @license AGPL-3.0 <https://www.gnu.org/licenses/agpl-3.0.html>
+
+set -e
+
+git_repos_update_done_file='/tmp/ansible_git_repos_update_done_file.list'
+touch "$git_repos_update_done_file"
+
+## Go into the directory where this script is stored.
+cd "$( dirname "${BASH_SOURCE[0]}" )" || exit
+
+## Get all files, independently what the current subdirectory is.
+cd "$(git rev-parse --show-toplevel)" || exit
+
+while read -r git_repo_location
+do
+	grep --quiet "$git_repo_location" "$git_repos_update_done_file" && continue
+
+	# git checkout master
+
+	pushd "$git_repo_location" 1>/dev/null
+
+	last_trusted_commit_hash="$(git log --pretty=format:'%H' --max-count 1 --author='Robin Schneider <ypid@riseup.net>' --show-signature | fgrep 'Good signature from "Robin Schneider (Automatic Signing Key) <ypid@riseup.net>" [ultimate]' --after-context 10 | tail --lines 1)"
+
+	echo "Git repository location: $git_repo_location"
+	echo "Last trusted commit hash: $last_trusted_commit_hash"
+
+	echo git diff --quiet "$last_trusted_commit_hash..FETCH_HEAD"
+	git diff --quiet "$last_trusted_commit_hash..FETCH_HEAD"
+
+	if git diff --quiet "$last_trusted_commit_hash..FETCH_HEAD"
+	then
+		# echo "no diff"
+		echo "$git_repo_location"  >> "$git_repos_update_done_file"
+		continue
+	fi
+
+	last_trusted_commit_hash="HEAD@{2}"
+
+	echo git diff --color-words "$last_trusted_commit_hash..FETCH_HEAD"
+	git diff --color-words "$last_trusted_commit_hash..FETCH_HEAD"
+
+	popd
+
+	# git pull --ff-only origin master
+
+	echo "$git_repo_location"  >> "$git_repos_update_done_file"
+done < <(git submodule --quiet foreach pwd | grep --invert-match --extended-regexp 'roles/(:?deprecated|unverified_yet)')
+# done < <(echo "$HOME/.ansible/ypid-ansible-common/roles/debops.apt_install")
+# done < <(echo "$HOME/.ansible/ypid-ansible-common/roles_ypid/debops-contrib.btrfs/")
+
+exit 1
+
+## Reset submodules of docs/debops/ to the versions of docs/debops/
+pushd docs/debops/ || exit 0
+git submodule update
+popd
+
+echo 'Review all changes and commit/sign them.'
