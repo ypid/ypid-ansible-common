@@ -3,12 +3,11 @@
 
 # Default variables
 # =================
-
+#
 # .. contents:: Sections
 #    :local:
 #
-# .. include:: global.rst.inc
-#;
+# .. include:: includes/all.rst
 
 # Required packages [[[
 # -----------------
