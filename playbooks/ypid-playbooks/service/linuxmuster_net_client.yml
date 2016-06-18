@@ -1,10 +1,1 @@
----
-
-  - name: Configure a linuxmuster.net client
-    hosts: [ 'ypid_service_linuxmuster_net_client' ]
-    become: True
-
-    roles:
-
-      - role: ypid.linuxmuster_net_client
-        tags: [ 'role::linuxmuster_net_client' ]
+../../../roles_ypid/ypid.linuxmuster_net_client/docs/playbooks/linuxmuster_net_client.yml

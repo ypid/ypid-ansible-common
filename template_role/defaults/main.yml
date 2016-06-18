@@ -9,13 +9,26 @@
 #
 # .. include:: includes/all.rst
 
-# Required packages [[[
-# -----------------
+# Packages and installation [[[
+# -------------------------
 
 # .. envvar:: udev_usbmon__base_packages
 #
 # List of base packages to install.
 udev_usbmon__base_packages:
   - 'cryptsetup'
+
+
+# .. envvar:: udev_usbmon__deploy_state
+#
+# What is the desired state which this role should achieve? Possible options:
+#
+# ``present``
+#   Default. Ensure that `changeme/FIXME** is installed and configured as requested.
+#
+# ``absent``
+#   Ensure that `changeme/FIXME** is uninstalled and it's configuration is removed.
+#
+udev_usbmon__deploy_state: 'present'
 
 # .. ]]]

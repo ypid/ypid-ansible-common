@@ -3,7 +3,7 @@ Introduction
 
 .. include:: includes/all.rst
 
-The ``debops-contrib.cryptsetup`` role is meant for
+The ``debops-contrib.cryptsetup`` role allows you to setup and mange
 
 
 Installation

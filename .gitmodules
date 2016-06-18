@@ -442,3 +442,12 @@
 [submodule "docs/debops-contrib"]
 	path = docs/debops-contrib
 	url = https://github.com/debops-contrib/debops-contrib.git
+[submodule "roles_ypid/debops-contrib.x2go_server"]
+	path = roles_ypid/debops-contrib.x2go_server
+	url = https://github.com/debops-contrib/ansible-x2go_server.git
+[submodule "roles_ypid/ypid.opsi"]
+	path = roles_ypid/ypid.opsi
+	url = https://github.com/ypid/ansible-opsi.git
+[submodule "roles_ypid/ypid.paedml_linux"]
+	path = roles_ypid/ypid.paedml_linux
+	url = https://github.com/ypid/ansible-paedml_linux.git

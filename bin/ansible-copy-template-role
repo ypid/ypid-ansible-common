@@ -32,3 +32,4 @@ find . -type f -exec sed --in-place "
     s/udev[_-]usbmon/$role_name/g;
     s/cryptsetup/$role_name/g;
 " {} \;
+mv docs/playbooks/cryptsetup.yml "docs/playbooks/${role_name}.yml"
