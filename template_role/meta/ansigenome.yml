@@ -1,9 +1,9 @@
 ---
 
 ansigenome_info:
+  galaxy_url: 'https://galaxy.ansible.com/ypid/cryptsetup'
   github_url: 'https://github.com/ypid/ansible-udev-usbmon'
   git_branch: 'master'
-  galaxy_id: ''
 
   travis: True
 

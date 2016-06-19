@@ -14,6 +14,7 @@
 .. _dm-crypt: https://en.wikipedia.org/wiki/Dm-crypt
 .. _cryptsetup: https://gitlab.com/cryptsetup/cryptsetup
 .. _X2go: http://wiki.x2go.org/
+.. _Wine: https://en.wikipedia.org/wiki/Wine_%28software%29
 
 .. _Opsi: https://en.wikipedia.org/wiki/Opsi
 .. _paedML Linux: https://www.lmz-bw.de/technische-unterstuetzung/kundenportal/linux.html

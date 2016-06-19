@@ -7,4 +7,4 @@
     install_recommends: False
     purge: True
   with_flattened: '{{ x2go_server__base_packages }}'
-  tags: [ 'role::x2go_server:install' ]
+  tags: [ 'role::x2go_server:pkts' ]

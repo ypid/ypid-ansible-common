@@ -49,5 +49,6 @@ Available role tags:
   Main role tag, should be used in the playbook to execute all of the role
   tasks as well as role dependencies.
 
-``role::cryptsetup:backup``
-  Tasks related to LUKS header backup.
+``role::cryptsetup:pkts``
+  Tasks related to system package management like installing, upgrading or
+  removing packages.

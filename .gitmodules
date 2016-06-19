@@ -451,3 +451,9 @@
 [submodule "roles_ypid/ypid.paedml_linux"]
 	path = roles_ypid/ypid.paedml_linux
 	url = https://github.com/ypid/ansible-paedml_linux.git
+[submodule "roles_ypid/ypid.wine"]
+	path = roles_ypid/ypid.wine
+	url = https://github.com/ypid/ansible-wine.git
+[submodule "integration_testing/ypid"]
+	path = integration_testing/ypid
+	url = https://github.com/ypid/test-suite.git

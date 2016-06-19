@@ -1,10 +1,1 @@
----
-
-  - name: Install and setup wine
-    hosts: 'ypid_service_wine'
-    become: True
-
-    roles:
-
-      - role: ypid.wine
-        tags: [ 'role::wine' ]
+../../../roles_ypid/ypid.wine/docs/playbooks/wine.yml
