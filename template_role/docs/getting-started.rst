@@ -11,11 +11,11 @@ Example inventory
 -----------------
 
 To setup and manage the X2go server, add the hosts to the
-``debops_service_cryptsetup`` Ansible inventory host group:
+``debops_service_ROLE_NAME`` Ansible inventory host group:
 
 .. code:: ini
 
-   [debops_service_cryptsetup]
+   [debops_service_ROLE_NAME]
    hostname
 
 Example playbook
@@ -23,11 +23,11 @@ Example playbook
 
 Here's an example playbook that can be used to setup and manage X2go server:
 
-.. literalinclude:: playbooks/cryptsetup.yml
+.. literalinclude:: playbooks/ROLE_NAME.yml
    :language: yaml
 
 This playbooks is shipped with this role under
-:file:`docs/playbooks/cryptsetup.yml` from which you can symlink it to your
+:file:`docs/playbooks/ROLE_NAME.yml` from which you can symlink it to your
 playbook directory.
 In case you use multiple `DebOps Contrib`_ roles, consider
 using the `DebOps Contrib playbooks`_.
@@ -45,10 +45,10 @@ configuration has not been changed.
 
 Available role tags:
 
-``role::cryptsetup``
+``role::ROLE_NAME``
   Main role tag, should be used in the playbook to execute all of the role
   tasks as well as role dependencies.
 
-``role::cryptsetup:pkts``
+``role::ROLE_NAME:pkts``
   Tasks related to system package management like installing, upgrading or
   removing packages.

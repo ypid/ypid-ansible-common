@@ -29,6 +29,5 @@ galaxy_info:
     - encryption
     - security
     - filesystem
-    - cryptsetup
     - dm-crypt
     - luks

@@ -1,6 +1,6 @@
-.. _ypid.udev-usbmon:
+.. _ROLE_OWNER.ROLE_NAME:
 
-Ansible role: ypid.udev-usbmon
+Ansible role: ROLE_OWNER.ROLE_NAME
 ===============================
 
 .. toctree::

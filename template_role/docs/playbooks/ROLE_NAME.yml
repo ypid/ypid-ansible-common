@@ -1,0 +1,10 @@
+---
+
+- name: Manage encrypted filesystems
+  hosts: [ 'debops_service_ROLE_NAME' ]
+  become: True
+
+  roles:
+
+    - role: debops.ROLE_NAME
+      tags: [ 'role::ROLE_NAME' ]

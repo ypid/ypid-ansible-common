@@ -3,7 +3,7 @@ Introduction
 
 .. include:: includes/all.rst
 
-The ``debops-contrib.cryptsetup`` role allows you to setup and mange
+The ``debops-contrib.ROLE_NAME`` role allows you to setup and mange
 
 
 Installation
@@ -11,7 +11,7 @@ Installation
 
 This role requires at least Ansible ``v1.9.0``. To install it, run::
 
-    ansible-galaxy install ypid.udev-usbmon
+    ansible-galaxy install ROLE_OWNER.ROLE_NAME
 
 ..
  Local Variables:
