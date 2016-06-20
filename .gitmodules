@@ -457,3 +457,9 @@
 [submodule "integration_testing/ypid"]
 	path = integration_testing/ypid
 	url = https://github.com/ypid/test-suite.git
+[submodule "READMEs/ansigenome"]
+	path = template_READMEs/ansigenome
+	url = https://github.com/nickjj/ansigenome.git
+[submodule "docs/debops-policy"]
+	path = docs/debops-policy
+	url = https://github.com/debops/debops-policy.git

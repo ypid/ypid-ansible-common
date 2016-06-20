@@ -1,8 +1,7 @@
 #!/bin/bash
 
-# Export ROLESPEC_TEST_SUITE_LOCATION as environment variables.
-
-TEMPLATE_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )/../template_role/" && pwd )"
+ROLE_TEMPLATE_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )/../template_role/" && pwd )"
+SPHINX_DOCS_TEMPLATE_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )/../integration_testing/ypid/sphinx-docs-template/" && pwd )"
 
 if [ ! -d "docs" ]
 then
@@ -10,8 +9,20 @@ then
     exit 1
 fi
 
-cp -f "${ROLESPEC_TEST_SUITE_LOCATION}/sphinx-docs-template"/* ./docs/
-test -e .gitignore || cp "${TEMPLATE_DIR}/.gitignore" .gitignore
+if [ ! -d "$ROLE_TEMPLATE_DIR" ]
+then
+    echo "Role template directory does not exist."
+    exit 1
+fi
+
+if [ ! -d "$SPHINX_DOCS_TEMPLATE_DIR" ]
+then
+    echo "Sphinx docs template directory does not exist."
+    exit 1
+fi
+
+cp -f "${SPHINX_DOCS_TEMPLATE_DIR}"/* ./docs/
+test -e .gitignore || cp "${ROLE_TEMPLATE_DIR}/.gitignore" .gitignore
 cd docs || exit
 test -d _static || mkdir -p _static
 test -f ../defaults/main.yml && yaml2rst ../defaults/main.yml defaults.rst --strip-regex '\s*(:?\[{3}|\]{3})\d?$'

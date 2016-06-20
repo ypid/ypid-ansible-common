@@ -1,0 +1,34 @@
+#!/bin/bash
+## @author Copyright (C) 2016 Robin Schneider <ypid@riseup.net>
+## @license AGPL-3.0 <https://www.gnu.org/licenses/agpl-3.0.html>
+
+## Wrapper around Ansigenome which enables the correct template for Ansigenome
+## based on the role owner and then runs Ansigenome to (re)generate the README.md.
+## Run from within the role repository.
+
+README_TEMPLATE_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )/../template_READMEs/" && pwd )"
+
+if [ ! -d "$README_TEMPLATE_DIR" ]
+then
+    echo "README template directory does not exist."
+    exit 1
+fi
+
+role_full_name="$(basename "$PWD")"
+# role_name="${role_full_name#*.}"
+role_owner="${role_full_name%.*}"
+
+ansigenome_config_file_name="$(cd "$README_TEMPLATE_DIR" && find . -maxdepth 1 -name "${role_owner}-ansigenome.conf" -type f | head --lines 1)"
+
+ansigenome_config_file_path="$README_TEMPLATE_DIR/$ansigenome_config_file_name"
+if [ -n "$ansigenome_config_file_name" ]
+then
+    echo "Using Ansigenome configuration: $ansigenome_config_file_path"
+else
+    echo "Could not find Ansigenome configuration for the role owner '$role_owner'."
+    echo "Exiting ..."
+    exit 1
+fi
+
+ln -sf "$ansigenome_config_file_path" "$HOME/.ansigenome.conf"
+ansigenome gendoc --format=md --limit "$role_full_name" ..
