@@ -460,3 +460,6 @@
 [submodule "docs/debops-policy"]
 	path = docs/debops-policy
 	url = https://github.com/debops/debops-policy.git
+[submodule "roles/debops.resources"]
+	path = roles/debops.resources
+	url = https://github.com/debops/ansible-resources.git

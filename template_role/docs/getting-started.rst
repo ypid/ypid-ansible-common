@@ -10,7 +10,7 @@ Getting started
 Example inventory
 -----------------
 
-To setup and manage the X2go server, add the hosts to the
+To `changeme/FIXME**, add the hosts to the
 ``debops_service_ROLE_NAME`` Ansible inventory host group:
 
 .. code:: ini
@@ -21,7 +21,7 @@ To setup and manage the X2go server, add the hosts to the
 Example playbook
 ----------------
 
-Here's an example playbook that can be used to setup and manage X2go server:
+Here's an example playbook that can be used to `changeme/FIXME**:
 
 .. literalinclude:: playbooks/ROLE_NAME.yml
    :language: yaml

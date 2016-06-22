@@ -28,3 +28,9 @@ test -d _static || mkdir -p _static
 test -f ../defaults/main.yml && yaml2rst ../defaults/main.yml defaults.rst --strip-regex '\s*(:?\[{3}|\]{3})\d?$'
 touch index.rst
 sphinx-build -n -W -b html -d _build/doctrees . _build/html
+
+if [[ $? != 0 ]] && [[ -d "includes" ]]
+then
+    cp ~/.ansible/ypid-ansible-common/template_role/docs/includes/global.rst includes/global.rst
+    sphinx-build -n -W -b html -d _build/doctrees . _build/html
+fi
