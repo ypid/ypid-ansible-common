@@ -451,9 +451,6 @@
 [submodule "roles_ypid/ypid.wine"]
 	path = roles_ypid/ypid.wine
 	url = https://github.com/ypid/ansible-wine.git
-[submodule "integration_testing/ypid"]
-	path = integration_testing/ypid
-	url = https://github.com/ypid/test-suite.git
 [submodule "READMEs/ansigenome"]
 	path = template_READMEs/ansigenome
 	url = https://github.com/nickjj/ansigenome.git

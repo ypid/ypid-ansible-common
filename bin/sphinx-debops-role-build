@@ -29,8 +29,13 @@ test -f ../defaults/main.yml && yaml2rst ../defaults/main.yml defaults.rst --str
 touch index.rst
 sphinx-build -n -W -b html -d _build/doctrees . _build/html
 
-if [[ $? != 0 ]] && [[ -d "includes" ]]
+if [[ $? != 0 ]]
 then
-    cp ~/.ansible/ypid-ansible-common/template_role/docs/includes/global.rst includes/global.rst
+    if [[ -d "includes" ]]
+    then
+        cp ~/.ansible/ypid-ansible-common/template_role/docs/includes/global.rst includes/global.rst
+    else
+        cp -r ~/.ansible/ypid-ansible-common/template_role/docs/includes .
+    fi
     sphinx-build -n -W -b html -d _build/doctrees . _build/html
 fi
