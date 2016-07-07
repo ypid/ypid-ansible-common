@@ -35,7 +35,7 @@
 	path = roles/debops.debug
 	url = https://github.com/debops/ansible-debug.git
 [submodule "debops.directories"]
-	path = roles/debops.directories
+	path = roles/deprecated/debops.directories
 	url = https://github.com/debops/ansible-directories.git
 [submodule "debops.dnsmasq"]
 	path = roles/debops.dnsmasq

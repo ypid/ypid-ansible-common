@@ -72,5 +72,5 @@
     - role: debops.sshd
       tags: [ 'role::sshd' ]
 
-    - role: debops.directories
-      tags: [ 'role::directories' ]
+    - role: debops.resources
+      tags: [ 'role::resources' ]
