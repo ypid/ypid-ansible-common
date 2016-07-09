@@ -21,7 +21,7 @@ To `changeme/FIXME**, add the hosts to the
 Example playbook
 ----------------
 
-Here's an example playbook that can be used to `changeme/FIXME**:
+Here's an example playbook that can be used to `changeme/FIXME** on a set of hosts:
 
 .. literalinclude:: playbooks/ROLE_NAME.yml
    :language: yaml
@@ -49,6 +49,6 @@ Available role tags:
   Main role tag, should be used in the playbook to execute all of the role
   tasks as well as role dependencies.
 
-``role::ROLE_NAME:pkts``
+``role::ROLE_NAME:pkg``
   Tasks related to system package management like installing, upgrading or
   removing packages.
