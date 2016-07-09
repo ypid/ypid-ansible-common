@@ -4,6 +4,10 @@
 
 # Convert repetitively used programs and commands to Sphinx inline syntax.
 # http://www.sphinx-doc.org/en/stable/markup/inline.html
+#
+# Note you should review the changes made by this script and try to build the
+# documentation as this script can not handle all cases. You might need to
+# revert some of the changes manually.
 
 # Don’t use:
 # * :option:`--tags`: https://github.com/debops/ansible-atd/pull/3#issuecomment-152024188
@@ -22,17 +26,27 @@
 # * :rfc:`number#anchor`
 # * :manpage:`ls(1)`
 # * :regexp:`^WARN.*$`
+# * :envvar:`example__variable`: See https://github.com/debops/docs/issues/153
 
+
+## For testing:
+# git ls-files -z | xargs --null -I '{}' find '{}' -type f -regextype posix-extended -regex '(:?defaults/.*\.yml|.*\.rst)$' -print0 | \
+#     xargs --null sed --in-place --regexp-extended '
+#     '
 
 # echo '``apt-cache.{{ ansible_domain }}``. This subdomain should be configured in the' | \
 	# sed --regexp-extended '
+
+# exit 0
+
 git ls-files -z | xargs --null -I '{}' find '{}' -type f -regextype posix-extended -regex '(:?defaults/.*\.yml|.*\.rst)$' -print0 | \
 	xargs --null sed --in-place --regexp-extended '
 		s/``(\/[^`]+[^`0-9])``/:file:`\1`/g;
-		s/``([^`]+\w+\.(:?yml|yaml|rst))``/:file:`\1`/g;
+		s/``([^`]+\w+\.(:?yml|yaml|rst|j2))``/:file:`\1`/g;
 		s/``((:?whereami|fail2ban|libvirtd|pki-realm|pki-authority|acme-tiny|apt-(:?cacher-ng|proxy)|nginx|etckeeper|irqbalance|rsnapshot|mysqld|collectd|ntpd|xinetd|opsi-product-updater|automysqlbackup|cron|dhclient|ferm|ferment)\b[^`{.]*?[^_]?)``/:program:`\1`/g;
 		s/``((:?hostname|sudo|which|fsck|mysql|mkfs|openssl|chattr|lsattr|gnutls|smbclient|update-ca-certificates|ansible(:?-vault|-playbook)?|debops-padlock|vgcreate|firejail|xpra|yaml2rst|occ|check_mk|docker|setxkbmap|setxkbmap -query|xmllint|git|hg|bzr|darcs|apt|dpkg|rpm|pacman|pacman-g2|yum|dnf|zypper|rsync|ssh|ip|ip(6|\(6\))?tables|netstat)\b[^ `.{]*?[^_]?)``/:command:`\1`/g;
 		s/``([[:lower:]_-]+\([[:digit:]]\))``/:manpage:`\1`/g;
+		s/``([[:alnum:]_]+__[^`]*)``/:envvar:`\1`/g;
 		s/\<e\.g\./e. g./g;
 	'
 
