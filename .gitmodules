@@ -460,12 +460,12 @@
 [submodule "roles/debops.resources"]
 	path = roles/debops.resources
 	url = https://github.com/debops/ansible-resources.git
-[submodule "integration_testing/ypid"]
-	path = integration_testing/ypid
-	url = https://github.com/ypid/test-suite-ypid.git
 [submodule "roles/debops-contrib.checkmk_server"]
 	path = roles/unverified_yet/debops-contrib.checkmk_server
 	url = https://github.com/debops-contrib/ansible-checkmk_server.git
 [submodule "submodules/debops-keyring"]
 	path = submodules/debops-keyring
 	url = https://github.com/debops/debops-keyring.git
+[submodule "integration_testing/ypid"]
+	path = integration_testing/ypid
+	url = https://github.com/ypid/test-suite-ypid
