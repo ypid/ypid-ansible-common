@@ -62,7 +62,7 @@
 .. _debops.owncloud: https://github.com/debops/ansible-owncloud
 .. _debops.grub: https://github.com/debops/ansible-grub
 
-.. _`DebOps Documentation`: http://docs.debops.org/en/latest/
+.. _`DebOps documentation`: http://docs.debops.org/en/latest/
 .. _`DebOps Contrib`: https://github.com/debops-contrib/debops-contrib
 .. _`DebOps Contrib playbooks`: https://github.com/debops-contrib/debops-contrib-playbooks
 
