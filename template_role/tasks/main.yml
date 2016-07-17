@@ -3,7 +3,7 @@
 - name: Ensure specified packages are in there desired state
   apt:
     name: '{{ item }}'
-    state: '{{ "latest" if (ROLE_NAME__deploy_state == "present") else "absent" }}'
+    state: '{{ "present" if (ROLE_NAME__deploy_state == "present") else "absent" }}'
     install_recommends: False
     purge: True
   with_flattened: '{{ ROLE_NAME__base_packages }}'
