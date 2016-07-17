@@ -26,7 +26,7 @@ cp -f "${SPHINX_DOCS_TEMPLATE_DIR}"/* ./docs/
 test -e .gitignore || cp "${ROLE_TEMPLATE_DIR}/.gitignore" .gitignore
 cd docs || exit
 test -d _static || mkdir -p _static
-test -f ../defaults/main.yml && yaml2rst ../defaults/main.yml defaults.rst --strip-regex '\s*(:?\[{3}|\]{3})\d?$'
+test -f ../defaults/main.yml && yaml2rst ../defaults/main.yml defaults.rst --strip-regex '\s*(:?\[{3}|\]{3})\d?$' --yaml-strip-regex '^\s{66,67}#\s\]{3}\d?$'
 # test -f ../defaults/main.yml && yaml2rst ../defaults/main.yml defaults.rst --strip-regex '#?\s*(:?\[{3}|\]{3})\d?$'
 touch index.rst
 test -d "includes" && cp "$GLOBAL_RST_INCLUDE_FILE" includes/global.rst

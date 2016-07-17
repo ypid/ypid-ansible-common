@@ -16,7 +16,8 @@ fi
 
 role_full_name="$(basename "$PWD")"
 # role_name="${role_full_name#*.}"
-role_owner="${role_full_name%.*}"
+# shellcheck disable=SC2001
+role_owner="$(echo "$role_full_name" | sed 's/[.-].\+$//g;')"
 
 ansigenome_config_file_name="$(cd "$README_TEMPLATE_DIR" && find . -maxdepth 1 -name "${role_owner}-ansigenome.conf" -type f | head --lines 1)"
 

@@ -1,12 +1,14 @@
 Changelog
 =========
 
+.. include:: includes/all.rst
+
 **ROLE_OWNER.ROLE_NAME**
 
 This project adheres to `Semantic Versioning <http://semver.org/spec/v2.0.0.html>`_
 and `human-readable changelog <http://keepachangelog.com/>`_.
 
-The current role maintainer is ypid.
+The current role maintainer is ypid_.
 
 
 `ROLE_OWNER.ROLE_NAME master`_ - unreleased
@@ -21,4 +23,3 @@ Added
 ~~~~~
 
 - Initial release. [ypid]
-

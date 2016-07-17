@@ -23,7 +23,7 @@ then
     exit 1
 fi
 
-rsync --recursive --verbose "$TEMPLATE_DIR" .
+rsync --recursive --verbose "$TEMPLATE_DIR/" .
 role_full_name="$(basename "$PWD")"
 role_name="${role_full_name#*.}"
 role_owner="${role_full_name%.*}"
@@ -33,8 +33,3 @@ find . -type f -exec sed --in-place "
     s/ROLE_NAME/$role_name/g;
 " {} \;
 mv docs/playbooks/ROLE_NAME.yml "docs/playbooks/${role_name}.yml"
-
-# find . -type f -exec sed --in-place "
-#     s/ypid.udev-usbmon/ROLE_OWNER.ROLE_NAME/g;
-#     s/x2go_server/ROLE_NAME/g;
-# " {} \;

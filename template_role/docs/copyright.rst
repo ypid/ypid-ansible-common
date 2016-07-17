@@ -2,4 +2,3 @@ Copyright
 =========
 
 .. literalinclude:: ../COPYRIGHT
-
