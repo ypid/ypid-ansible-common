@@ -48,6 +48,7 @@ git ls-files -z | xargs --null -I '{}' find '{}' -type f -regextype posix-extend
 		s/``([[:lower:]_-]+\([[:digit:]]\))``/:manpage:`\1`/g;
 		s/``([[:alnum:]_]+__[^`]*)``/:envvar:`\1`/g;
 		s/``(debops\.[[:alnum:]_-]+)``/\1_/g;
+		s/([\[ ]drybjed|ypid)([^_])/\1_\2/g;
 		s/\<e\.g\./e. g./g;
 	'
 
