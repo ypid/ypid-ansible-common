@@ -2,7 +2,7 @@
 
 GLOBAL_RST_INCLUDE_FILE="$( cd "$( dirname "${BASH_SOURCE[0]}" )/../docs/debops/docs/includes" && pwd )/global.rst"
 ROLE_TEMPLATE_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )/../template_role/" && pwd )"
-SPHINX_DOCS_TEMPLATE_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )/../integration_testing/ypid/sphinx-docs-template/" && pwd )"
+SPHINX_DOCS_TEMPLATE_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )/../integration_testing/debops/sphinx-docs-template/" && pwd )"
 
 if [ ! -d "docs" ]
 then
@@ -22,8 +22,16 @@ then
     exit 1
 fi
 
-cp -f "${SPHINX_DOCS_TEMPLATE_DIR}"/* ./docs/
+cp -rf "${SPHINX_DOCS_TEMPLATE_DIR}"/* ./docs/
 test -e .gitignore || cp "${ROLE_TEMPLATE_DIR}/.gitignore" .gitignore
+while read -r line
+do
+    ## Avoid Ansible startup time when possible.
+    if ! grep -qF "$line" .gitignore
+    then
+        ansible localhost -m lineinfile -a "dest=\".gitignore\" line=\"$line\" insertafter=\"global.rst$\""
+    fi
+done < "${ROLE_TEMPLATE_DIR}/.gitignore"
 cd docs || exit
 test -d _static || mkdir -p _static
 test -f ../defaults/main.yml && yaml2rst ../defaults/main.yml defaults.rst --strip-regex '\s*(:?\[{3}|\]{3})\d?$' --yaml-strip-regex '^\s{66,67}#\s\]{3}\d?$'
