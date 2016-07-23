@@ -484,3 +484,6 @@
 [submodule "submodules/debops-api"]
 	path = submodules/debops-api
 	url = https://github.com/debops/debops-api.git
+[submodule "roles/unverified_yet/debops.hashicorp"]
+	path = roles/unverified_yet/debops.hashicorp
+	url = https://github.com/debops/ansible-hashicorp.git
