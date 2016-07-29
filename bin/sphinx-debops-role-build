@@ -32,10 +32,23 @@ do
         ansible localhost -m lineinfile -a "dest=\".gitignore\" line=\"$line\" insertafter=\"global.rst$\""
     fi
 done < "${ROLE_TEMPLATE_DIR}/.gitignore"
+
+for file in CHANGES.rst
+do
+    ## Avoid Ansible startup time when possible.
+    if ! grep -qF '.. include:: includes/all.rst' "$file"
+    then
+        ansible localhost -m lineinfile -a "dest=\"$file\" line=\"\n.. include:: includes/all.rst\" insertafter=\"^==+$\""
+    fi
+done
+
 cd docs || exit
 test -d _static || mkdir -p _static
 test -f ../defaults/main.yml && yaml2rst ../defaults/main.yml defaults.rst --strip-regex '\s*(:?\[{3}|\]{3})\d?$' --yaml-strip-regex '^\s{66,67}#\s\]{3}\d?$'
 # test -f ../defaults/main.yml && yaml2rst ../defaults/main.yml defaults.rst --strip-regex '#?\s*(:?\[{3}|\]{3})\d?$'
 touch index.rst
+
+test -d "includes" || cp -r "$ROLE_TEMPLATE_DIR/docs/includes" includes
 test -d "includes" && cp "$GLOBAL_RST_INCLUDE_FILE" includes/global.rst
+
 sphinx-build -n -W -b html -d _build/doctrees . _build/html

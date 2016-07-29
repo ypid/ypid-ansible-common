@@ -10,6 +10,12 @@ this for the following reasons:
 * To catch unintentionally/internally introduced flaws
 * To ensure that the component does what it says
 
+Note that this does not include the CM engine (Ansible).
+Ansible core is trusted.
+Components in
+[ansible-modules-extras](https://github.com/ansible/ansible-modules-extras)
+might receive a review when it feels appropriate.
+
 ## How it works
 
 This repository mainly consists of git submodules pointing to the last version
