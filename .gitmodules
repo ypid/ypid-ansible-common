@@ -113,7 +113,7 @@
 	path = roles/debops.sshd
 	url = https://github.com/debops/ansible-sshd.git
 [submodule "debops.sshkeys"]
-	path = roles/debops.sshkeys
+	path = roles/deprecated/debops.sshkeys
 	url = https://github.com/debops/ansible-sshkeys.git
 [submodule "debops.tcpwrappers"]
 	path = roles/debops.tcpwrappers
@@ -490,3 +490,12 @@
 [submodule "ansible/engine"]
 	path = ansible/engine
 	url = https://github.com/ansible/ansible.git
+[submodule "roles/debops.nullmailer"]
+	path = roles/debops.nullmailer
+	url = https://github.com/debops/ansible-nullmailer.git
+[submodule "roles/debops.environment"]
+	path = roles/debops.environment
+	url = https://github.com/debops/ansible-environment.git
+[submodule "roles/debops.authorized_keys"]
+	path = roles/debops.authorized_keys
+	url = https://github.com/debops/ansible-authorized_keys.git

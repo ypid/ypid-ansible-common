@@ -1,8 +1,6 @@
 ---
 
-- include: service/copy.yml
-
-- name: 'Manage paedML Linux using Ansible'
+- name: Manage paedML Linux using Ansible
   hosts: [ 'ypid_service_paedml_linux' ]
   become: True
 

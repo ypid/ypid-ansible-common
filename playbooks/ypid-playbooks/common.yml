@@ -24,6 +24,3 @@
 
     - role: ypid.divert
       tags: [ 'role::divert' ]
-
-    - role: ypid.copy
-      tags: [ 'role::copy' ]
