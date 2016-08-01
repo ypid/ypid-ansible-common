@@ -476,7 +476,7 @@
 	path = docs/debops.github.io
 	url = https://github.com/debops/debops.github.io
 [submodule "roles/unverified_yet/debops.php"]
-	path = roles/unverified_yet/debops.php
+	path = roles/debops.php
 	url = https://github.com/debops/ansible-php.git
 [submodule "roles_ypid/debops.debops_api"]
 	path = roles_ypid/debops.debops_api
