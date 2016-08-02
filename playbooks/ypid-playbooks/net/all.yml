@@ -1,6 +1,7 @@
 ---
+# .. vim: foldmarker=[[[,]]]:foldmethod=marker
+
 
 - include: vnstat.yml
 - include: dhclient.yml
-
 - include: whereami.yml
