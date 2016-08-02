@@ -21,7 +21,7 @@ might receive a review when it feels appropriate.
 This repository mainly consists of git submodules pointing to the last version
 of git repositories which I have verified and tested.
 
-All commits of this repository are signed with my PGP automatic signing key
+All commits of this repository are signed with my OpenPGP automatic signing key
 which includes/signs all contents of the particular version and the git history
 of all submodules.
 

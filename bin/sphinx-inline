@@ -55,7 +55,8 @@ git ls-files -z | xargs --null -I '{}' find '{}' -type f -regextype posix-extend
 		s/``([[:lower:]_-]+\([[:digit:]]\))``/:manpage:`\1`/g;
 		s/``([[:alnum:]_]+__[^*?` ]+?[^*?` _])``/:envvar:`\1`/g;
 		s/``(debops\.[[:alnum:]_-]+)``/\1_/g;
-		s/([\[ ]drybjed|ypid|ganto|htgoebel|nickjj|scibi|do3cc|AnBuKu|thiagotalma)([^_])/\1_\2/g;
+		s/``(ypid\.[[:alnum:]_-]+)``/\1_/g;
+		s/([\[ ]drybjed|ypid|ganto|htgoebel|nickjj|scibi|do3cc|AnBuKu|thiagotalma)([^\/@_.-])/\1_\2/g;
 		s/\*\*(drybjed|ypid|ganto|htgoebel|nickjj|scibi|do3cc|AnBuKu|thiagotalma)\*\*/\1_/g;
 		s/([^`])(debops tools)([^`])/\1`DebOps Tools`_\3/gi;
 		s/The current role maintainer is/The current role maintainer_ is/gi;

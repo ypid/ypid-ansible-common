@@ -499,3 +499,6 @@
 [submodule "roles/debops.authorized_keys"]
 	path = roles/debops.authorized_keys
 	url = https://github.com/debops/ansible-authorized_keys.git
+[submodule "integration_testing/rolespec"]
+	path = integration_testing/rolespec
+	url = https://github.com/nickjj/rolespec
