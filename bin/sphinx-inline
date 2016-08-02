@@ -13,7 +13,9 @@
 # * :option:`--tags`: https://github.com/debops/ansible-atd/pull/3#issuecomment-152024188
 #
 # Use:
-# * :file:`/etc/issue`
+# * :file:`/etc/issue` Can also be a AppArmor wildcard pattern.
+#   Check: http://wiki.apparmor.net/index.php/QuickProfileLanguage#File_Globbing
+#	Some regex dialect is undesired for readability reasons.
 # * :command:`rm`: The name of an OS-level command, such as `rm`. Used when
 #   referring to a program primely used in the shell (CLI interface) by sysadmins
 #   and/or users.
