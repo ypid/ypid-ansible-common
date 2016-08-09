@@ -56,9 +56,9 @@ git ls-files -z | xargs --null -I '{}' find '{}' -type f -regextype posix-extend
 		s/``([[:alnum:]_]+__[^*?` ]+?[^*?` _])``/:envvar:`\1`/g;
 		s/``(debops\.[[:alnum:]_-]+)``/\1_/g;
 		s/``(ypid\.[[:alnum:]_-]+)``/\1_/g;
-		s/([\[ ]drybjed|ypid|ganto|htgoebel|nickjj|scibi|do3cc|AnBuKu|thiagotalma)([^\/@_.-])/\1_\2/g;
+		s/([^`_](:?drybjed|ypid|ganto|htgoebel|nickjj|scibi|do3cc|AnBuKu|thiagotalma))([^\/@_.-])/\1_\3/g;
 		s/\*\*(drybjed|ypid|ganto|htgoebel|nickjj|scibi|do3cc|AnBuKu|thiagotalma)\*\*/\1_/g;
-		s/([^`])(debops tools)([^`])/\1`DebOps Tools`_\3/gi;
+		s/([^`])(debops tools)([^`/ ])/\1`DebOps Tools`_\3/gi;
 		s/The current role maintainer is/The current role maintainer_ is/gi;
 		s/\<e\.g\./e. g./g;
 		s#(`Semantic Versioning <http://semver\.org/spec/v2\.0\.0\.html>`_)\b#\1_#;
@@ -86,7 +86,13 @@ git ls-files -z | xargs --null -I '{}' find '{}' -type f -regextype posix-extend
 ## Revert other changes.
 git ls-files -z | xargs --null -I '{}' find '{}' -type f -regextype posix-extended -regex '(:?defaults/.*\.yml|.*\.rst)$' -print0 | \
 	xargs --null sed --in-place --regexp-extended '
-			s/:envvar:`((:?owncloud__enable_occ_shortcut|php__pool_default|php__version))`/``\1``/g;
+			s/:envvar:`((:?owncloud__enable_occ_shortcut|php__pool_default|php__version|inventory__host_environment|inventory__group_environment|inventory__environment))`/``\1``/g;
+		'
+
+## Revert changes only for debops-playbooks
+git ls-files -z | xargs --null -I '{}' find '{}' -type f -regextype posix-extended -regex '(:?defaults/.*\.yml|.*\.rst)$' -print0 | \
+	xargs --null sed --in-place --regexp-extended '
+			s/:envvar:`((:?apt_preferences__preset_list))`/``\1``/g;
 		'
 
 echo "Done. Be sure to review the changes."
