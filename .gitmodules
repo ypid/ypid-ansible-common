@@ -490,6 +490,7 @@
 [submodule "ansible/engine"]
 	path = ansible/engine
 	url = https://github.com/ansible/ansible.git
+	ignore = untracked
 [submodule "roles/debops.nullmailer"]
 	path = roles/debops.nullmailer
 	url = https://github.com/debops/ansible-nullmailer.git
@@ -502,3 +503,6 @@
 [submodule "integration_testing/rolespec"]
 	path = integration_testing/rolespec
 	url = https://github.com/nickjj/rolespec
+[submodule "roles/debops.debops_fact"]
+	path = roles/debops.debops_fact
+	url = https://github.com/debops/ansible-debops_fact.git

@@ -22,8 +22,9 @@ This repository mainly consists of git submodules pointing to the last version
 of git repositories which I have verified and tested.
 
 All commits of this repository are signed with my OpenPGP automatic signing key
-which includes/signs all contents of the particular version and the git history
-of all submodules.
+implicitly signs all content and the git history (also applies to git submodules).
+
+I use a [shell script called "update_submodules"](https://github.com/ypid/ypid-ansible-common/blob/master/update_submodules) to pull the latest changes from git remotes, show me the diffs and then update my master branch of the repository if everything looks good.
 
 ## Refs
 
