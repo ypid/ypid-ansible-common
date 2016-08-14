@@ -7,7 +7,8 @@
 #
 # Note you should review the changes made by this script and try to build the
 # documentation as this script can not handle all cases. You might need to
-# revert some of the changes manually.
+# revert some of the changes manually or preferable write patterns to revert
+# the changes for you :)
 
 # Don’t use:
 # * :option:`--tags`: https://github.com/debops/ansible-atd/pull/3#issuecomment-152024188
@@ -15,7 +16,7 @@
 # Use:
 # * :file:`/etc/issue` Can also be a AppArmor wildcard pattern.
 #   Check: http://wiki.apparmor.net/index.php/QuickProfileLanguage#File_Globbing
-#	Some regex dialect is undesired for readability reasons.
+#	A regex dialect is undesired for readability reasons.
 # * :command:`rm`: The name of an OS-level command, such as `rm`. Used when
 #   referring to a program primely used in the shell (CLI interface) by sysadmins
 #   and/or users.
@@ -71,7 +72,7 @@ git ls-files -z | xargs --null -I '{}' find '{}' -type f -regextype posix-extend
 # LICENSE should be done in a global replace to decease commit review noise.
 git ls-files -z | xargs --null -I '{}' find '{}' -type f -regextype posix-extended -not -regex '(:?LICENSE)$' -print0 | \
 	xargs --null sed --in-place --regexp-extended '
-		s#http://(debops\.org|docs\.debops\.org|www\.gnu\.org|stackoverflow\.com)#https://\1#g;
+		s#http://(ansible\.com|debops\.org|docs\.debops\.org|www\.gnu\.org|stackoverflow\.com)#https://\1#g;
 	'
 
 # Disabled due to false positives:
