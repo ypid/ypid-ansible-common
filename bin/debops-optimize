@@ -97,7 +97,7 @@ git ls-files -z | xargs --null -I '{}' find '{}' -type f -regextype posix-extend
 ## Revert other changes.
 git ls-files -z | xargs --null -I '{}' find '{}' -type f -regextype posix-extended -regex '(:?defaults/.*\.yml|.*\.rst)$' -print0 | \
 	xargs --null sed --in-place --regexp-extended '
-			s/:envvar:`((:?owncloud__enable_occ_shortcut|php__pool_default|php__version|inventory__host_environment|inventory__group_environment|inventory__environment))`/``\1``/g;
+			s/:envvar:`((:?bootstrap__admin_system_home|bootstrap__admin_name|bootstrap__admin_manage_existing|owncloud__enable_occ_shortcut|php__pool_default|php__version|inventory__host_environment|inventory__group_environment|inventory__environment))`/``\1``/g;
 		'
 
 ## Revert changes only for debops-playbooks

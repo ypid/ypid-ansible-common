@@ -7,7 +7,7 @@ git_repos_update_done_file='/tmp/ansible_git_repos_update_done_file.list'
 
 if [ ! -e "$git_repos_update_done_file" ]
 then
-	git submodule foreach git fetch origin master
+	git submodule foreach 'git fetch origin master || git fetch origin devel'
 fi
 
 touch "$git_repos_update_done_file"
