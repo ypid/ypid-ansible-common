@@ -1,7 +1,7 @@
 ---
 
 - name: Put /etc under version control using etckeeper
-  hosts: 'all:!ypid_no_common'
+  hosts: [ 'debops_service_etckeeper_early' ]
   become: True
 
   roles:

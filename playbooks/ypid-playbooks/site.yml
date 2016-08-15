@@ -1,0 +1,11 @@
+---
+
+# - include: service_early/etckeeper.yml
+
+# - include: debops.yml
+- include: ../debops-contrib-playbooks/service/all.yml
+
+- include: common.yml
+- include: sys/all.yml
+- include: security/all.yml
+- include: net/all.yml
