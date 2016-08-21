@@ -52,7 +52,7 @@ git ls-files -z | xargs --null -I '{}' find '{}' -type f -regextype posix-extend
 		s/``(\/[^`]+[^`0-9])``/:file:`\1`/g;
 		s/``([^`]+\w+(:?\.(:?yml|yaml|rst|j2|ini|pem|crt)|\/))``/:file:`\1`/g;
 		s/``((:?whereami|fail2ban|libvirtd|pki-realm|pki-authority|acme-tiny|apt-(:?cacher-ng|proxy)|nginx|etckeeper|irqbalance|rsnapshot|mysqld|collectd|ntpd|xinetd|opsi-product-updater|automysqlbackup|cron|dhclient|ferm|ferment)\b[^`{.]*?[^_]?)``/:program:`\1`/g;
-		s/``((:?hostname|sudo|which|fsck|mysql|mkfs|openssl|chattr|lsattr|gnutls|smbclient|update-ca-certificates|ansible(:?-vault|-playbook)?|debops-padlock|vgcreate|firejail|xpra|yaml2rst|occ|check_mk|docker|setxkbmap|setxkbmap -query|xmllint|gpg2?|git|hg|bzr|darcs|apt|dpkg|rpm|pacman|pacman-g2|yum|dnf|zypper|rsync|ssh|ip|ip(6|\(6\))?tables|netstat)\b[^ /`.{]*?[^_]?)``/:command:`\1`/g;
+		s/``((:?hostname|sudo|which|fsck|mysql|mkfs|openssl|chattr|lsattr|gnutls|smbclient|update-ca-certificates|debootstrap|lxc|ansible(:?-vault|-playbook)?|debops-padlock|vgcreate|firejail|xpra|yaml2rst|occ|check_mk|docker|setxkbmap|setxkbmap -query|xmllint|gpg2?|git|hg|bzr|darcs|apt|dpkg|rpm|pacman|pacman-g2|yum|dnf|zypper|rsync|ssh|ip|ip(6|\(6\))?tables|netstat)\b[^ /`.{]*?[^_]?)``/:command:`\1`/g;
 		s/``([[:lower:]_-]+\([[:digit:]]\))``/:manpage:`\1`/g;
 		s/``([[:alnum:]_]+__[^*?` ]+?[^*?` _])``/:envvar:`\1`/g;
 		s/:any:/:envvar:/g;
@@ -66,6 +66,7 @@ git ls-files -z | xargs --null -I '{}' find '{}' -type f -regextype posix-extend
 		s#debops project#DebOps project#gi;
 		s#(`Semantic Versioning <[^>]+>`_)\b#\1_#g;
 		s#`(human-readable changelog) <http://keepachangelog.com/>`_\b#`\1 <http://keepachangelog.com/en/0.3.0/>`__#;
+		s#`(human-readable changelog) <http://keepachangelog.com/>`__#`\1 <http://keepachangelog.com/en/0.3.0/>`__#;
 	'
 
 
@@ -75,6 +76,7 @@ git ls-files -z | xargs --null -I '{}' find '{}' -type f -regextype posix-extend
 	xargs --null sed --in-place --regexp-extended '
 		s#http://(ansible\.com|debops\.org|docs\.debops\.org|www\.gnu\.org|stackoverflow\.com)#https://\1#g;
 		s#Copyright \(C\) ([[:digit:],-]+) DebOps Project#Copyright (C) \1 DebOps#gi;
+		s#set -eu -o pipefail#set -o nounset -o pipefail -o errexit#gi;
 	'
 
 # Disabled due to false positives:

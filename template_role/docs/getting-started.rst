@@ -23,6 +23,9 @@ Example playbook
 
 Here's an example playbook that can be used to `changeme/FIXME** on a set of hosts:
 
+If you are using this role without DebOps, here's an example Ansible playbook
+that uses the ``ROLE_OWNER.ROLE_NAME`` role:
+
 .. literalinclude:: playbooks/ROLE_NAME.yml
    :language: yaml
 

@@ -506,3 +506,9 @@
 [submodule "roles/debops.debops_fact"]
 	path = roles/debops.debops_fact
 	url = https://github.com/debops/ansible-debops_fact.git
+[submodule "submodules/acme-tiny"]
+	path = submodules/acme-tiny
+	url = https://github.com/diafygi/acme-tiny
+[submodule "roles/deprecated/debops.kvm"]
+	path = roles/deprecated/debops.kvm
+	url = https://github.com/debops/ansible-kvm.git
