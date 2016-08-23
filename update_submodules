@@ -2,6 +2,8 @@
 ## @author Copyright (C) 2016 Robin Schneider <ypid@riseup.net>
 ## @license AGPL-3.0 <https://www.gnu.org/licenses/agpl-3.0.html>
 
+# FIXME: wd wrap lines so that long lines don’t get pushed out of the screen.
+
 set -o nounset -o pipefail -o errexit
 git_repos_update_done_file='/tmp/ansible_git_repos_update_done_file.list'
 
