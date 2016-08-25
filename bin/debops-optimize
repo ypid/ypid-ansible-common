@@ -67,7 +67,13 @@ git ls-files -z | xargs --null -I '{}' find '{}' -type f -regextype posix-extend
 		s#(`Semantic Versioning <[^>]+>`_)\b#\1_#g;
 		s#`(human-readable changelog) <http://keepachangelog.com/>`_\b#`\1 <http://keepachangelog.com/en/0.3.0/>`__#;
 		s#`(human-readable changelog) <http://keepachangelog.com/>`__#`\1 <http://keepachangelog.com/en/0.3.0/>`__#;
+		s#Default variables: configuration#Default variable details#;
+		s#Configuration of other Ansible roles#Configuration for other Ansible roles#;
 	'
+
+# https://github.com/debops/docs/issues/139
+test -e docs/defaults-configuration.rst && mv docs/defaults-configuration.rst docs/defaults-detailed.rst
+sed --in-place --regexp-extended 's#defaults-configuration#defaults-detailed#;' docs/index.rst
 
 
 # HTTPS everywhere

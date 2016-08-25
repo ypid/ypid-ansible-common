@@ -83,7 +83,7 @@
 	path = roles/debops.owncloud
 	url = https://github.com/debops/ansible-owncloud.git
 [submodule "debops.php5"]
-	path = roles/debops.php5
+	path = roles/deprecated/debops.php5
 	url = https://github.com/debops/ansible-php5.git
 [submodule "debops.pki"]
 	path = roles/debops.pki
