@@ -31,7 +31,9 @@
 # * :regexp:`^WARN.*$`
 # * :envvar:`example__variable`: See https://github.com/debops/docs/issues/153
 
-## Script is expected to be run from the root of a role!
+## Script is expected to be run from the root of a role.
+cd "$(git rev-parse --show-toplevel)" || exit
+
 role_full_name="$(basename "$PWD")"
 role_name="${role_full_name#*.}"
 role_owner="${role_full_name%.*}"
@@ -53,9 +55,10 @@ git ls-files -z | xargs --null -I '{}' find '{}' -type f -regextype posix-extend
 		s/``([^`]+\w+(:?\.(:?yml|yaml|rst|j2|ini|pem|crt)|\/))``/:file:`\1`/g;
 		s/``((:?whereami|fail2ban|libvirtd|pki-realm|pki-authority|acme-tiny|apt-(:?cacher-ng|proxy)|nginx|etckeeper|irqbalance|rsnapshot|mysqld|collectd|ntpd|xinetd|opsi-product-updater|automysqlbackup|cron|dhclient|ferm|ferment)\b[^`{.]*?[^_]?)``/:program:`\1`/g;
 		s/``((:?hostname|sudo|which|fsck|mysql|mkfs|openssl|chattr|lsattr|gnutls|smbclient|update-ca-certificates|debootstrap|lxc|ansible(:?-vault|-playbook)?|debops-padlock|vgcreate|firejail|xpra|yaml2rst|occ|check_mk|docker|setxkbmap|setxkbmap -query|xmllint|gpg2?|git|hg|bzr|darcs|apt|dpkg|rpm|pacman|pacman-g2|yum|dnf|zypper|rsync|ssh|ip|ip(6|\(6\))?tables|netstat)\b[^ /`.{]*?[^_]?)``/:command:`\1`/g;
-		s/``([[:lower:]_-]+\([[:digit:]]\))``/:manpage:`\1`/g;
+		s/``([[:lower:]_.-]+\([[:digit:]]\))``/:manpage:`\1`/g;
 		s/``([[:alnum:]_]+__[^*?` ]+?[^*?` _])``/:envvar:`\1`/g;
 		s/:any:/:envvar:/g;
+		s/`([[:alnum:]_-]+\.[[:alnum:]_-]+)`_/\1_/g;
 		s/``(debops\.[[:alnum:]_-]+)``/\1_/g;
 		s/``(ypid\.[[:alnum:]_-]+)``/\1_/g;
 		s/([^`@_](:?drybjed|ypid|ganto|htgoebel|nickjj|scibi|do3cc|AnBuKu|thiagotalma))([^\/@_.>-])/\1_\3/g;
@@ -69,6 +72,12 @@ git ls-files -z | xargs --null -I '{}' find '{}' -type f -regextype posix-extend
 		s#`(human-readable changelog) <http://keepachangelog.com/>`__#`\1 <http://keepachangelog.com/en/0.3.0/>`__#;
 		s#Default variables: configuration#Default variable details#;
 		s#Configuration of other Ansible roles#Configuration for other Ansible roles#;
+	'
+
+git ls-files -z | xargs --null -I '{}' find '{}' -type f -regextype posix-extended -regex '(:?meta/.*\.yml)$' -print0 | \
+	xargs --null sed --in-place --regexp-extended '
+		s#GNU General Public License v3#GPL-3.0#;
+		s#categories:#galaxy_tags:#;
 	'
 
 # https://github.com/debops/docs/issues/139
@@ -107,7 +116,7 @@ git ls-files -z | xargs --null -I '{}' find '{}' -type f -regextype posix-extend
 ## Revert other changes.
 git ls-files -z | xargs --null -I '{}' find '{}' -type f -regextype posix-extended -regex '(:?defaults/.*\.yml|.*\.rst)$' -print0 | \
 	xargs --null sed --in-place --regexp-extended '
-			s/:envvar:`((:?bootstrap__admin_system_home|bootstrap__admin_name|bootstrap__admin_manage_existing|owncloud__enable_occ_shortcut|php__pool_default|php__version|inventory__host_environment|inventory__group_environment|inventory__environment))`/``\1``/g;
+			s/:envvar:`((:?bootstrap__admin_system_home|bootstrap__admin_name|bootstrap__admin_manage_existing|owncloud__enable_occ_shortcut|php__pool_default|php__version|inventory__host_environment|inventory__group_environment|inventory__environment|tinc__compression|tinc__address_family))`/``\1``/g;
 		'
 
 ## Revert changes only for debops-playbooks

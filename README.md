@@ -1,6 +1,6 @@
 # ypid-ansible-common
 
-This git repository is tying together my Ansible building blocks using git submodules.
+This git repository is tying together ypid’s Ansible building blocks using git submodules.
 
 As every good sysadmin should know what he/she is doing and CM is an essential
 tool for every good sysadmin ypid has committed himself to review every CM component
@@ -21,17 +21,17 @@ might receive a review when it feels appropriate.
 This repository mainly consists of git submodules pointing to the last version
 of git repositories which ypid has verified and tested.
 
-All commits of this repository are signed with my OpenPGP automatic signing key
-and thus implicitly signs all content and the git history (also applies to git
-submodules).
+All commits of this repository are signed with ypid’s OpenPGP automatic signing
+key and thus implicitly signs all content and the git history (also applies to
+git submodules).
 
 The weakest link of the signature is currently
 [SHA-1](https://en.wikipedia.org/wiki/SHA-1) used in by git.
 This will be mitigated in the near future by only relying on
-currently strong cryptography (ref:
+strong cryptography (ref:
 [Cryptographically strong code signing](https://github.com/QubesOS/qubes-issues/issues/2240)).
 
-ypid uses a [shell script called "update_submodules"](https://github.com/ypid/ypid-ansible-common/blob/master/update_submodules) to pull the latest changes from git remotes, show me the diffs and then update my master branch of the repository if everything looks good.
+ypid uses a [shell script called "update_submodules"](https://github.com/ypid/ypid-ansible-common/blob/master/update_submodules) to pull the latest changes from git remotes, show the diffs and then update the master branch of the repository if everything looks good.
 
 ## Refs
 
