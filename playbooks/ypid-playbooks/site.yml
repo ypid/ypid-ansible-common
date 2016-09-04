@@ -2,7 +2,7 @@
 
 # - include: service_early/etckeeper.yml
 
-# - include: debops.yml
+- include: debops.yml
 - include: ../debops-contrib-playbooks/service/all.yml
 
 - include: common.yml

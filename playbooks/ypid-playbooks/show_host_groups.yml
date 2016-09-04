@@ -2,6 +2,8 @@
 
 - name: Show host groups
   hosts: [ 'all' ]
+  ## Don’t require network access.
+  gather_facts: False
   become: False
 
   tasks:

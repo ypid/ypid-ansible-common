@@ -54,15 +54,15 @@ git ls-files -z | xargs --null -I '{}' find '{}' -type f -regextype posix-extend
 		s/``(\/[^`]+[^`0-9])``/:file:`\1`/g;
 		s/``([^`]+\w+(:?\.(:?yml|yaml|rst|j2|ini|pem|crt)|\/))``/:file:`\1`/g;
 		s/``((:?whereami|fail2ban|libvirtd|pki-realm|pki-authority|acme-tiny|apt-(:?cacher-ng|proxy)|nginx|etckeeper|irqbalance|rsnapshot|mysqld|collectd|ntpd|xinetd|opsi-product-updater|automysqlbackup|cron|dhclient|ferm|ferment)\b[^`{.]*?[^_]?)``/:program:`\1`/g;
-		s/``((:?hostname|sudo|which|fsck|mysql|mkfs|openssl|chattr|lsattr|gnutls|smbclient|update-ca-certificates|debootstrap|lxc|ansible(:?-vault|-playbook)?|debops-padlock|vgcreate|firejail|xpra|yaml2rst|occ|check_mk|docker|setxkbmap|setxkbmap -query|xmllint|gpg2?|git|hg|bzr|darcs|apt|dpkg|rpm|pacman|pacman-g2|yum|dnf|zypper|rsync|ssh|ip|ip(6|\(6\))?tables|netstat)\b[^ /`.{]*?[^_]?)``/:command:`\1`/g;
+		s/``((:?hostname|sudo|which|fsck|mysql|mkfs|openssl|chattr|lsattr|gnutls|brctl|smbclient|update-ca-certificates|debootstrap|lxc|ansible(:?-vault|-playbook)?|debops-padlock|vgcreate|firejail|xpra|yaml2rst|occ|check_mk|docker|setxkbmap|setxkbmap -query|xmllint|gpg2?|git|hg|bzr|darcs|apt|dpkg|rpm|pacman|pacman-g2|yum|dnf|zypper|rsync|ssh|ip|ip(6|\(6\))?tables|netstat)\b[^ /`.{]*?[^_]?)``/:command:`\1`/g;
 		s/``([[:lower:]_.-]+\([[:digit:]]\))``/:manpage:`\1`/g;
 		s/``([[:alnum:]_]+__[^*?` ]+?[^*?` _])``/:envvar:`\1`/g;
 		s/:any:/:envvar:/g;
 		s/`([[:alnum:]_-]+\.[[:alnum:]_-]+)`_/\1_/g;
 		s/``(debops\.[[:alnum:]_-]+)``/\1_/g;
 		s/``(ypid\.[[:alnum:]_-]+)``/\1_/g;
-		s/([^`@_](:?drybjed|ypid|ganto|htgoebel|nickjj|scibi|do3cc|AnBuKu|thiagotalma))([^\/@_.>-])/\1_\3/g;
-		s/\*\*(drybjed|ypid|ganto|htgoebel|nickjj|scibi|do3cc|AnBuKu|thiagotalma)\*\*/\1_/g;
+		s/([^[:alnum:]`@_]\b(:?drybjed|ypid|ganto|htgoebel|nickjj|scibi|do3cc|AnBuKu|thiagotalma|jacksingleton|ser))([^[:alnum:]\/@_.>-])/\1_\3/g;
+		s/\*\*(drybjed|ypid|ganto|htgoebel|nickjj|scibi|do3cc|AnBuKu|thiagotalma|jacksingleton|ser)\*\*/\1_/g;
 		s/([^`])(debops tools)([^`/ ])/\1`DebOps Tools`_\3/gi;
 		s/The current role maintainer is/The current role maintainer_ is/gi;
 		s/\<e\.g\./e. g./g;
@@ -72,6 +72,7 @@ git ls-files -z | xargs --null -I '{}' find '{}' -type f -regextype posix-extend
 		s#`(human-readable changelog) <http://keepachangelog.com/>`__#`\1 <http://keepachangelog.com/en/0.3.0/>`__#;
 		s#Default variables: configuration#Default variable details#;
 		s#Configuration of other Ansible roles#Configuration for other Ansible roles#;
+		s#This variable is intended to be used in the inventory of the host#This variable is intended to be used in the inventory of hosts#;
 	'
 
 git ls-files -z | xargs --null -I '{}' find '{}' -type f -regextype posix-extended -regex '(:?meta/.*\.yml)$' -print0 | \
@@ -116,7 +117,7 @@ git ls-files -z | xargs --null -I '{}' find '{}' -type f -regextype posix-extend
 ## Revert other changes.
 git ls-files -z | xargs --null -I '{}' find '{}' -type f -regextype posix-extended -regex '(:?defaults/.*\.yml|.*\.rst)$' -print0 | \
 	xargs --null sed --in-place --regexp-extended '
-			s/:envvar:`((:?bootstrap__admin_system_home|bootstrap__admin_name|bootstrap__admin_manage_existing|owncloud__enable_occ_shortcut|php__pool_default|php__version|inventory__host_environment|inventory__group_environment|inventory__environment|tinc__compression|tinc__address_family))`/``\1``/g;
+			s/:envvar:`((:?bootstrap__admin_system_home|bootstrap__admin_name|bootstrap__admin_manage_existing|owncloud__enable_occ_shortcut|php__pool_default|php__version|inventory__host_environment|inventory__group_environment|inventory__environment|tinc__compression|tinc__connect_to_mesh0))`/``\1``/g;
 		'
 
 ## Revert changes only for debops-playbooks
@@ -124,5 +125,14 @@ git ls-files -z | xargs --null -I '{}' find '{}' -type f -regextype posix-extend
 	xargs --null sed --in-place --regexp-extended '
 			s/:envvar:`((:?apt_preferences__preset_list))`/``\1``/g;
 		'
+
+if ! grep -qF 'https://galaxy.ansible.com/api/v1/notifications/' .travis.yml
+then
+	cat << EOF >> .travis.yml
+notifications:
+  webhooks:
+    - 'https://galaxy.ansible.com/api/v1/notifications/'
+EOF
+fi
 
 echo "Done. Be sure to review the changes."

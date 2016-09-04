@@ -290,7 +290,7 @@
 	path = roles/unverified_yet/debops.tgt
 	url = https://github.com/debops/ansible-tgt.git
 [submodule "roles/debops.tinc"]
-	path = roles/unverified_yet/debops.tinc
+	path = roles/debops.tinc
 	url = https://github.com/debops/ansible-tinc.git
 [submodule "roles/debops.dhparam"]
 	path = roles/debops.dhparam

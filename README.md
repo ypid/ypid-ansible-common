@@ -31,7 +31,7 @@ This will be mitigated in the near future by only relying on
 strong cryptography (ref:
 [Cryptographically strong code signing](https://github.com/QubesOS/qubes-issues/issues/2240)).
 
-ypid uses a [shell script called "update_submodules"](https://github.com/ypid/ypid-ansible-common/blob/master/update_submodules) to pull the latest changes from git remotes, show the diffs and then update the master branch of the repository if everything looks good.
+ypid uses a [shell script called "update_submodules"](https://github.com/ypid/ypid-ansible-common/blob/master/update_submodules) to pull the latest changes from git remotes, watch over the diffs and then update the master branch of the repository if everything looks good.
 
 ## Refs
 
