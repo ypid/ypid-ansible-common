@@ -95,6 +95,11 @@ git ls-files -z | xargs --null -I '{}' find '{}' -type f -regextype posix-extend
 		s#set -eu -o pipefail#set -o nounset -o pipefail -o errexit#gi;
 	'
 
+git ls-files -z | xargs --null -I '{}' find '{}' -type f -print0 | \
+	xargs --null sed --in-place --regexp-extended '
+		s/\(This file is managed remotely, all changes will be lost\|This file is managed remotely, some changes might be overwritten\|This file is managed by Ansible, all changes will be lost\)/{{ ansible_managed }}/g
+	'
+
 # Disabled due to false positives:
 # s/([[:lower:]_-]+\([[:digit:]]\))(\s)/:manpage:`\1`\2/g;  ## Would also match: d(1)
 

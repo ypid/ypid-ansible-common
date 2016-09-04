@@ -382,9 +382,6 @@
 [submodule "ypid.udev-usbmon"]
 	path = roles_ypid/ypid.udev-usbmon
 	url = https://github.com/ypid/ansible-udev-usbmon
-[submodule "roles/picotrading.sysctl"]
-	path = roles/picotrading.sysctl
-	url = https://github.com/ypid/ansible-sysctl.git
 [submodule "roles/picotrading.sudo"]
 	path = roles/picotrading.sudo
 	url = https://github.com/ypid/ansible-sudo
