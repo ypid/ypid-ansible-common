@@ -2,6 +2,8 @@
 ## @license AGPLv3 <https://www.gnu.org/licenses/agpl-3.0.html>
 ## @author Copyright (C) 2015 Robin Schneider <ypid@riseup.net>
 
+set -o nounset -o pipefail -o errexit
+
 # Convert repetitively used programs and commands to Sphinx inline syntax.
 # http://www.sphinx-doc.org/en/stable/markup/inline.html
 #
@@ -37,7 +39,15 @@ cd "$(git rev-parse --show-toplevel)" || exit
 role_full_name="$(basename "$PWD")"
 role_name="${role_full_name#*.}"
 role_owner="${role_full_name%.*}"
-echo "Running sphinx-inline for: '$role_name', full role name: '$role_full_name', role owner is: '$role_owner'"
+if [ "${role_owner}" == "${role_full_name}" ]
+then
+    echo "Using workaround to work with Ansible role names not following Ansible Galaxy convention."
+    echo "Guessing role owner."
+    role_name="${role_full_name#*-}"
+    role_owner='debops'
+    role_full_name="${role_owner}.${role_name}"
+fi
+echo "Running debops-optimize for: '$role_name', full role name: '${role_full_name:-}', role owner is: '${role_owner:-}'"
 
 ## For testing:
 # git ls-files -z | xargs --null -I '{}' find '{}' -type f -regextype posix-extended -regex '(:?defaults/.*\.yml|.*\.rst)$' -print0 | \
@@ -54,7 +64,7 @@ git ls-files -z | xargs --null -I '{}' find '{}' -type f -regextype posix-extend
 		s/``(\/[^`]+[^`0-9])``/:file:`\1`/g;
 		s/``([^`]+\w+(:?\.(:?yml|yaml|rst|j2|ini|pem|crt)|\/))``/:file:`\1`/g;
 		s/``((:?whereami|fail2ban|libvirtd|pki-realm|pki-authority|acme-tiny|apt-(:?cacher-ng|proxy)|nginx|etckeeper|irqbalance|rsnapshot|mysqld|collectd|ntpd|xinetd|opsi-product-updater|automysqlbackup|cron|dhclient|ferm|ferment)\b[^`{.]*?[^_]?)``/:program:`\1`/g;
-		s/``((:?hostname|sudo|which|fsck|mysql|mkfs|openssl|chattr|lsattr|gnutls|brctl|smbclient|update-ca-certificates|debootstrap|lxc|ansible(:?-vault|-playbook)?|debops-padlock|vgcreate|firejail|xpra|yaml2rst|occ|check_mk|docker|setxkbmap|setxkbmap -query|xmllint|gpg2?|git|hg|bzr|darcs|apt|dpkg|rpm|pacman|pacman-g2|yum|dnf|zypper|rsync|ssh|ip|ip(6|\(6\))?tables|netstat)\b[^ /`.{]*?[^_]?)``/:command:`\1`/g;
+		s/``((:?hostname|sudo|sysctl|which|fsck|mysql|mkfs|openssl|chattr|lsattr|gnutls|brctl|smbclient|update-ca-certificates|debootstrap|lxc|ansible(:?-vault|-playbook)?|debops-padlock|vgcreate|firejail|xpra|yaml2rst|occ|check_mk|docker|setxkbmap|setxkbmap -query|xmllint|gpg2?|git|hg|bzr|darcs|apt|dpkg|rpm|pacman|pacman-g2|yum|dnf|zypper|rsync|ssh|ip|ip(6|\(6\))?tables|netstat)\b[^ /`.{]*?[^_]?)``/:command:`\1`/g;
 		s/``([[:lower:]_.-]+\([[:digit:]]\))``/:manpage:`\1`/g;
 		s/``([[:alnum:]_]+__[^*?` ]+?[^*?` _])``/:envvar:`\1`/g;
 		s/:any:/:envvar:/g;
