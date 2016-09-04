@@ -43,6 +43,7 @@ if [ "${role_owner}" == "${role_full_name}" ]
 then
     echo "Using workaround to work with Ansible role names not following Ansible Galaxy convention."
     echo "Guessing role owner."
+    # TODO: Improve auto detection if needed using "How can I use jq for YAML instead of JSON?" https://github.com/stedolan/jq/wiki/FAQ
     role_name="${role_full_name#*-}"
     role_owner='debops'
     role_full_name="${role_owner}.${role_name}"
