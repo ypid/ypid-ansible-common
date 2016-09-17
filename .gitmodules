@@ -509,3 +509,9 @@
 [submodule "roles/deprecated/debops.kvm"]
 	path = roles/deprecated/debops.kvm
 	url = https://github.com/debops/ansible-kvm.git
+[submodule "roles_ypid/debops.sysctl"]
+	path = roles_ypid/debops.sysctl
+	url = https://github.com/debops/ansible-sysctl.git
+[submodule "inventory"]
+	path = inventory
+	url = https://github.com/ypid/ypid-ansible-inventory.git

@@ -22,7 +22,7 @@ This repository mainly consists of git submodules pointing to the last version
 of git repositories which ypid has verified and tested.
 
 All commits of this repository are signed with ypid’s OpenPGP automatic signing
-key and thus implicitly signs all content and the git history (also applies to
+key which implicitly signs all content and the git history (also applies to
 git submodules).
 
 The weakest link of the signature is currently
