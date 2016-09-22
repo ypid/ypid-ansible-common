@@ -3,7 +3,7 @@ Introduction
 
 .. include:: includes/all.rst
 
-The ``ROLE_OWNER.ROLE_NAME`` role allows you to setup and mange
+The ``ROLE_OWNER.ROLE_NAME`` role allows you to manage and configure
 
 
 Installation

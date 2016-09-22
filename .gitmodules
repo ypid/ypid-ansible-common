@@ -53,7 +53,7 @@
 	path = roles/debops.ifupdown
 	url = https://github.com/debops/ansible-ifupdown.git
 [submodule "debops.librenms"]
-	path = roles/debops.librenms
+	path = roles/unverified_yet/debops.librenms
 	url = https://github.com/debops/ansible-librenms.git
 [submodule "debops.lxc"]
 	path = roles/debops.lxc
@@ -179,7 +179,7 @@
 	path = roles/debops.subnetwork
 	url = https://github.com/debops/ansible-subnetwork.git
 [submodule "playbooks/ansible-os-hardening"]
-	path = roles/hardening.os-hardening
+	path = roles/dev-sec.os-hardening
 	url = https://github.com/hardening-io/ansible-os-hardening.git
 [submodule "playbooks/debops-playbooks"]
 	path = submodules/debops-playbooks
@@ -302,7 +302,7 @@
 	path = roles/debops-contrib.checkmk_agent
 	url = https://github.com/debops-contrib/ansible-checkmk_agent.git
 [submodule "roles/hardening.ssh-hardening"]
-	path = roles/hardening.ssh-hardening
+	path = roles/dev-sec.ssh-hardening
 	url = https://github.com/hardening-io/ansible-ssh-hardening.git
 [submodule "submodules/ansible-qubes"]
 	path = submodules/ansible-qubes
@@ -515,3 +515,6 @@
 [submodule "inventory"]
 	path = inventory
 	url = https://github.com/ypid/ypid-ansible-inventory.git
+[submodule "roles/dev-sec.apache-hardening"]
+	path = roles/dev-sec.apache-hardening
+	url = https://github.com/dev-sec/ansible-apache-hardening.git

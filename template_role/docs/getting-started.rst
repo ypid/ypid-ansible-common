@@ -10,8 +10,8 @@ Getting started
 Example inventory
 -----------------
 
-To `changeme/FIXME**, add the hosts to the
-``debops_service_ROLE_NAME`` Ansible inventory host group:
+To manage `changeme/FIXME**, on a given host it should be included in the
+``debops_service_ROLE_NAME`` Ansible inventory group:
 
 .. code:: ini
 
@@ -20,8 +20,6 @@ To `changeme/FIXME**, add the hosts to the
 
 Example playbook
 ----------------
-
-Here's an example playbook that can be used to `changeme/FIXME** on a set of hosts:
 
 If you are using this role without DebOps, here's an example Ansible playbook
 that uses the ``ROLE_OWNER.ROLE_NAME`` role:
@@ -52,6 +50,6 @@ Available role tags:
   Main role tag, should be used in the playbook to execute all of the role
   tasks as well as role dependencies.
 
-``role::ROLE_NAME:pkg``
-  Tasks related to system package management like installing, upgrading or
+``role::ROLE_NAME:pkgs``
+  Tasks related to system package management like installing or
   removing packages.

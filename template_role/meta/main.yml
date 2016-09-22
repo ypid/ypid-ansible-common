@@ -6,9 +6,9 @@ galaxy_info:
 
   company: 'DebOps'
   author: 'Robin Schneider'
-  description: 'FIXME.'
+  description: 'FIXME'
   license: 'GPL-3.0'
-  min_ansible_version: '1.9.0'
+  min_ansible_version: '2.0.0'
 
   platforms:
 
@@ -20,10 +20,8 @@ galaxy_info:
     - name: Ubuntu
       versions:
         - precise
-        - quantal
-        - raring
-        - saucy
         - trusty
+        - xenial
 
   galaxy_tags:
     - encryption

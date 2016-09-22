@@ -1,10 +1,8 @@
 ---
 
 - name: Ensure specified packages are in there desired state
-  apt:
+  package:
     name: '{{ item }}'
     state: '{{ "present" if (ROLE_NAME__deploy_state == "present") else "absent" }}'
-    install_recommends: False
-    purge: True
   with_flattened: '{{ ROLE_NAME__base_packages }}'
   tags: [ 'role::ROLE_NAME:pkts' ]

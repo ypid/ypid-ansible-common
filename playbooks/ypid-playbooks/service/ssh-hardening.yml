@@ -6,5 +6,5 @@
 
   roles:
 
-    - role: hardening.ssh-hardening
+    - role: dev-sec.ssh-hardening
       tags: [ 'role::ssh-hardening' ]
