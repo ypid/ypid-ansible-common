@@ -1,8 +1,7 @@
 ---
 
-- name: Show host groups
+- name: Show Ansible inventory groups
   hosts: [ 'all' ]
-  ## Don’t require network access.
   gather_facts: False
   become: False
 
@@ -10,4 +9,4 @@
 
     - name: Show host groups
       debug:
-        msg: '{{ hostvars[inventory_hostname]["group_names"] | sort }}'
+        var: 'group_names'

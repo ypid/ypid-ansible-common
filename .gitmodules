@@ -518,3 +518,6 @@
 [submodule "roles/dev-sec.apache-hardening"]
 	path = roles/dev-sec.apache-hardening
 	url = https://github.com/dev-sec/ansible-apache-hardening.git
+[submodule "roles_ypid/debops.apache"]
+	path = roles_ypid/debops.apache
+	url = https://github.com/debops/ansible-apache.git
