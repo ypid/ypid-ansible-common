@@ -125,6 +125,9 @@ git ls-files -z | xargs --null -I '{}' find '{}' -type f -print0 | \
 ## Use NARROW NO-BREAK SPACE: https://en.wikipedia.org/wiki/Thin_space
 ## If you can’t handle Unicode, that’s your problem. Deal with it!
 
+# Ensure normal files are not executable.
+# Example: https://github.com/debops/ansible-apt_install/commit/2df7d51c58a78bd4ca7724a5f8f95208b0043c1c
+git ls-files -z | xargs --null -I '{}' find '{}' -type f -executable -regextype posix-extended -regex '((:?defaults|tasks|meta|templates|handlers).*|.*\.(:?rst|md|txt))' -exec chmod -x {} \;
 
 ## Revert a change for the role itself because a self reference (currently points to GitHub) might be confusing.
 git ls-files -z | xargs --null -I '{}' find '{}' -type f -regextype posix-extended -regex '(:?defaults/.*\.yml|.*\.rst)$' -print0 | \
