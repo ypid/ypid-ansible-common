@@ -1,6 +1,6 @@
 #!/bin/bash
 ## @license AGPLv3 <https://www.gnu.org/licenses/agpl-3.0.html>
-## @author Copyright (C) 2015 Robin Schneider <ypid@riseup.net>
+## @author Copyright (C) 2015-2016 Robin Schneider <ypid@riseup.net>
 
 set -o nounset -o pipefail -o errexit
 
@@ -130,6 +130,7 @@ git ls-files -z | xargs --null -I '{}' find '{}' -type f -print0 | \
 git ls-files -z | xargs --null -I '{}' find '{}' -type f -executable -regextype posix-extended -regex '((:?defaults|tasks|meta|templates|handlers).*|.*\.(:?rst|md|txt))' -exec chmod -x {} \;
 
 ## Revert a change for the role itself because a self reference (currently points to GitHub) might be confusing.
+## Also in preparation for: https://github.com/debops/docs/issues/212
 git ls-files -z | xargs --null -I '{}' find '{}' -type f -regextype posix-extended -regex '(:?defaults/.*\.yml|.*\.rst)$' -print0 | \
     xargs --null sed --in-place --regexp-extended "
             s/\b${role_full_name}_\b/\`\`${role_full_name}\`\`/g;
@@ -138,13 +139,13 @@ git ls-files -z | xargs --null -I '{}' find '{}' -type f -regextype posix-extend
 ## Revert a change for deprecated roles (might be removed from the documentation at some point) or falsely detected roles.
 git ls-files -z | xargs --null -I '{}' find '{}' -type f -regextype posix-extended -regex '(:?defaults/.*\.yml|.*\.rst)$' -print0 | \
     xargs --null sed --in-place --regexp-extended "
-            s/\b(debops\.(:?php5|sshkeys|cfg))_\b/\`\`\1\`\`/g;
+            s/\b(debops\.(:?php5|sshkeys|cfg)|ypid\.(:?crypttab))_\b/\`\`\1\`\`/g;
         "
 
 ## Revert other changes.
 git ls-files -z | xargs --null -I '{}' find '{}' -type f -regextype posix-extended -regex '(:?defaults/.*\.yml|.*\.rst)$' -print0 | \
     xargs --null sed --in-place --regexp-extended '
-            s/:envvar:`((:?bootstrap__admin_system_home|bootstrap__admin_name|bootstrap__admin_manage_existing|owncloud__enable_occ_shortcut|php__pool_default|php__version|inventory__host_environment|inventory__group_environment|inventory__environment|tinc__compression|tinc__connect_to_mesh0|owncloud__subdomain|apt__conditional_whitelist))`/``\1``/g;
+            s/:envvar:`((:?bootstrap__admin_system_home|bootstrap__admin_name|bootstrap__admin_manage_existing|owncloud__enable_occ_shortcut|php__pool_default|php__version|inventory__host_environment|inventory__group_environment|inventory__environment|tinc__compression|tinc__connect_to_mesh0|owncloud__subdomain|apt__conditional_whitelist|apt__proxy_bypass_for_bugs_debian_org|apt__sources_sections|apt__update_cache_early|apt__sources_types|apt__http_proxy_url|apt__https_proxy_url))`/``\1``/g;
         '
 
 ## Revert changes only for debops-playbooks

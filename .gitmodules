@@ -521,3 +521,9 @@
 [submodule "roles_ypid/debops.apache"]
 	path = roles_ypid/debops.apache
 	url = https://github.com/debops/ansible-apache.git
+[submodule "roles/debops.apt_proxy"]
+	path = roles/debops.apt_proxy
+	url = https://github.com/debops/ansible-apt_proxy.git
+[submodule "roles/debops.apt_listchanges"]
+	path = roles/debops.apt_listchanges
+	url = https://github.com/debops/ansible-apt_listchanges.git
