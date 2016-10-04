@@ -80,7 +80,7 @@
 	path = roles/deprecated/debops.openvz
 	url = https://github.com/debops/ansible-openvz.git
 [submodule "debops.owncloud"]
-	path = roles/debops.owncloud
+	path = roles_ypid/debops.owncloud
 	url = https://github.com/debops/ansible-owncloud.git
 [submodule "debops.php5"]
 	path = roles/deprecated/debops.php5
