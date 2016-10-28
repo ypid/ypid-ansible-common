@@ -26,7 +26,7 @@ key which implicitly signs all content and the git history (also applies to
 git submodules).
 
 The weakest link of the signature is currently
-[SHA-1](https://en.wikipedia.org/wiki/SHA-1) used in by git.
+[SHA-1](https://en.wikipedia.org/wiki/SHA-1) used by git.
 This will be mitigated in the near future by only relying on
 strong cryptography (ref:
 [Cryptographically strong code signing](https://github.com/QubesOS/qubes-issues/issues/2240)).

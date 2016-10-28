@@ -12,7 +12,7 @@
     - role: ypid.packages
       tags: [ 'role::packages' ]
 
-    ## Merge move to debops.rsyslog and debops.logrotate
+    ## Merge with debops.rsyslog and debops.logrotate
     # - role: ypid.rsyslog
     #   tags: [ 'role::ypid.rsyslog' ]
 

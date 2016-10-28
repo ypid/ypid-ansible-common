@@ -1,10 +1,10 @@
 Getting started
 ===============
 
+.. include:: includes/all.rst
+
 .. contents::
    :local:
-
-.. include:: includes/all.rst
 
 
 Example inventory
@@ -27,7 +27,7 @@ Here's an example playbook that uses the ``ROLE_OWNER.ROLE_NAME`` role:
    :language: yaml
 
 This playbooks is shipped with this role under
-:file:`docs/playbooks/ROLE_NAME.yml` from which you can symlink it to your
+:file:`./docs/playbooks/ROLE_NAME.yml` from which you can symlink it to your
 playbook directory.
 In case you use multiple `DebOps Contrib`_ roles, consider
 using the `DebOps Contrib playbooks`_.

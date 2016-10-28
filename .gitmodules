@@ -527,3 +527,9 @@
 [submodule "roles/debops.apt_listchanges"]
 	path = roles/debops.apt_listchanges
 	url = https://github.com/debops/ansible-apt_listchanges.git
+[submodule "roles/unverified_yet/debops.gunicorn"]
+	path = roles/unverified_yet/debops.gunicorn
+	url = https://github.com/debops/ansible-gunicorn.git
+[submodule "roles/unverified_yet/debops.netbox"]
+	path = roles/unverified_yet/debops.netbox
+	url = https://github.com/debops/ansible-netbox.git

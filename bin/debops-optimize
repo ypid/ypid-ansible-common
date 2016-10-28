@@ -138,6 +138,10 @@ git ls-files -z | xargs --null -I '{}' find '{}' -type f -print0 | \
 ## Use NARROW NO-BREAK SPACE: https://en.wikipedia.org/wiki/Thin_space
 ## If you can’t handle Unicode, that’s your problem. Deal with it!
 
+sed --in-place --regexp-extended "
+        s/^\* /- /;
+    " CHANGES.rst
+
 # Ensure normal files are not executable.
 # Example: https://github.com/debops/ansible-apt_install/commit/2df7d51c58a78bd4ca7724a5f8f95208b0043c1c
 git ls-files -z | xargs --null -I '{}' find '{}' -type f -executable -regextype posix-extended -regex '((:?defaults|tasks|meta|templates|handlers).*|.*\.(:?rst|md|txt))' -exec chmod -x {} \;
@@ -158,7 +162,7 @@ git ls-files -z | xargs --null -I '{}' find '{}' -type f -regextype posix-extend
 ## Revert other changes.
 git ls-files -z | xargs --null -I '{}' find '{}' -type f -regextype posix-extended -regex '(:?defaults/.*\.yml|.*\.rst)$' -print0 | \
     xargs --null sed --in-place --regexp-extended '
-            s/:envvar:`((:?bootstrap__admin_system_home|bootstrap__admin_name|bootstrap__admin_manage_existing|owncloud__enable_occ_shortcut|php__pool_default|php__version|inventory__host_environment|inventory__group_environment|inventory__environment|tinc__compression|tinc__connect_to_mesh0|owncloud__subdomain|apt__conditional_whitelist|apt__proxy_bypass_for_bugs_debian_org|apt__sources_sections|apt__update_cache_early|apt__sources_types|apt__http_proxy_url|apt__https_proxy_url|apt__proxy_url))`/``\1``/g;
+            s/:envvar:`((:?bootstrap__admin_system_home|bootstrap__admin_name|bootstrap__admin_manage_existing|owncloud__enable_occ_shortcut|php__pool_default|php__version|inventory__host_environment|inventory__group_environment|inventory__environment|tinc__compression|tinc__connect_to_mesh0|owncloud__subdomain|apt__conditional_whitelist|apt__proxy_bypass_for_bugs_debian_org|apt__sources_sections|apt__update_cache_early|apt__sources_types|apt__http_proxy_url|apt__https_proxy_url|apt__proxy_url|apt_cacher_ng__nginx_upstream|apt_cacher_ng__nginx_upstream_servers))`/``\1``/g;
         '
 
 ## Revert changes only for debops-playbooks

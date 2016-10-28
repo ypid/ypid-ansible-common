@@ -1,0 +1,4 @@
+---
+
+- include: etckeeper.yml
+- include: fuse.yml
