@@ -10,4 +10,4 @@
       tags: [ 'role::packages', 'role::apt_preferences' ]
 
     - role: ypid.packages
-      tags: [ 'role::packages' ]
+      tags: [ 'role::packages', 'role::packages:only' ]

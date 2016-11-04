@@ -425,7 +425,7 @@
 	path = roles/debops.logrotate
 	url = https://github.com/debops/ansible-logrotate.git
 [submodule "roles_ypid/ypid.gdm"]
-	path = roles_ypid/ypid.gdm
+	path = roles_ypid/ypid.dm
 	url = https://github.com/ypid/ansible-gdm.git
 [submodule "roles_ypid/debops.contrib-btrfs"]
 	path = roles_ypid/debops-contrib.btrfs
@@ -433,9 +433,6 @@
 [submodule "roles/debops.apt_install"]
 	path = roles/debops.apt_install
 	url = https://github.com/debops/ansible-apt_install
-[submodule "docs/debops-contrib"]
-	path = docs/debops-contrib
-	url = https://github.com/debops-contrib/debops-contrib.git
 [submodule "roles_ypid/debops-contrib.x2go_server"]
 	path = roles_ypid/debops-contrib.x2go_server
 	url = https://github.com/debops-contrib/ansible-x2go_server.git
@@ -533,3 +530,6 @@
 [submodule "roles/unverified_yet/debops.netbox"]
 	path = roles/unverified_yet/debops.netbox
 	url = https://github.com/debops/ansible-netbox.git
+[submodule "roles_ypid/debops-contrib.firejail"]
+	path = roles_ypid/debops-contrib.firejail
+	url = https://github.com/debops-contrib/ansible-firejail
