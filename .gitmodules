@@ -533,3 +533,6 @@
 [submodule "roles_ypid/debops-contrib.firejail"]
 	path = roles_ypid/debops-contrib.firejail
 	url = https://github.com/debops-contrib/ansible-firejail
+[submodule "docs/debops-contrib"]
+	path = docs/debops-contrib
+	url = https://github.com/debops-contrib/docs.git
