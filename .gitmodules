@@ -405,7 +405,7 @@
 	url = https://github.com/debops/ansible-apt_cacher_ng.git
 [submodule "submodules/debops"]
 	path = submodules/debops
-	url = https://github.com/debops/debops.git
+	url = https://github.com/debops/debops-tools.git
 [submodule "roles/unverified_yet/debops.gitlab_runner"]
 	path = roles/unverified_yet/debops.gitlab_runner
 	url = https://github.com/debops/ansible-gitlab_runner.git
@@ -536,3 +536,9 @@
 [submodule "docs/debops-contrib"]
 	path = docs/debops-contrib
 	url = https://github.com/debops-contrib/docs.git
+[submodule "submodules/yaml4rst"]
+	path = submodules/yaml4rst
+	url = https://github.com/ypid/yaml4rst.git
+[submodule "submodules/yaml2rst"]
+	path = submodules/yaml2rst
+	url = https://github.com/htgoebel/yaml2rst.git
