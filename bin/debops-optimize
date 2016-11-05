@@ -56,6 +56,11 @@ then
     yaml4rst --config-kv "ansible_full_role_name=${role_full_name}" defaults/main.yml -i
 fi
 
+if command -v ansible-update-min-version
+then
+    ansible-update-min-version meta/main.yml --update-text-file docs/introduction.rst README.md
+fi
+
 if [ ! -e 'meta/main.yml' ]
 then
     echo "This repository is not a Ansible role. Disabling Ansible role optimizations."
