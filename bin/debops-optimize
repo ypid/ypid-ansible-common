@@ -111,6 +111,9 @@ git ls-files -z | xargs --null -I '{}' find '{}' -type f -regextype posix-extend
 
 # Not yet done by default, needs to be tested. Console is too generic.
 # s#^(\.\. code-block:: )console#\1shell#;
+#
+# reST error:
+# s/\.\. code::/.. code-block::/;
 
 git ls-files -z | xargs --null -I '{}' find '{}' -type f -regextype posix-extended -regex '(:?meta/.*\.yml)$' -print0 | \
     xargs --null --no-run-if-empty sed --in-place --regexp-extended '
@@ -161,7 +164,7 @@ git ls-files -z | xargs --null -I '{}' find '{}' -type f -regextype posix-extend
 ## Revert a change for deprecated roles (might be removed from the documentation at some point) or falsely detected roles.
 git ls-files -z | xargs --null -I '{}' find '{}' -type f -regextype posix-extended -regex '(:?defaults/.*\.yml|.*\.rst)$' -print0 | \
     xargs --null sed --in-place --regexp-extended "
-            s/\b(debops\.(:?php5|sshkeys|cfg)|ypid\.(:?crypttab|gdm))_\b/\`\`\1\`\`/g;
+            s/\b(debops\.(:?php5|sshkeys|cfg)|ypid\.(:?crypttab|gdm|snapshot_snapper|kernel_module))_\b/\`\`\1\`\`/g;
         "
 
 ## Revert other changes.

@@ -25,10 +25,9 @@ ansible-galaxy install {{ role.galaxy_name }}
 
 ### Documentation
 
-Until the documentation is available in a rendered version you can refer to the
-reST documentation source files in the
-[/docs](https://github.com/debops-contrib/{{ scm.repo_prefix + role.name }}/tree/master/docs) directory.
-Refer to the [debops/docs#111 issue](https://github.com/debops/docs/issues/111) for details.
+<!-- FIXME: Change to the canonical URL when it has been setup. https://github.com/debops/docs/issues/111 -->
+More information about `{{ role.galaxy_name }}` can be found in the
+[official {{ role.galaxy_name }} documentation](https://debops-contrib.readthedocs.io/en/latest/ansible/roles/{{ role.slug }}/docs/).
 
 {% endblock %}
 {% block standalone %}

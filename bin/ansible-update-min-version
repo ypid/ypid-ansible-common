@@ -140,7 +140,6 @@ def main():
         )
 
     prev_version = update_meta_main_file(args.meta_main_file, set_version_explicit, set_version=args.set_version)
-    print(args.update_text_file)
     if prev_version is not None:
         for text_file in args.update_text_file:
             update_text_file(text_file, prev_version, set_version=args.set_version)

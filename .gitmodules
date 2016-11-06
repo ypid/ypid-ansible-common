@@ -308,8 +308,8 @@
 	path = submodules/ansible-qubes
 	url = https://github.com/Rudd-O/ansible-qubes.git
 [submodule "roles_ypid/ypid.kernel_module"]
-	path = roles_ypid/ypid.kernel_module
-	url = https://github.com/ypid/ansible-kernel_module.git
+	path = roles_ypid/debops-contrib.kernel_module
+	url = https://github.com/debops-contrib/ansible-kernel_module.git
 [submodule "roles_ypid/ypid.copy"]
 	path = roles_ypid/deprecated/ypid.copy
 	url = https://github.com/ypid/ansible-copy.git
