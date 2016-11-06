@@ -9,7 +9,7 @@ The ``ROLE_OWNER.ROLE_NAME`` role allows you to manage and configure
 Installation
 ~~~~~~~~~~~~
 
-This role requires at least Ansible ``v2.0.0``. To install it, run:
+This role requires at least Ansible ``v2.1.3``. To install it, run:
 
 .. code-block:: console
 

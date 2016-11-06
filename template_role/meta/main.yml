@@ -8,7 +8,7 @@ galaxy_info:
   author: 'Robin Schneider'
   description: 'FIXME'
   license: 'GPL-3.0'
-  min_ansible_version: '2.0.0'
+  min_ansible_version: '2.1.3'
 
   platforms:
 
@@ -24,8 +24,5 @@ galaxy_info:
         - xenial
 
   galaxy_tags:
-    - encryption
     - security
-    - filesystem
-    - dm-crypt
-    - luks
+    - FIXME

@@ -1,10 +1,1 @@
----
-
-- name: Configure whereami
-  hosts: [ 'ypid_service_whereami' ]
-  become: True
-
-  roles:
-
-    - role: ypid.whereami
-      tags: [ 'role::whereami' ]
+../../../roles_ypid/ypid.whereami/docs/playbooks/whereami.yml

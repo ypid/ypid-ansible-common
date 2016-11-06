@@ -105,8 +105,10 @@ git ls-files -z | xargs --null -I '{}' find '{}' -type f -regextype posix-extend
         s#Configuration of other Ansible roles#Configuration for other Ansible roles#;
         s#This variable is intended to be used in the inventory of the host#This variable is intended to be used in the inventory of hosts#;
         s#Ensure specified packages are in there desired state#Ensure specified packages are in their desired state#;
-        s#This can be used after host is first$#This can be used after a host was first#
-        s#configuration has not been changed\.$#configuration is already in the desired state.#
+        s#This can be used after host is first$#This can be used after a host was first#;
+        s#configuration has not been changed\.$#configuration is already in the desired state.#;
+        s#This playbooks$#This playbook#;
+        s#This playbooks is shipped with this role under$#The playbooks is shipped with this role under#;
     '
 
 # Not yet done by default, needs to be tested. Console is too generic.

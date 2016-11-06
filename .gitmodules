@@ -542,3 +542,6 @@
 [submodule "submodules/yaml2rst"]
 	path = submodules/yaml2rst
 	url = https://github.com/htgoebel/yaml2rst.git
+[submodule "docs/ypid-ansible-role-docs"]
+	path = docs/ypid-ansible-role-docs
+	url = https://github.com/ypid/ypid-ansible-role-docs
