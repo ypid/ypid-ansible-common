@@ -47,10 +47,12 @@ git clone {{ ansigenome_info.github_url }}.git {{ role.galaxy_name }}
 git submodule add {{ ansigenome_info.github_url }}.git {{ role.galaxy_name }}
 ```
 
+{% if ansigenome_info.docs|d(True) %}
 ### Documentation
 
 More information about `{{ role.galaxy_name }}` can be found in the
 [official {{ role.galaxy_name }} documentation](https://ypid-ansible-roles.readthedocs.io/en/latest/ansible/roles/{{ role.slug }}/docs/).
+{% endif %}
 
 {% endblock %}{# ))) #}
 {% block defaults %}

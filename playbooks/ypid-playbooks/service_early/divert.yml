@@ -1,0 +1,14 @@
+---
+
+- name: Package management aware renaming of files
+  hosts: 'all:!ypid_no_common'
+  become: True
+
+  environment: '{{ inventory__environment | d({})
+                   | combine(inventory__group_environment | d({}))
+                   | combine(inventory__host_environment  | d({})) }}'
+
+  roles:
+
+    - role: ypid.divert
+      tags: [ 'role::divert' ]

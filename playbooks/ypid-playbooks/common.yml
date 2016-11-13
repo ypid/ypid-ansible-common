@@ -16,9 +16,6 @@
     # - role: ypid.rsyslog
     #   tags: [ 'role::ypid.rsyslog' ]
 
-    - role: ypid.kernel_module
-      tags: [ 'role::kernel_module' ]
-
     - role: tersmitten.updatedb
       tags: [ 'role::updatedb' ]
 
