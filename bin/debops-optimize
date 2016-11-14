@@ -58,7 +58,10 @@ fi
 
 if command -v ansible-update-min-version
 then
-    ansible-update-min-version meta/main.yml --update-text-file docs/introduction.rst README.md
+    if [ "${role_owner}" != 'debops' ]
+    then
+        ansible-update-min-version meta/main.yml --update-text-file docs/introduction.rst README.md
+    fi
 fi
 
 if [ ! -e 'meta/main.yml' ]
@@ -172,7 +175,7 @@ git ls-files -z | xargs --null -I '{}' find '{}' -type f -regextype posix-extend
 ## Revert other changes.
 git ls-files -z | xargs --null -I '{}' find '{}' -type f -regextype posix-extended -regex '(:?defaults/.*\.yml|.*\.rst)$' -print0 | \
     xargs --null sed --in-place --regexp-extended '
-            s/:envvar:`((:?bootstrap__admin_system_home|bootstrap__admin_name|bootstrap__admin_manage_existing|owncloud__enable_occ_shortcut|php__pool_default|php__version|inventory__host_environment|inventory__group_environment|inventory__environment|tinc__compression|tinc__connect_to_mesh0|owncloud__subdomain|apt__conditional_whitelist|apt__proxy_bypass_for_bugs_debian_org|apt__sources_sections|apt__update_cache_early|apt__sources_types|apt__http_proxy_url|apt__https_proxy_url|apt__proxy_url|apt_cacher_ng__nginx_upstream|apt_cacher_ng__nginx_upstream_servers|swapfile__swappiness|swapfile__cache_pressure|x2go_server__apt_repo_key_fingerprint_override_map|x2go_server__upstream_repository_override_map))`/``\1``/g;
+            s/:envvar:`((:?bootstrap__admin_system_home|bootstrap__admin_name|bootstrap__admin_manage_existing|owncloud__enable_occ_shortcut|php__pool_default|php__version|inventory__host_environment|inventory__group_environment|inventory__environment|tinc__compression|tinc__connect_to_mesh0|owncloud__subdomain|apt__conditional_whitelist|apt__proxy_bypass_for_bugs_debian_org|apt__sources_sections|apt__update_cache_early|apt__sources_types|apt__http_proxy_url|apt__https_proxy_url|apt__proxy_url|apt_cacher_ng__nginx_upstream|apt_cacher_ng__nginx_upstream_servers|swapfile__swappiness|swapfile__cache_pressure|x2go_server__apt_repo_key_fingerprint_override_map|x2go_server__upstream_repository_override_map|owncloud__nginx__servers|owncloud__nginx__upstream_php))`/``\1``/g;
         '
 
 ## Revert changes only for debops-playbooks
