@@ -1,7 +1,7 @@
 ---
 
 - name: Common configuration for all hosts
-  hosts: 'all:!ypid_no_common'
+  hosts: [ 'ypid_common' ]
   become: True
 
   roles:

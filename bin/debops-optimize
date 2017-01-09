@@ -56,13 +56,14 @@ then
     yaml4rst --config-kv "ansible_full_role_name=${role_full_name}" defaults/main.yml -i
 fi
 
-if command -v ansible-update-min-version
-then
-    if [ "${role_owner}" != 'debops' ]
-    then
-        ansible-update-min-version meta/main.yml --update-text-file docs/introduction.rst README.md
-    fi
-fi
+# https://github.com/nusenu/ansible-relayor/commit/85e2a7d7d76387c5016c78f52db5621627281679
+# if command -v ansible-update-min-version
+# then
+#     if [ "${role_owner}" != 'debops' ]
+#     then
+#         ansible-update-min-version meta/main.yml --update-text-file docs/introduction.rst README.md
+#     fi
+# fi
 
 if [ ! -e 'meta/main.yml' ]
 then
@@ -83,7 +84,7 @@ fi
 git ls-files -z | xargs --null -I '{}' find '{}' -type f -regextype posix-extended -regex '(:?defaults/.*\.yml|.*\.rst)$' -and -not -name 'README.rst' -print0 | \
     xargs --null sed --in-place --regexp-extended '
         s/``(\/[^`]+[^`0-9])``/:file:`\1`/g;
-        s/``([^`]+\w+(:?\.(:?yml|yaml|rst|j2|ini|pem|crt|conf)|\/))``/:file:`\1`/g;
+        s/``([^`]+\w+(:?\.(:?yml|yaml|rst|j2|ini|pem|crt|conf)))``/:file:`\1`/g;
         s/``((:?whereami|fail2ban|libvirtd|pki-realm|pki-authority|acme-tiny|apt-(:?cacher-ng|proxy)|nginx|etckeeper|irqbalance|rsnapshot|mysqld|collectd|ntpd|xinetd|opsi-product-updater|automysqlbackup|cron|dhclient|ferm|ferment|jq)\b[^`{.]*?[^_]?)``/:program:`\1`/g;
         s/``((:?hostname|sudo|cryptsetup|sysctl|which|fsck|mysql|mkfs|openssl|chattr|lsattr|gnutls|brctl|smbclient|update-ca-certificates|debootstrap|lxc|ansible(:?-vault|-playbook)?|debops-padlock|vgcreate|firejail|firecfg|firemon|xpra|yaml2rst|occ|check_mk|docker|setxkbmap|setxkbmap -query|xmllint|gpg2?|git|hg|bzr|darcs|apt|dpkg|rpm|pacman|pacman-g2|yum|dnf|zypper|rsync|ssh|ip|ip(6|\(6\))?tables|netstat|shellcheck)\b[^ /`.{]*?[^_]?)``/:command:`\1`/g;
         s/``([[:lower:]_.-]+\([[:digit:]]\))``/:manpage:`\1`/g;
@@ -100,6 +101,7 @@ git ls-files -z | xargs --null -I '{}' find '{}' -type f -regextype posix-extend
         s/The current role maintainer is/The current role maintainer_ is/gi;
         s/is drybjed_?\.?$/is drybjed_./gi;
         s/\<e\.g\./e. g./g;
+        s#Debops#DebOps#g;
         s#debops project#DebOps project#gi;
         s#(`Semantic Versioning <[^>]+>`_)\b#\1_#g;
         s#`(human-readable changelog) <http://keepachangelog.com/>`_\b#`\1 <http://keepachangelog.com/en/0.3.0/>`__#;
@@ -112,6 +114,7 @@ git ls-files -z | xargs --null -I '{}' find '{}' -type f -regextype posix-extend
         s#configuration has not been changed\.$#configuration is already in the desired state.#;
         s#This playbooks$#This playbook#;
         s#This playbooks is shipped with this role under$#The playbooks is shipped with this role under#;
+        s#:file:`/server-status`#``/server-status``#;
     '
 
 # Not yet done by default, needs to be tested. Console is too generic.
@@ -129,6 +132,26 @@ git ls-files -z | xargs --null -I '{}' find '{}' -type f -regextype posix-extend
 # https://github.com/debops/docs/issues/139
 test -e docs/defaults-configuration.rst && mv docs/defaults-configuration.rst docs/defaults-detailed.rst
 sed --in-place --regexp-extended 's#defaults-configuration#defaults-detailed#;' docs/index.rst
+
+## Update copyright.
+update_copyright_for () {
+	local name="$1"
+	if [ -z "$name" ]; then
+		return 1
+	fi
+
+	## Known BUGS: "Copyright (C) 2010,2012" -> "Copyright (C) 2010,2012-2017"
+	if [[ "$name" == "$(git config --get user.name)" ]] || [[ "$name" == 'DebOps' ]]; then
+		year="$(date +%Y)"
+		if ! egrep -q "Copyright \\(C\\) ([[:digit:]]{4}-)${year} ${name}" COPYRIGHT; then
+			sed --in-place --regexp-extended "s/(Copyright \\(C\\) [[:digit:]]{4}-)[[:digit:]]{4}( ${name})/\\1${year}\\2/g;" COPYRIGHT
+			sed --in-place --regexp-extended "s/(Copyright \\(C\\) [[:digit:]]{4})( ${name})/\\1-${year}\\2/g;" COPYRIGHT
+		fi
+	fi
+}
+update_copyright_for "Maciej Delmanowski"
+update_copyright_for "Robin Schneider"
+update_copyright_for "DebOps"
 
 
 # HTTPS everywhere
