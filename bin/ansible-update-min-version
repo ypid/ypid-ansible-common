@@ -38,7 +38,7 @@ import fileinput
 import yaml
 
 LOG = logging.getLogger(__name__)
-ANSIBLE_MIN_TRUSTWORTHY_VERSION = '2.1.3'
+ANSIBLE_MIN_TRUSTWORTHY_VERSION = '2.1.4'
 
 
 def update_meta_main_file(meta_main_file, set_version_explicit, set_version=ANSIBLE_MIN_TRUSTWORTHY_VERSION):
