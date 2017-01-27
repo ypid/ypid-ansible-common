@@ -545,3 +545,6 @@
 [submodule "docs/ypid-ansible-role-docs"]
 	path = docs/ypid-ansible-role-docs
 	url = https://github.com/ypid/ypid-ansible-role-docs
+[submodule "roles/debops.cron"]
+	path = roles/debops.cron
+	url = https://github.com/debops/ansible-cron.git

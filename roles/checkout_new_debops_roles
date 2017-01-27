@@ -1,9 +1,0 @@
-#!/bin/bash
-## @license AGPLv3 <https://www.gnu.org/licenses/agpl-3.0.html>
-## @author Copyright (C) 2015 Robin Schneider <ypid@riseup.net>
-
-while read role
-do
-    role="${role#debops.}"
-    git submodule add "https://github.com/debops/ansible-$role.git" "debops.$role"
-done < ../playbooks/debops-playbooks/galaxy/requirements.txt
