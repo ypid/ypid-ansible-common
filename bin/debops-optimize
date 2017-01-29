@@ -143,7 +143,7 @@ update_copyright_for () {
 	## Known BUGS: "Copyright (C) 2010,2012" -> "Copyright (C) 2010,2012-2017"
 	if [[ "$name" == "$(git config --get user.name)" ]] || [[ "$name" == 'DebOps' ]]; then
 		year="$(date +%Y)"
-		if ! egrep -q "Copyright \\(C\\) ([[:digit:]]{4}-)${year} ${name}" COPYRIGHT; then
+		if ! egrep -q "Copyright \\(C\\) ([[:digit:]]{4}-)?${year} ${name}" COPYRIGHT; then
 			sed --in-place --regexp-extended "s/(Copyright \\(C\\) [[:digit:]]{4}-)[[:digit:]]{4}( ${name})/\\1${year}\\2/g;" COPYRIGHT
 			sed --in-place --regexp-extended "s/(Copyright \\(C\\) [[:digit:]]{4})( ${name})/\\1-${year}\\2/g;" COPYRIGHT
 		fi

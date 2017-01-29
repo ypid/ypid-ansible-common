@@ -548,3 +548,6 @@
 [submodule "roles/debops.cron"]
 	path = roles/debops.cron
 	url = https://github.com/debops/ansible-cron.git
+[submodule "roles_ypid/ypid.plymouth"]
+	path = roles_ypid/ypid.plymouth
+	url = https://github.com/ypid/ansible-plymouth.git

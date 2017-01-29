@@ -10,7 +10,7 @@ Getting started
 Example inventory
 -----------------
 
-To manage `changeme/FIXME**, on a given host it should be included in the
+To manage `changeme/FIXME**, on a host it should be included in the
 ``debops_service_ROLE_NAME`` Ansible inventory group:
 
 .. code:: ini
