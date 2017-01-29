@@ -426,7 +426,7 @@
 	url = https://github.com/debops/ansible-logrotate.git
 [submodule "roles_ypid/ypid.gdm"]
 	path = roles_ypid/ypid.dm
-	url = https://github.com/ypid/ansible-gdm.git
+	url = https://github.com/ypid/ansible-dm.git
 [submodule "roles_ypid/debops.contrib-btrfs"]
 	path = roles_ypid/debops-contrib.btrfs
 	url = https://github.com/debops-contrib/ansible-btrfs.git

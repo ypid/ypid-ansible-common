@@ -3,3 +3,4 @@
 - include: etckeeper.yml
 - include: fuse.yml
 - include: divert.yml
+- include: btrfs.yml

@@ -9,3 +9,4 @@
 - include: sys/all.yml
 - include: security/all.yml
 - include: net/all.yml
+- include: workstation/all.yml

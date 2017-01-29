@@ -1,8 +1,12 @@
 ---
 
 - name: Common configuration for all hosts
-  hosts: [ 'all:!ypid_no_common', 'ypid_service_packages' ]
+  hosts: [ 'ypid_common', 'ypid_service_packages' ]
   become: True
+
+  environment: '{{ inventory__environment | d({})
+                   | combine(inventory__group_environment | d({}))
+                   | combine(inventory__host_environment  | d({})) }}'
 
   roles:
 

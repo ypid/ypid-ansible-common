@@ -149,10 +149,12 @@ update_copyright_for () {
 		fi
 	fi
 }
-update_copyright_for "Maciej Delmanowski"
-update_copyright_for "Robin Schneider"
-update_copyright_for "DebOps"
-
+if [ -f "COPYRIGHT" ]
+then
+    update_copyright_for "Maciej Delmanowski"
+    update_copyright_for "Robin Schneider"
+    update_copyright_for "DebOps"
+fi
 
 # HTTPS everywhere
 # LICENSE should be done in a global replace to decease commit review noise.
