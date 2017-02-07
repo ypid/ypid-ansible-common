@@ -27,7 +27,7 @@ that uses the ``ROLE_OWNER.ROLE_NAME`` role:
 .. literalinclude:: playbooks/ROLE_NAME.yml
    :language: yaml
 
-The playbooks is shipped with this role under
+The playbook is shipped with this role under
 :file:`./docs/playbooks/ROLE_NAME.yml` from which you can symlink it to your
 playbook directory.
 In case you use multiple `DebOps Contrib`_ roles, consider

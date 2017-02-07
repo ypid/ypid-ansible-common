@@ -1,14 +1,1 @@
----
-
-- name: Configure a display manager
-  hosts: [ 'ypid_service_dm' ]
-  become: True
-
-  environment: '{{ inventory__environment | d({})
-                   | combine(inventory__group_environment | d({}))
-                   | combine(inventory__host_environment  | d({})) }}'
-
-  roles:
-
-    - role: ypid.dm
-      tags: [ 'role::dm' ]
+../../../roles_ypid/ypid.dm/docs/playbooks/dm.yml

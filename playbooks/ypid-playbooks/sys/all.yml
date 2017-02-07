@@ -1,6 +1,6 @@
 ---
 
-- include: cron.yml
 - include: smartd.yml
 - include: shutdown_if_battery_low.yml
 - include: file_attributes.yml
+- include: packages.yml

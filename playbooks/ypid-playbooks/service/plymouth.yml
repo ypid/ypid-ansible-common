@@ -1,18 +1,1 @@
----
-
-- name: Configure a graphical boot and shutdown animation using Plymouth
-  hosts: [ 'ypid_service_plymouth' ]
-  become: True
-
-  environment: '{{ inventory__environment | d({})
-                   | combine(inventory__group_environment | d({}))
-                   | combine(inventory__host_environment  | d({})) }}'
-
-  roles:
-
-    - role: debops.grub
-      grub_dependent_kernel_options: '{{ plymouth__grub__dependent_kernel_options }}'
-      tags: [ 'role::grub' ]
-
-    - role: ypid.plymouth
-      tags: [ 'role::plymouth' ]
+../../../roles_ypid/ypid.plymouth/docs/playbooks/plymouth.yml

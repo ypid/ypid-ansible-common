@@ -176,7 +176,7 @@
 	path = roles/debops.swapfile
 	url = https://github.com/debops/ansible-swapfile.git
 [submodule "roles/debops.subnetwork"]
-	path = roles/debops.subnetwork
+	path = roles/deprecated/debops.subnetwork
 	url = https://github.com/debops/ansible-subnetwork.git
 [submodule "playbooks/ansible-os-hardening"]
 	path = roles/dev-sec.os-hardening
@@ -385,9 +385,6 @@
 [submodule "roles/picotrading.sudo"]
 	path = roles/picotrading.sudo
 	url = https://github.com/ypid/ansible-sudo
-[submodule "roles/franklinkim.cron"]
-	path = roles/franklinkim.cron
-	url = https://github.com/ypid/ansible-cron.git
 [submodule "roles_ypid/ypid.packages"]
 	path = roles_ypid/ypid.packages
 	url = https://github.com/ypid/ansible-packages.git
@@ -551,3 +548,6 @@
 [submodule "roles_ypid/ypid.plymouth"]
 	path = roles_ypid/ypid.plymouth
 	url = https://github.com/ypid/ansible-plymouth.git
+[submodule "roles_ypid/debops.persistent_paths"]
+	path = roles_ypid/debops.persistent_paths
+	url = https://github.com/debops/ansible-persistent_paths.git

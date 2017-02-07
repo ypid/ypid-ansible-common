@@ -1,14 +1,1 @@
----
-
-- name: Configure dhclient
-  hosts: [ 'ypid_service_dhclient' ]
-  become: True
-
-  environment: '{{ inventory__environment | d({})
-                   | combine(inventory__group_environment | d({}))
-                   | combine(inventory__host_environment  | d({})) }}'
-
-  roles:
-
-    - role: ypid.dhclient
-      tags: [ 'role::dhclient' ]
+../../../roles_ypid/ypid.dhclient/docs/playbooks/dhclient.yml
