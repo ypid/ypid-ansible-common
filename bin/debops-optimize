@@ -65,6 +65,11 @@ fi
 #     fi
 # fi
 
+if command -v ansible-lint
+then
+    ansible-lint -x ANSIBLE0018 .
+fi
+
 if [ ! -e 'meta/main.yml' ]
 then
     echo "This repository is not a Ansible role. Disabling Ansible role optimizations."

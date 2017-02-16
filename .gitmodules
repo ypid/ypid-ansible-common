@@ -551,3 +551,15 @@
 [submodule "roles_ypid/debops.persistent_paths"]
 	path = roles_ypid/debops.persistent_paths
 	url = https://github.com/debops/ansible-persistent_paths.git
+[submodule "submodules/ansible-lint"]
+	path = submodules/ansible-lint
+	url = https://github.com/willthames/ansible-lint.git
+[submodule "submodules/ansible-cmdb"]
+	path = submodules/ansible-cmdb
+	url = https://github.com/fboender/ansible-cmdb.git
+[submodule "submodules/ansible-review"]
+	path = submodules/ansible-review
+	url = https://github.com/willthames/ansible-review.git
+[submodule "submodules/ansible-roles-graph"]
+	path = submodules/ansible-roles-graph
+	url = https://github.com/sebn/ansible-roles-graph.git
