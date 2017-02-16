@@ -2,3 +2,5 @@
 # .. vim: foldmarker=[[[,]]]:foldmethod=marker
 
 - include: dm.yml
+- include: dotfiles.yml
+- include: plymouth.yml

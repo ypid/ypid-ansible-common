@@ -563,3 +563,6 @@
 [submodule "submodules/ansible-roles-graph"]
 	path = submodules/ansible-roles-graph
 	url = https://github.com/sebn/ansible-roles-graph.git
+[submodule "roles_ypid/ypid.dotfiles"]
+	path = roles_ypid/ypid.dotfiles
+	url = https://github.com/ypid/ansible-dotfiles.git
