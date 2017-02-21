@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# Copyright (C) 2016 Robin Schneider <ypid@riseup.net>
+# Copyright (C) 2016-2017 Robin Schneider <ypid@riseup.net>
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as
@@ -46,7 +46,7 @@ def update_meta_main_file(meta_main_file, set_version_explicit, set_version=ANSI
     Return previous version if update was necessary and None otherwise.
     """
     with open(meta_main_file, 'r') as meta_main_fh:
-        data = yaml.load(meta_main_fh)
+        data = yaml.safe_load(meta_main_fh)
 
         prev_version = data['galaxy_info']['min_ansible_version']
         if StrictVersion(prev_version) == StrictVersion(set_version):
