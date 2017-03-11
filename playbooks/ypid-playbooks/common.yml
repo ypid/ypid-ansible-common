@@ -6,12 +6,6 @@
 
   roles:
 
-    - role: debops.apt_preferences
-      tags: [ 'role::packages', 'role::apt_preferences' ]
-
-    - role: ypid.packages
-      tags: [ 'role::packages' ]
-
     ## Merge with debops.rsyslog and debops.logrotate
     # - role: ypid.rsyslog
     #   tags: [ 'role::ypid.rsyslog' ]
