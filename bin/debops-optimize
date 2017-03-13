@@ -67,7 +67,7 @@ fi
 
 if command -v ansible-lint
 then
-    ansible-lint -x ANSIBLE0018 .
+    ansible-lint -x ANSIBLE0018 . || :
 fi
 
 if [ ! -e 'meta/main.yml' ]
