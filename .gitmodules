@@ -566,3 +566,6 @@
 [submodule "roles_ypid/ypid.dotfiles"]
 	path = roles_ypid/ypid.dotfiles
 	url = https://github.com/ypid/ansible-dotfiles.git
+[submodule "roles/debops.root_account"]
+	path = roles/debops.root_account
+	url = https://github.com/debops/ansible-root_account.git
