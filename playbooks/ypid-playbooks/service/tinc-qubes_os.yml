@@ -1,0 +1,25 @@
+---
+
+- name: Configure Tinc VPN client on a Qubes OS TemplateBasedVM with minimal dependencies
+  hosts: [ 'debops_service_tinc_qubes_os_min', 'debops_service_tinc_aux' ]
+  become: True
+
+  environment: '{{ inventory__environment | d({})
+                   | combine(inventory__group_environment | d({}))
+                   | combine(inventory__host_environment  | d({})) }}'
+
+  roles:
+
+    - role: debops.tinc/env
+      tags: [ 'role::tinc', 'role::tinc:secret', 'role::secret', 'role::ferm' ]
+
+    - role: debops.secret
+      tags: [ 'role::secret', 'role::tinc:secret' ]
+      secret_directories: '{{ tinc__env_secret__directories }}'
+
+    - role: debops.tinc
+      tags: [ 'role::tinc' ]
+
+    - role: debops.persistent_paths
+      tags: [ 'role::persistent_paths' ]
+      persistent_paths__dependent_paths: '{{ tinc__persistent_paths__dependent_paths }}'

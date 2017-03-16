@@ -4,7 +4,8 @@
 
 - include: initramfs_message.yml
 
-- include: ssh-hardening.yml
+## Incompatible with Ansible 2.1 because the `check_mode` keyword is used.
+# - include: ssh-hardening.yml
 
 - include: cryptsetup_remote_unlock.yml
 
