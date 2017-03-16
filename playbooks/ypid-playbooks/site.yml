@@ -1,9 +1,9 @@
 ---
 
-# - include: service_early/all.yml
+- include: service_early/all.yml
 
-# - include: debops.yml
-# - include: ../debops-contrib-playbooks/service/all.yml
+- include: debops.yml
+- include: ../debops-contrib-playbooks/service/all.yml
 
 - include: common.yml
 - include: sys/all.yml
