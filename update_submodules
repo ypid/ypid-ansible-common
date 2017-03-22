@@ -1,15 +1,13 @@
 #!/bin/bash
-## @author Copyright (C) 2016 Robin Schneider <ypid@riseup.net>
+## @author Copyright (C) 2016-2017 Robin Schneider <ypid@riseup.net>
 ## @license AGPL-3.0 <https://www.gnu.org/licenses/agpl-3.0.html>
-
-# FIXME: wd wrap lines so that long lines don’t get pushed out of the screen.
 
 set -o nounset -o pipefail -o errexit
 git_repos_update_done_file='/tmp/ansible_git_repos_update_done_file.list'
 
 if [ ! -e "$git_repos_update_done_file" ]
 then
-	git submodule foreach 'git fetch origin master || git fetch origin devel'
+	git submodule foreach 'git fetch origin master --tags || git fetch origin devel --tags'
 fi
 
 touch "$git_repos_update_done_file"
