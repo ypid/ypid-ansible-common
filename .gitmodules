@@ -314,7 +314,7 @@
 	path = roles_ypid/deprecated/ypid.copy
 	url = https://github.com/ypid/ansible-copy.git
 [submodule "roles_ypid/ypid.cryptsetup_remote_unlock"]
-	path = roles_ypid/ypid.cryptsetup_remote_unlock
+	path = roles_ypid/debops-contrib.dropbear_initramfs
 	url = https://github.com/ypid/ansible-cryptsetup_remote_unlock.git
 [submodule "roles_ypid/ypid.divert"]
 	path = roles_ypid/ypid.divert
@@ -569,3 +569,9 @@
 [submodule "roles/debops.root_account"]
 	path = roles/debops.root_account
 	url = https://github.com/debops/ansible-root_account.git
+[submodule "roles/unverified_deprecated/systemli.rootcrypto"]
+	path = roles/unverified_deprecated/systemli.rootcrypto
+	url = https://github.com/systemli/ansible-rootcrypto.git
+[submodule "roles/unverified_deprecated/martin-v.sshpreluks"]
+	path = roles/unverified_deprecated/martin-v.sshpreluks
+	url = https://github.com/martin-v/ansible-sshpreluks.git
