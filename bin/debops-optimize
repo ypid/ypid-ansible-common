@@ -56,6 +56,12 @@ then
     test -e defaults/main.yml && yaml4rst --config-kv "ansible_full_role_name=${role_full_name}" defaults/main.yml -i
 fi
 
+if command -v ag
+then
+    # Seems ypid gets this wrong sometimes.
+    ag --ignore LICENSE their
+fi
+
 # https://github.com/nusenu/ansible-relayor/commit/85e2a7d7d76387c5016c78f52db5621627281679
 # if command -v ansible-update-min-version
 # then
@@ -98,6 +104,7 @@ git ls-files -z | xargs --null -I '{}' find '{}' -type f -regextype posix-extend
         s/`RFC([[:digit:]]+[^`]*)`_/:rfc:`\1`/gi;
         s/RFC([[:digit:]]+)_/:rfc:`\1`/gi
         s/`([[:alnum:]_-]+\.[[:alnum:]_-]+)`_/\1_/g;
+	s/\<(SOTA)\>/\1_/g;
         s/``(debops\.[[:alnum:]_-]+)``/\1_/g;
         s/``(ypid\.[[:alnum:]_-]+)``/\1_/g;
         s/([^[:alnum:]`@_]\b(:?drybjed|ypid|ganto|htgoebel|nickjj|scibi|do3cc|AnBuKu|thiagotalma|jacksingleton|ser|yuvadm|pedroluislopez|patrickheeney|le9i0nx|tallandtree|zpfvo))([^[:alnum:]\/@_.>:-])/\1_\3/g;
@@ -131,7 +138,7 @@ git ls-files -z | xargs --null -I '{}' find '{}' -type f -regextype posix-extend
 
 git ls-files -z | xargs --null -I '{}' find '{}' -type f -regextype posix-extended -regex '(:?meta/.*\.yml)$' -print0 | \
     xargs --null --no-run-if-empty sed --in-place --regexp-extended '
-        s#GNU General Public License v3#GPL-3.0#;
+	s#(GNU General Public License v3|GPLv3)#GPL-3.0#;
         s#categories:#galaxy_tags:#;
     '
 
@@ -173,11 +180,13 @@ git ls-files -z | xargs --null -I '{}' find '{}' -type f -regextype posix-extend
 
 git ls-files -z | xargs --null -I '{}' find '{}' -type f -print0 | \
     xargs --null sed --in-place --regexp-extended '
-        s/\(This file is managed remotely, all changes will be lost\|This file is managed remotely, some changes might be overwritten\|This file is managed by Ansible, all changes will be lost\)/{{ ansible_managed }}/g
+        s/\(This file is managed remotely, all changes will be lost\|This file is managed remotely, some changes might be overwritten\|This file is managed by Ansible, all changes will be lost\)/{{ ansible_managed }}/g;
+        s/:pkts/:pkgs/g;
     '
 
 # Disabled due to false positives:
 # s/([[:lower:]_-]+\([[:digit:]]\))(\s)/:manpage:`\1`\2/g;  ## Would also match: d(1)
+# s/httpredir\.debian\.org/deb.debian.org/g;
 
 ## Use NARROW NO-BREAK SPACE: https://en.wikipedia.org/wiki/Thin_space
 ## If you can’t handle Unicode, that’s your problem. Deal with it!
