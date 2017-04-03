@@ -1,5 +1,6 @@
 ---
 
+- include: ../../debops-playbooks/service/apt_proxy.yml
 - include: etckeeper.yml
 - include: fuse.yml
 - include: divert.yml

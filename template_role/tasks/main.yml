@@ -5,4 +5,4 @@
     name: '{{ item }}'
     state: '{{ "present" if (ROLE_NAME__deploy_state == "present") else "absent" }}'
   with_flattened: '{{ ROLE_NAME__base_packages }}'
-  tags: [ 'role::ROLE_NAME:pkts' ]
+  tags: [ 'role::ROLE_NAME:pkgs' ]
