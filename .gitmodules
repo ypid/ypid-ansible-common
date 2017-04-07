@@ -575,3 +575,6 @@
 [submodule "roles/unverified_deprecated/martin-v.sshpreluks"]
 	path = roles/unverified_deprecated/martin-v.sshpreluks
 	url = https://github.com/martin-v/ansible-sshpreluks.git
+[submodule "roles/geerlingguy.composer"]
+	path = roles/geerlingguy.composer
+	url = https://github.com/geerlingguy/ansible-role-composer.git
