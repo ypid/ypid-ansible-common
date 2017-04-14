@@ -1,3 +1,5 @@
+.. _ROLE_NAME__ref_getting_started:
+
 Getting started
 ===============
 
