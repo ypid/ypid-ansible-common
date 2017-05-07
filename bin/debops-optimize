@@ -57,7 +57,7 @@ echo "Running debops-optimize for: '$role_name', full role name: '${role_full_na
 
 if command -v yaml4rst
 then
-    test -e defaults/main.yml && yaml4rst --config-kv "ansible_full_role_name=${role_full_name}" defaults/main.yml -i
+    test -e defaults/main.yml && echo yaml4rst --config-kv "ansible_full_role_name=${role_full_name}" defaults/main.yml -i
 fi
 
 if command -v ag
