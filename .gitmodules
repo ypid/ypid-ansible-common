@@ -332,14 +332,14 @@
 	path = roles_ypid/ypid.linuxmuster_net_client
 	url = https://github.com/ypid/ansible-linuxmuster_net_client.git
 [submodule "roles_ypid/ypid.linuxmuster_net-client-epoptes_via_postsync"]
-	path = roles_ypid/ypid.linuxmuster_net-client-epoptes_via_postsync
+	path = roles_ypid/deprecated/ypid.linuxmuster_net-client-epoptes_via_postsync
 	url = https://github.com/ypid/ansible-linuxmuster_net-client-epoptes_via_postsync.git
 [submodule "roles_ypid/ypid.linuxmuster_net-server-customize"]
 	path = roles_ypid/ypid.linuxmuster_net-server-customize
 	url = https://github.com/ypid/ansible-linuxmuster_net-server-customize.git
 [submodule "roles_ypid/ypid.linuxmuster_net-server-epoptes_via_postsync"]
-	path = roles_ypid/ypid.linuxmuster_net-server-epoptes_via_postsync
-	url = https://github.com/ypid/ansible-linuxmuster_net-server-epoptes_via_postsync.git
+	path = roles_ypid/ypid.epoptes
+	url = https://github.com/ypid/ansible-epoptes.git
 [submodule "roles_ypid/ypid.rsyslog"]
 	path = roles_ypid/ypid.rsyslog
 	url = https://github.com/ypid/ansible-rsyslog.git
@@ -459,7 +459,7 @@
 	url = https://github.com/debops/debops-keyring.git
 [submodule "integration_testing/ypid"]
 	path = integration_testing/ypid
-	url = https://github.com/ypid/test-suite-ypid
+	url = https://github.com/ypid/test-suite.git
 [submodule "submodules/ansible-inventory-grapher"]
 	path = submodules/ansible-inventory-grapher
 	url = https://github.com/willthames/ansible-inventory-grapher.git
@@ -605,3 +605,6 @@
 [submodule "roles/unverified_yet/debops.elastic_co"]
 	path = roles/unverified_yet/debops.elastic_co
 	url = https://github.com/debops/ansible-elastic_co.git
+[submodule "roles_ypid/debops-contrib.bitcoind"]
+	path = roles_ypid/debops-contrib.bitcoind
+	url = https://github.com/debops-contrib/ansible-bitcoind.git

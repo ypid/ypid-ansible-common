@@ -55,11 +55,6 @@ then
 fi
 echo "Running debops-optimize for: '$role_name', full role name: '${role_full_name:-}', role owner: '${role_owner:-}'"
 
-if command -v yaml4rst
-then
-    test -e defaults/main.yml && echo yaml4rst --config-kv "ansible_full_role_name=${role_full_name}" defaults/main.yml -i
-fi
-
 if command -v ag
 then
     # Seems ypid gets this wrong sometimes.
@@ -148,11 +143,12 @@ git ls-files -z | xargs --null -I '{}' find '{}' -type f -regextype posix-extend
 
 # Unfortunately, some people misuse the " " (U+00A0 NO-BREAK SPACE, &nbsp;)
 # Otherwise, we could add a `-regextype posix-extended -not -regex '(.*\.rst)$'`
-# But as it is now, also fixing does files does more good then harm as it seems.
+# But as it is now, also fixing docs files does more good then harm as it seems.
 # Learn when to use NO-BREAK SPACE properly!
 git ls-files -z | xargs --null -I '{}' find '{}' -type f -print0 | \
     xargs --null --no-run-if-empty sed --in-place --regexp-extended '
         s#[ ]# #;
+        s#https://github\.com/ypid/test-suite-ypid#https://github.com/ypid/test-suite#;
     '
 
 # https://github.com/debops/docs/issues/139
@@ -241,13 +237,13 @@ git ls-files -z | xargs --null -I '{}' find '{}' -type f -regextype posix-extend
 ## Revert a change for deprecated roles (might be removed from the documentation at some point) or falsely detected roles.
 git ls-files -z | xargs --null -I '{}' find '{}' -type f -regextype posix-extended -regex '(defaults/.*\.yml|.*\.rst)$' -print0 | \
     xargs --null sed --in-place --regexp-extended "
-            s/\b(debops\.(php5|sshkeys|cfg|subnetwork)|ypid\.(crypttab|gdm|snapshot_snapper|kernel_module))_\b/\`\`\1\`\`/g;
+            s/\b(debops\.(php5|sshkeys|cfg|subnetwork)|ypid\.(crypttab|gdm|snapshot_snapper|kernel_module|linuxmuster_net-client-epoptes_via_postsync|linuxmuster_net-server-epoptes_via_postsync))_\b/\`\`\1\`\`/g;
         "
 
 ## Revert other changes.
 git ls-files -z | xargs --null -I '{}' find '{}' -type f -regextype posix-extended -regex '(defaults/.*\.yml|.*\.rst)$' -print0 | \
     xargs --null sed --in-place --regexp-extended '
-            s/:envvar:`((role_name__[[:alnum:]_]+|bootstrap__admin_system_home|bootstrap__admin_name|bootstrap__admin_manage_existing|owncloud__enable_occ_shortcut|php__pool_default|php__version|inventory__host_environment|inventory__group_environment|inventory__environment|tinc__compression|tinc__connect_to_mesh0|owncloud__subdomain|apt__conditional_whitelist|apt__proxy_bypass_for_bugs_debian_org|apt__sources_sections|apt__update_cache_early|apt__sources_types|apt__http_proxy_url|apt__https_proxy_url|apt__proxy_url|apt_cacher_ng__nginx_upstream|apt_cacher_ng__nginx_upstream_servers|swapfile__swappiness|swapfile__cache_pressure|x2go_server__apt_repo_key_fingerprint_override_map|x2go_server__upstream_repository_override_map|owncloud__nginx__servers|owncloud__nginx__upstream_php|owncloud__theme_entitiy_name|php__fpm_|tinc__address_family_mesh0|tinc__mlock_mesh0|tinc__inventory_hosts_mesh0|tinc__reachable_peer_hosts_mesh0|tinc__client_hosts|tinc__compression_mesh0|persistent_paths__qubes_os_paths|persistent_paths__qubes_os_bind_dirs|checkmk_agent__hostname|checkmk_agent__group_plugin_map))`/``\1``/g;
+            s/:envvar:`((role_name__[[:alnum:]_]+|bootstrap__admin_system_home|bootstrap__admin_name|bootstrap__admin_manage_existing|owncloud__enable_occ_shortcut|php__pool_default|php__version|inventory__host_environment|inventory__group_environment|inventory__environment|tinc__compression|tinc__connect_to_mesh0|owncloud__subdomain|apt__conditional_whitelist|apt__proxy_bypass_for_bugs_debian_org|apt__sources_sections|apt__update_cache_early|apt__sources_types|apt__http_proxy_url|apt__https_proxy_url|apt__proxy_url|apt_cacher_ng__nginx_upstream|apt_cacher_ng__nginx_upstream_servers|swapfile__swappiness|swapfile__cache_pressure|x2go_server__apt_repo_key_fingerprint_override_map|x2go_server__upstream_repository_override_map|owncloud__nginx__servers|owncloud__nginx__upstream_php|owncloud__theme_entitiy_name|php__fpm_|tinc__address_family_mesh0|tinc__mlock_mesh0|tinc__inventory_hosts_mesh0|tinc__reachable_peer_hosts_mesh0|tinc__client_hosts|tinc__compression_mesh0|persistent_paths__qubes_os_paths|persistent_paths__qubes_os_bind_dirs|checkmk_agent__hostname|checkmk_agent__group_plugin_map|mariadb_server__default_options))`/``\1``/g;
         '
 
 ## Revert changes only for debops-playbooks
@@ -269,6 +265,11 @@ notifications:
     - 'https://galaxy.ansible.com/api/v1/notifications/'
 EOF
     fi
+fi
+
+if command -v yaml4rst
+then
+    test -e defaults/main.yml && yaml4rst --config-kv "ansible_full_role_name=${role_full_name}" defaults/main.yml -i
 fi
 
 echo "Done. Be sure to review the changes."
