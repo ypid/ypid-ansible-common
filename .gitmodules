@@ -476,7 +476,7 @@
 	path = submodules/debops-api
 	url = https://github.com/debops/debops-api.git
 [submodule "roles/unverified_yet/debops.hashicorp"]
-	path = roles/unverified_yet/debops.hashicorp
+	path = roles/debops.hashicorp
 	url = https://github.com/debops/ansible-hashicorp.git
 [submodule "ansible/engine"]
 	path = ansible/engine
@@ -608,3 +608,6 @@
 [submodule "roles_ypid/debops-contrib.bitcoind"]
 	path = roles_ypid/debops-contrib.bitcoind
 	url = https://github.com/debops-contrib/ansible-bitcoind.git
+[submodule "roles/debops.kibana"]
+	path = roles/unverified_yet/debops.kibana
+	url = https://github.com/debops/ansible-kibana.git

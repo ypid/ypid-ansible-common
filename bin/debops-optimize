@@ -193,6 +193,7 @@ git ls-files -z | xargs --null -I '{}' find '{}' -type f -print0 | \
         s/:pkts/:pkgs/g;
         s/nginx_apt_preferences_dependent_list/nginx__apt_preferences__dependent_list/g;
         s/nginx_ferm_dependent_rules/nginx__ferm__dependent_rules/g;
+        s/overriden/overridden/g;
     '
 
 if [ "$role_name" != 'mariadb' ]
@@ -243,7 +244,7 @@ git ls-files -z | xargs --null -I '{}' find '{}' -type f -regextype posix-extend
 ## Revert other changes.
 git ls-files -z | xargs --null -I '{}' find '{}' -type f -regextype posix-extended -regex '(defaults/.*\.yml|.*\.rst)$' -print0 | \
     xargs --null sed --in-place --regexp-extended '
-            s/:envvar:`((role_name__[[:alnum:]_]+|bootstrap__admin_system_home|bootstrap__admin_name|bootstrap__admin_manage_existing|owncloud__enable_occ_shortcut|php__pool_default|php__version|inventory__host_environment|inventory__group_environment|inventory__environment|tinc__compression|tinc__connect_to_mesh0|owncloud__subdomain|apt__conditional_whitelist|apt__proxy_bypass_for_bugs_debian_org|apt__sources_sections|apt__update_cache_early|apt__sources_types|apt__http_proxy_url|apt__https_proxy_url|apt__proxy_url|apt_cacher_ng__nginx_upstream|apt_cacher_ng__nginx_upstream_servers|swapfile__swappiness|swapfile__cache_pressure|x2go_server__apt_repo_key_fingerprint_override_map|x2go_server__upstream_repository_override_map|owncloud__nginx__servers|owncloud__nginx__upstream_php|owncloud__theme_entitiy_name|php__fpm_|tinc__address_family_mesh0|tinc__mlock_mesh0|tinc__inventory_hosts_mesh0|tinc__reachable_peer_hosts_mesh0|tinc__client_hosts|tinc__compression_mesh0|persistent_paths__qubes_os_paths|persistent_paths__qubes_os_bind_dirs|checkmk_agent__hostname|checkmk_agent__group_plugin_map|mariadb_server__default_options))`/``\1``/g;
+            s/:envvar:`((role_name__[[:alnum:]_]+|bootstrap__admin_system_home|bootstrap__admin_name|bootstrap__admin_manage_existing|owncloud__enable_occ_shortcut|php__pool_default|php__version|inventory__host_environment|inventory__group_environment|inventory__environment|tinc__compression|tinc__connect_to_mesh0|owncloud__subdomain|apt__conditional_whitelist|apt__proxy_bypass_for_bugs_debian_org|apt__sources_sections|apt__update_cache_early|apt__sources_types|apt__http_proxy_url|apt__https_proxy_url|apt__proxy_url|apt_cacher_ng__nginx_upstream|apt_cacher_ng__nginx_upstream_servers|swapfile__swappiness|swapfile__cache_pressure|x2go_server__apt_repo_key_fingerprint_override_map|x2go_server__upstream_repository_override_map|owncloud__nginx__servers|owncloud__nginx__upstream_php|owncloud__theme_entitiy_name|php__fpm_|tinc__address_family_mesh0|tinc__mlock_mesh0|tinc__inventory_hosts_mesh0|tinc__reachable_peer_hosts_mesh0|tinc__client_hosts|tinc__compression_mesh0|persistent_paths__qubes_os_paths|persistent_paths__qubes_os_bind_dirs|checkmk_agent__hostname|checkmk_agent__group_plugin_map|mariadb_server__default_options|ferm__rules_forward|ferm__default_weight|libvirtd__group_map|libvirtd__access_group|libvirtd__connections|libvirtd__access_groups|libvirtd__uri))`/``\1``/g;
         '
 
 ## Revert changes only for debops-playbooks
