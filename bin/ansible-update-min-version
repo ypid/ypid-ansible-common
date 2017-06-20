@@ -24,6 +24,9 @@ Refer to: https://www.ansible.com/security
 
 Note that Ansible as of 2.2 does not even give a hint if a role is run with an unsupported Ansible version.
 Tracked upstream: https://github.com/ansible/ansible/issues/18375
+
+For DebOps roles, the script would usually be evoked as follows:
+ansible-update-min-version meta/main.yml --update-text-file docs/introduction.rst README.md CHANGES.rst tasks/main.yml -s 2.2.0
 """
 
 __license__ = 'AGPL-3.0'
