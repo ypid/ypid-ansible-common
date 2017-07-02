@@ -115,8 +115,9 @@ git ls-files -z | xargs --null -I '{}' find '{}' -type f -regextype posix-extend
         s#Debops#DebOps#g;
         s#debops project#DebOps project#gi;
         s#(`Semantic Versioning <[^>]+>`_)\b#\1_#g;
-        s#`(human-readable changelog) <http://keepachangelog.com/>`_\b#`\1 <http://keepachangelog.com/en/0.3.0/>`__#;
-        s#`(human-readable changelog) <http://keepachangelog.com/>`__#`\1 <http://keepachangelog.com/en/0.3.0/>`__#;
+        s#`(human-readable changelog) <http://keepachangelog.com/>`_\b#`\1 <http://keepachangelog.com/en/1.0.0/>`__#;
+        s#`(human-readable changelog) <http://keepachangelog.com/>`__#`\1 <http://keepachangelog.com/en/1.0.0/>`__#;
+        s#http://keepachangelog.com/en/0.3.0/#http://keepachangelog.com/en/1.0.0/#;
         s#Default variables: configuration#Default variable details#;
         s#Configuration of other Ansible roles#Configuration for other Ansible roles#;
         s#This variable is intended to be used in the inventory of the host#This variable is intended to be used in the inventory of hosts#;

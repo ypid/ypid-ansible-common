@@ -52,7 +52,9 @@ def update_meta_main_file(meta_main_file, set_version_explicit, set_version=ANSI
         data = yaml.safe_load(meta_main_fh)
 
         prev_version = data['galaxy_info']['min_ansible_version']
+        print(prev_version)
         if StrictVersion(prev_version) == StrictVersion(set_version):
+            print("test")
             return None
 
         if not set_version_explicit and StrictVersion(set_version) < StrictVersion(prev_version):
@@ -143,6 +145,7 @@ def main():
         )
 
     prev_version = update_meta_main_file(args.meta_main_file, set_version_explicit, set_version=args.set_version)
+    LOG.info("Detected previous Ansible min version: {}".format(prev_version))
     if prev_version is not None:
         for text_file in args.update_text_file:
             update_text_file(text_file, prev_version, set_version=args.set_version)
