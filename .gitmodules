@@ -128,7 +128,7 @@
 	path = roles/tersmitten.updatedb
 	url = https://github.com/Oefenweb/ansible-updatedb.git
 [submodule "roles/debops.gitlab"]
-	path = roles/unverified_yet/debops.gitlab
+	path = roles/debops.gitlab
 	url = https://github.com/debops/ansible-gitlab.git
 [submodule "roles/debops.redis"]
 	path = roles/debops.redis
@@ -611,3 +611,12 @@
 [submodule "roles/debops.kibana"]
 	path = roles/unverified_yet/debops.kibana
 	url = https://github.com/debops/ansible-kibana.git
+[submodule "roles/debops.libvirtd_qemu"]
+	path = roles/debops.libvirtd_qemu
+	url = https://github.com/debops/ansible-libvirtd_qemu.git
+[submodule "roles/unverified_yet/debops.rabbitmq_management"]
+	path = roles/unverified_yet/debops.rabbitmq_management
+	url = https://github.com/debops/ansible-rabbitmq_management.git
+[submodule "roles/unverified_yet/debops.rabbitmq_server"]
+	path = roles/unverified_yet/debops.rabbitmq_server
+	url = https://github.com/debops/ansible-rabbitmq_server.git
