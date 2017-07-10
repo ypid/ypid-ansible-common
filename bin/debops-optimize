@@ -101,7 +101,7 @@ git ls-files -z | xargs --null -I '{}' find '{}' -type f -regextype posix-extend
         s/``([[:alnum:]_]+__[^*?`/\ ]?[[:alnum:]_]+)``/:envvar:`\1`/g;
         s/:any:/:envvar:/g;
         s/`RFC([[:digit:]]+[^`]*)`_/:rfc:`\1`/gi;
-        s/RFC([[:digit:]]+)_/:rfc:`\1`/gi
+        s/\bRFC([[:digit:]]+)_/:rfc:`\1`/gi
         s/`([[:alnum:]_-]+\.[[:alnum:]_-]+)`_/\1_/g;
         s/\<(SOTA)\>/\1_/g;
         s/``(debops\.[[:alnum:]_-]+)``/\1_/g;

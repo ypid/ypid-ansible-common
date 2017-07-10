@@ -620,3 +620,6 @@
 [submodule "roles/unverified_yet/debops.rabbitmq_server"]
 	path = roles/unverified_yet/debops.rabbitmq_server
 	url = https://github.com/debops/ansible-rabbitmq_server.git
+[submodule "roles/unverified_yet/debops.etc_aliases"]
+	path = roles/unverified_yet/debops.etc_aliases
+	url = https://github.com/debops/ansible-etc_aliases.git
