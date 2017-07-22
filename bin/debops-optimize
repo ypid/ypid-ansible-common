@@ -146,10 +146,10 @@ git ls-files -z | xargs --null -I '{}' find '{}' -type f -regextype posix-extend
 # Otherwise, we could add a `-regextype posix-extended -not -regex '(.*\.rst)$'`
 # But as it is now, also fixing docs files does more good then harm as it seems.
 # Learn when to use NO-BREAK SPACE properly!
-git ls-files -z | xargs --null -I '{}' find '{}' -type f -print0 | \
+# Done that because `tree` uses NO-BREAK SPACE properly.
+git ls-files -z | xargs --null -I '{}' find '{}' -type f -regextype posix-extended -not -regex '(.*\.rst)$' -print0 | \
     xargs --null --no-run-if-empty sed --in-place --regexp-extended '
-        s#[ ]# #;
-        s#https://github\.com/ypid/test-suite-ypid#https://github.com/ypid/test-suite#;
+        s#[ ]# #g;
     '
 
 # https://github.com/debops/docs/issues/139
@@ -196,6 +196,7 @@ git ls-files -z | xargs --null -I '{}' find '{}' -type f -print0 | \
         s/nginx_ferm_dependent_rules/nginx__ferm__dependent_rules/g;
         s/ansible_ssh_user/ansible_user/g;
         s/overriden/overridden/g;
+        s#https://github\.com/ypid/test-suite-ypid#https://github.com/ypid/test-suite#;
     '
 
 if [ "$role_name" != 'mariadb' ]
