@@ -623,3 +623,6 @@
 [submodule "roles/unverified_yet/debops.etc_aliases"]
 	path = roles/unverified_yet/debops.etc_aliases
 	url = https://github.com/debops/ansible-etc_aliases.git
+[submodule "roles/unverified_yet/debops-contrib.roundcube"]
+	path = roles/unverified_yet/debops-contrib.roundcube
+	url = https://github.com/debops-contrib/ansible-roundcube.git
