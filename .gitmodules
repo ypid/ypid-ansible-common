@@ -1,5 +1,5 @@
 [submodule "debops.postfix"]
-	path = roles/debops.postfix
+	path = roles/unverified_yet/debops.postfix
 	url = https://github.com/debops/ansible-postfix.git
 [submodule "debops.libvirt"]
 	path = roles/debops.libvirt
@@ -626,3 +626,24 @@
 [submodule "roles/unverified_yet/debops-contrib.roundcube"]
 	path = roles/unverified_yet/debops-contrib.roundcube
 	url = https://github.com/debops-contrib/ansible-roundcube.git
+[submodule "roles/unverified_yet/debops.unbound"]
+	path = roles/unverified_yet/debops.unbound
+	url = https://github.com/debops/ansible-unbound.git
+[submodule "roles/unverified_yet/debops.ansible_plugins"]
+	path = roles/unverified_yet/debops.ansible_plugins
+	url = https://github.com/debops/ansible-ansible_plugins.git
+[submodule "roles/unverified_yet/debops.saslauthd"]
+	path = roles/unverified_yet/debops.saslauthd
+	url = https://github.com/debops/ansible-saslauthd.git
+[submodule "roles/unverified_yet/debops.postscreen"]
+	path = roles/unverified_yet/debops.postscreen
+	url = https://github.com/debops/ansible-postscreen.git
+[submodule "roles/unverified_yet/debops.postwhite"]
+	path = roles/unverified_yet/debops.postwhite
+	url = https://github.com/debops/ansible-postwhite.git
+[submodule "roles/unverified_yet/debops.postconf"]
+	path = roles/unverified_yet/debops.postconf
+	url = https://github.com/debops/ansible-postconf.git
+[submodule "roles/unverified_yet/debops.opendkim"]
+	path = roles/unverified_yet/debops.opendkim
+	url = https://github.com/debops/ansible-opendkim.git
