@@ -1,153 +1,15 @@
-[submodule "debops.postfix"]
-	path = roles/unverified_yet/debops.postfix
-	url = https://github.com/debops/ansible-postfix.git
-[submodule "debops.libvirt"]
-	path = roles/debops.libvirt
-	url = https://github.com/debops/ansible-libvirt.git
-[submodule "debops.libvirtd"]
-	path = roles/debops.libvirtd
-	url = https://github.com/debops/ansible-libvirtd.git
-[submodule "debops.docker"]
-	path = roles/debops.docker
-	url = https://github.com/debops/ansible-docker.git
-[submodule "debops.apt"]
-	path = roles/debops.apt
-	url = https://github.com/debops/ansible-apt.git
-[submodule "debops.apt_preferences"]
-	path = roles/debops.apt_preferences
-	url = https://github.com/debops/ansible-apt_preferences.git
-[submodule "debops.auth"]
-	path = roles/debops.auth
-	url = https://github.com/debops/ansible-auth.git
-[submodule "debops.bootstrap"]
-	path = roles/debops.bootstrap
-	url = https://github.com/debops/ansible-bootstrap.git
-[submodule "debops.boxbackup"]
-	path = roles/unverified_yet/debops.boxbackup
-	url = https://github.com/debops/ansible-boxbackup.git
-[submodule "debops.console"]
-	path = roles/debops.console
-	url = https://github.com/debops/ansible-console.git
-[submodule "debops.core"]
-	path = roles/debops.core
-	url = https://github.com/debops/ansible-core.git
-[submodule "debops.debug"]
-	path = roles/debops.debug
-	url = https://github.com/debops/ansible-debug.git
-[submodule "debops.directories"]
-	path = roles/deprecated/debops.directories
-	url = https://github.com/debops/ansible-directories.git
-[submodule "debops.dnsmasq"]
-	path = roles/debops.dnsmasq
-	url = https://github.com/debops/ansible-dnsmasq.git
-[submodule "debops.etc_services"]
-	path = roles/debops.etc_services
-	url = https://github.com/debops/ansible-etc_services.git
-[submodule "debops.ferm"]
-	path = roles/debops.ferm
-	url = https://github.com/debops/ansible-ferm.git
-[submodule "debops.grub"]
-	path = roles/debops.grub
-	url = https://github.com/debops/ansible-grub.git
-[submodule "debops.ifupdown"]
-	path = roles/debops.ifupdown
-	url = https://github.com/debops/ansible-ifupdown.git
-[submodule "debops.librenms"]
-	path = roles/unverified_yet/debops.librenms
-	url = https://github.com/debops/ansible-librenms.git
-[submodule "debops.lxc"]
-	path = roles/debops.lxc
-	url = https://github.com/debops/ansible-lxc.git
-[submodule "debops.mariadb"]
-	path = roles/debops.mariadb
-	url = https://github.com/debops/ansible-mariadb.git
-[submodule "debops.mariadb_server"]
-	path = roles/debops.mariadb_server
-	url = https://github.com/debops/ansible-mariadb_server.git
-[submodule "debops.mysql"]
-	path = roles/deprecated/debops.mysql
-	url = https://github.com/debops/ansible-mysql.git
-[submodule "debops.nginx"]
-	path = roles/debops.nginx
-	url = https://github.com/debops/ansible-nginx.git
-[submodule "debops.nodejs"]
-	path = roles/debops.nodejs
-	url = https://github.com/debops/ansible-nodejs.git
-[submodule "debops.ntp"]
-	path = roles/debops.ntp
-	url = https://github.com/debops/ansible-ntp.git
-[submodule "debops.openvz"]
-	path = roles/deprecated/debops.openvz
-	url = https://github.com/debops/ansible-openvz.git
-[submodule "debops.owncloud"]
-	path = roles_ypid/debops.owncloud
-	url = https://github.com/debops/ansible-owncloud.git
-[submodule "debops.php5"]
-	path = roles/deprecated/debops.php5
-	url = https://github.com/debops/ansible-php5.git
-[submodule "debops.pki"]
-	path = roles/debops.pki
-	url = https://github.com/debops/ansible-pki.git
-[submodule "debops.postgresql"]
-	path = roles/unverified_yet/debops.postgresql
-	url = https://github.com/debops/ansible-postgresql.git
-[submodule "debops.preseed"]
-	path = roles/debops.preseed
-	url = https://github.com/debops/ansible-preseed.git
-[submodule "debops.rsnapshot"]
-	path = roles/debops.rsnapshot
-	url = https://github.com/debops/ansible-rsnapshot.git
-[submodule "debops.rsyslog"]
-	path = roles/debops.rsyslog
-	url = https://github.com/debops/ansible-rsyslog.git
-[submodule "debops.samba"]
-	path = roles/debops.samba
-	url = https://github.com/debops/ansible-samba.git
-[submodule "debops.secret"]
-	path = roles/debops.secret
-	url = https://github.com/debops/ansible-secret.git
-[submodule "debops.sftpusers"]
-	path = roles/debops.sftpusers
-	url = https://github.com/debops/ansible-sftpusers.git
-[submodule "debops.sshd"]
-	path = roles/debops.sshd
-	url = https://github.com/debops/ansible-sshd.git
-[submodule "debops.sshkeys"]
-	path = roles/deprecated/debops.sshkeys
-	url = https://github.com/debops/ansible-sshkeys.git
-[submodule "debops.tcpwrappers"]
-	path = roles/debops.tcpwrappers
-	url = https://github.com/debops/ansible-tcpwrappers.git
-[submodule "debops.users"]
-	path = roles/debops.users
-	url = https://github.com/debops/ansible-users.git
 [submodule "roles/tersmitten.logcheck"]
 	path = roles/tersmitten.logcheck
 	url = https://github.com/Oefenweb/ansible-logcheck.git
 [submodule "roles/tersmitten.updatedb"]
 	path = roles/tersmitten.updatedb
 	url = https://github.com/Oefenweb/ansible-updatedb.git
-[submodule "roles/debops.gitlab"]
-	path = roles/debops.gitlab
-	url = https://github.com/debops/ansible-gitlab.git
-[submodule "roles/debops.redis"]
-	path = roles/debops.redis
-	url = https://github.com/debops/ansible-redis.git
-[submodule "roles/debops.ruby"]
-	path = roles/debops.ruby
-	url = https://github.com/debops/ansible-ruby.git
-[submodule "roles/debops.backporter"]
-	path = roles/unverified_yet/debops.backporter
-	url = https://github.com/debops/ansible-backporter.git
 [submodule "roles/rvm_io.rvm1-ruby"]
 	path = roles/rvm_io.rvm1-ruby
 	url = https://github.com/rvm/rvm1-ansible.git
 [submodule "roles/nusenu.relayor"]
 	path = roles/nusenu.relayor
 	url = https://github.com/nusenu/ansible-relayor.git
-[submodule "roles/debops.etherpad"]
-	path = roles/debops.etherpad
-	url = https://github.com/debops/ansible-etherpad.git
 [submodule "roles/aeriscloud.disk"]
 	path = roles/aeriscloud.disk
 	url = https://github.com/AerisCloud/ansible-disk.git
@@ -157,147 +19,15 @@
 [submodule "roles/tersmitten.swapfile"]
 	path = roles/deprecated/tersmitten.swapfile
 	url = https://github.com/Oefenweb/ansible-swapfile.git
-[submodule "roles/debops.monit"]
-	path = roles/unverified_yet/debops.monit
-	url = https://github.com/debops/ansible-monit.git
-[submodule "roles/debops.salt"]
-	path = roles/unverified_yet/debops.salt
-	url = https://github.com/debops/ansible-salt.git
 [submodule "playbooks/debops-wordpress"]
 	path = submodules/debops-wordpress
 	url = https://github.com/carlalexander/debops-wordpress.git
-[submodule "roles/debops.docker_gen"]
-	path = roles/debops.docker_gen
-	url = https://github.com/debops/ansible-docker_gen.git
-[submodule "roles/debops.nat"]
-	path = roles/deprecated/debops.nat
-	url = https://github.com/debops/ansible-nat.git
-[submodule "roles/debops.swapfile"]
-	path = roles/debops.swapfile
-	url = https://github.com/debops/ansible-swapfile.git
-[submodule "roles/debops.subnetwork"]
-	path = roles/deprecated/debops.subnetwork
-	url = https://github.com/debops/ansible-subnetwork.git
 [submodule "playbooks/ansible-os-hardening"]
 	path = roles/dev-sec.os-hardening
 	url = https://github.com/hardening-io/ansible-os-hardening.git
 [submodule "playbooks/debops-playbooks"]
 	path = submodules/debops-playbooks
 	url = https://github.com/debops/debops-playbooks.git
-[submodule "roles/debops.atd"]
-	path = roles/debops.atd
-	url = https://github.com/debops/ansible-atd.git
-[submodule "roles/debops.debops"]
-	path = roles/debops.debops
-	url = https://github.com/debops/ansible-debops.git
-[submodule "roles/debops.dhcpd"]
-	path = roles/unverified_yet/debops.dhcpd
-	url = https://github.com/debops/ansible-dhcpd.git
-[submodule "roles/debops.dokuwiki"]
-	path = roles/unverified_yet/debops.dokuwiki
-	url = https://github.com/debops/ansible-dokuwiki.git
-[submodule "roles/debops.dovecot"]
-	path = roles/unverified_yet/debops.dovecot
-	url = https://github.com/debops/ansible-dovecot.git
-[submodule "roles/debops.elasticsearch"]
-	path = roles/unverified_yet/debops.elasticsearch
-	url = https://github.com/debops/ansible-elasticsearch.git
-[submodule "roles/debops.fail2ban"]
-	path = roles/unverified_yet/debops.fail2ban
-	url = https://github.com/debops/ansible-fail2ban.git
-[submodule "roles/debops.fcgiwrap"]
-	path = roles/unverified_yet/debops.fcgiwrap
-	url = https://github.com/debops/ansible-fcgiwrap.git
-[submodule "roles/debops.gitlab_ci"]
-	path = roles/unverified_yet/debops.gitlab_ci
-	url = https://github.com/debops/ansible-gitlab_ci.git
-[submodule "roles/debops.gitlab_ci_runner"]
-	path = roles/unverified_yet/debops.gitlab_ci_runner
-	url = https://github.com/debops/ansible-gitlab_ci_runner.git
-[submodule "roles/debops.gitusers"]
-	path = roles/debops.gitusers
-	url = https://github.com/debops/ansible-gitusers.git
-[submodule "roles/debops.golang"]
-	path = roles/unverified_yet/debops.golang
-	url = https://github.com/debops/ansible-golang.git
-[submodule "roles/debops.hwraid"]
-	path = roles/debops.hwraid
-	url = https://github.com/debops/ansible-hwraid.git
-[submodule "roles/debops.ipxe"]
-	path = roles/unverified_yet/debops.ipxe
-	url = https://github.com/debops/ansible-ipxe.git
-[submodule "roles/debops.iscsi"]
-	path = roles/unverified_yet/debops.iscsi
-	url = https://github.com/debops/ansible-iscsi.git
-[submodule "roles/debops.java"]
-	path = roles/unverified_yet/debops.java
-	url = https://github.com/debops/ansible-java.git
-[submodule "roles/debops.lvm"]
-	path = roles/debops.lvm
-	url = https://github.com/debops/ansible-lvm.git
-[submodule "roles/debops.mailman"]
-	path = roles/unverified_yet/debops.mailman
-	url = https://github.com/debops/ansible-mailman.git
-[submodule "roles/debops.memcached"]
-	path = roles/debops.memcached
-	url = https://github.com/debops/ansible-memcached.git
-[submodule "roles/debops.monkeysphere"]
-	path = roles/unverified_yet/debops.monkeysphere
-	url = https://github.com/debops/ansible-monkeysphere.git
-[submodule "roles/debops.nfs"]
-	path = roles/unverified_yet/debops.nfs
-	url = https://github.com/debops/ansible-nfs.git
-[submodule "roles/debops.phpipam"]
-	path = roles/unverified_yet/debops.phpipam
-	url = https://github.com/debops/ansible-phpipam.git
-[submodule "roles/debops.phpmyadmin"]
-	path = roles/unverified_yet/debops.phpmyadmin
-	url = https://github.com/debops/ansible-phpmyadmin.git
-[submodule "roles/debops.postgresql_server"]
-	path = roles/unverified_yet/debops.postgresql_server
-	url = https://github.com/debops/ansible-postgresql_server.git
-[submodule "roles/debops.radvd"]
-	path = roles/unverified_yet/debops.radvd
-	url = https://github.com/debops/ansible-radvd.git
-[submodule "roles/debops.rails_deploy"]
-	path = roles/unverified_yet/debops.rails_deploy
-	url = https://github.com/debops/ansible-rails_deploy.git
-[submodule "roles/debops.reprepro"]
-	path = roles/unverified_yet/debops.reprepro
-	url = https://github.com/debops/ansible-reprepro.git
-[submodule "roles/debops.rstudio_server"]
-	path = roles/unverified_yet/debops.rstudio_server
-	url = https://github.com/debops/ansible-rstudio_server.git
-[submodule "roles/debops.sks"]
-	path = roles/unverified_yet/debops.sks
-	url = https://github.com/debops/ansible-sks.git
-[submodule "roles/debops.slapd"]
-	path = roles/debops.slapd
-	url = https://github.com/debops/ansible-slapd.git
-[submodule "roles/debops.smstools"]
-	path = roles/unverified_yet/debops.smstools
-	url = https://github.com/debops/ansible-smstools.git
-[submodule "roles/debops.snmpd"]
-	path = roles/debops.snmpd
-	url = https://github.com/debops/ansible-snmpd.git
-[submodule "roles/debops.stunnel"]
-	path = roles/unverified_yet/debops.stunnel
-	url = https://github.com/debops/ansible-stunnel.git
-[submodule "roles/debops.tftpd"]
-	path = roles/unverified_yet/debops.tftpd
-	url = https://github.com/debops/ansible-tftpd.git
-[submodule "roles/debops.tgt"]
-	path = roles/unverified_yet/debops.tgt
-	url = https://github.com/debops/ansible-tgt.git
-[submodule "roles/debops.tinc"]
-	path = roles/debops.tinc
-	url = https://github.com/debops/ansible-tinc.git
-[submodule "roles/debops.dhparam"]
-	path = roles/debops.dhparam
-	url = https://github.com/debops/ansible-dhparam.git
-[submodule "roles/unverified_yet/ansible-roundcube"]
-	path = roles/unverified_yet/debops.roundcube
-	url = https://github.com/debops-contrib/ansible-roundcube.git
 [submodule "roles/debops.contrib-checkmk_agent"]
 	path = roles/debops-contrib.checkmk_agent
 	url = https://github.com/debops-contrib/ansible-checkmk_agent.git
@@ -355,18 +85,12 @@
 [submodule "roles_ypid/ypid.psad"]
 	path = roles_ypid/ypid.psad
 	url = https://github.com/ypid/ansible-psad.git
-[submodule "roles_ypid/debops.cryptsetup"]
-	path = roles_ypid/debops.cryptsetup
-	url = https://github.com/debops/ansible-cryptsetup.git
 [submodule "roles_ypid/debops.contrib-foodsoft"]
 	path = roles_ypid/debops-contrib.foodsoft
 	url = https://github.com/debops-contrib/ansible-foodsoft.git
 [submodule "playbooks/debops-contrib-playbooks"]
 	path = playbooks/debops-contrib-playbooks
 	url = https://github.com/debops-contrib/debops-contrib-playbooks.git
-[submodule "roles/debops.encfs"]
-	path = roles/debops.encfs
-	url = https://github.com/debops/ansible-encfs
 [submodule "roles_ypid/debops.contrib-etckeeper"]
 	path = roles_ypid/debops-contrib.etckeeper
 	url = https://github.com/debops-contrib/ansible-etckeeper.git
@@ -391,18 +115,9 @@
 [submodule "roles_ypid/ypid.whereami"]
 	path = roles_ypid/ypid.whereami
 	url = https://github.com/ypid/ansible-whereami.git
-[submodule "roles/debops.unattended_upgrades"]
-	path = roles/debops.unattended_upgrades
-	url = https://github.com/debops/ansible-unattended_upgrades.git
 [submodule "roles_ypid/debops.contrib-snapshot_snapper"]
 	path = roles_ypid/debops-contrib.snapshot_snapper
 	url = https://github.com/debops-contrib/ansible-snapshot_snapper.git
-[submodule "roles_ypid/debops.apt_cacher_ng"]
-	path = roles_ypid/debops.apt_cacher_ng
-	url = https://github.com/debops/ansible-apt_cacher_ng.git
-[submodule "roles/unverified_yet/debops.gitlab_runner"]
-	path = roles/unverified_yet/debops.gitlab_runner
-	url = https://github.com/debops/ansible-gitlab_runner.git
 [submodule "docs/debops"]
 	path = docs/debops
 	url = https://github.com/debops/docs.git
@@ -415,18 +130,12 @@
 [submodule "roles_ypid/ypid.dhclient"]
 	path = roles_ypid/ypid.dhclient
 	url = https://github.com/ypid/ansible-dhclient.git
-[submodule "roles/debops.logrotate"]
-	path = roles/debops.logrotate
-	url = https://github.com/debops/ansible-logrotate.git
 [submodule "roles_ypid/ypid.gdm"]
 	path = roles_ypid/ypid.dm
 	url = https://github.com/ypid/ansible-dm.git
 [submodule "roles_ypid/debops.contrib-btrfs"]
 	path = roles_ypid/debops-contrib.btrfs
 	url = https://github.com/debops-contrib/ansible-btrfs.git
-[submodule "roles/debops.apt_install"]
-	path = roles/debops.apt_install
-	url = https://github.com/debops/ansible-apt_install
 [submodule "roles_ypid/debops-contrib.x2go_server"]
 	path = roles_ypid/debops-contrib.x2go_server
 	url = https://github.com/debops-contrib/ansible-x2go_server.git
@@ -445,9 +154,6 @@
 [submodule "docs/debops-policy"]
 	path = docs/debops-policy
 	url = https://github.com/debops/debops-policy.git
-[submodule "roles/debops.resources"]
-	path = roles/debops.resources
-	url = https://github.com/debops/ansible-resources.git
 [submodule "roles/debops-contrib.checkmk_server"]
 	path = roles/unverified_yet/debops-contrib.checkmk_server
 	url = https://github.com/debops-contrib/ansible-checkmk_server.git
@@ -463,67 +169,25 @@
 [submodule "docs/debops.github.io"]
 	path = docs/debops.github.io
 	url = https://github.com/debops/debops.github.io
-[submodule "roles/unverified_yet/debops.php"]
-	path = roles/debops.php
-	url = https://github.com/debops/ansible-php.git
-[submodule "roles_ypid/debops.debops_api"]
-	path = roles_ypid/debops.debops_api
-	url = https://github.com/debops/ansible-debops_api.git
 [submodule "submodules/debops-api"]
 	path = submodules/debops-api
 	url = https://github.com/debops/debops-api.git
-[submodule "roles/unverified_yet/debops.hashicorp"]
-	path = roles/debops.hashicorp
-	url = https://github.com/debops/ansible-hashicorp.git
 [submodule "ansible/engine"]
 	path = ansible/engine
 	url = https://github.com/ansible/ansible.git
 	ignore = untracked
-[submodule "roles/debops.nullmailer"]
-	path = roles/debops.nullmailer
-	url = https://github.com/debops/ansible-nullmailer.git
-[submodule "roles/debops.environment"]
-	path = roles/debops.environment
-	url = https://github.com/debops/ansible-environment.git
-[submodule "roles/debops.authorized_keys"]
-	path = roles/debops.authorized_keys
-	url = https://github.com/debops/ansible-authorized_keys.git
 [submodule "integration_testing/rolespec"]
 	path = integration_testing/rolespec
 	url = https://github.com/nickjj/rolespec
-[submodule "roles/debops.debops_fact"]
-	path = roles/debops.debops_fact
-	url = https://github.com/debops/ansible-debops_fact.git
 [submodule "submodules/acme-tiny"]
 	path = submodules/acme-tiny
 	url = https://github.com/diafygi/acme-tiny
-[submodule "roles/deprecated/debops.kvm"]
-	path = roles/deprecated/debops.kvm
-	url = https://github.com/debops/ansible-kvm.git
-[submodule "roles_ypid/debops.sysctl"]
-	path = roles_ypid/debops.sysctl
-	url = https://github.com/debops/ansible-sysctl.git
 [submodule "inventory"]
 	path = inventory
 	url = https://github.com/ypid/ypid-ansible-inventory.git
 [submodule "roles/dev-sec.apache-hardening"]
 	path = roles/dev-sec.apache-hardening
 	url = https://github.com/dev-sec/ansible-apache-hardening.git
-[submodule "roles_ypid/debops.apache"]
-	path = roles_ypid/debops.apache
-	url = https://github.com/debops/ansible-apache.git
-[submodule "roles/debops.apt_proxy"]
-	path = roles/debops.apt_proxy
-	url = https://github.com/debops/ansible-apt_proxy.git
-[submodule "roles/debops.apt_listchanges"]
-	path = roles/debops.apt_listchanges
-	url = https://github.com/debops/ansible-apt_listchanges.git
-[submodule "roles/unverified_yet/debops.gunicorn"]
-	path = roles/unverified_yet/debops.gunicorn
-	url = https://github.com/debops/ansible-gunicorn.git
-[submodule "roles/unverified_yet/debops.netbox"]
-	path = roles/unverified_yet/debops.netbox
-	url = https://github.com/debops/ansible-netbox.git
 [submodule "roles_ypid/debops-contrib.firejail"]
 	path = roles_ypid/debops-contrib.firejail
 	url = https://github.com/debops-contrib/ansible-firejail
@@ -539,15 +203,9 @@
 [submodule "docs/ypid-ansible-role-docs"]
 	path = docs/ypid-ansible-role-docs
 	url = https://github.com/ypid/ypid-ansible-role-docs
-[submodule "roles/debops.cron"]
-	path = roles/debops.cron
-	url = https://github.com/debops/ansible-cron.git
 [submodule "roles_ypid/ypid.plymouth"]
 	path = roles_ypid/ypid.plymouth
 	url = https://github.com/ypid/ansible-plymouth.git
-[submodule "roles_ypid/debops.persistent_paths"]
-	path = roles_ypid/debops.persistent_paths
-	url = https://github.com/debops/ansible-persistent_paths.git
 [submodule "submodules/ansible-lint"]
 	path = submodules/ansible-lint
 	url = https://github.com/willthames/ansible-lint.git
@@ -563,9 +221,6 @@
 [submodule "roles_ypid/ypid.dotfiles"]
 	path = roles_ypid/ypid.dotfiles
 	url = https://github.com/ypid/ansible-dotfiles.git
-[submodule "roles/debops.root_account"]
-	path = roles/debops.root_account
-	url = https://github.com/debops/ansible-root_account.git
 [submodule "roles/unverified_deprecated/systemli.rootcrypto"]
 	path = roles/unverified_deprecated/systemli.rootcrypto
 	url = https://github.com/systemli/ansible-rootcrypto.git
@@ -578,72 +233,21 @@
 [submodule "roles_ypid/debops-contrib.volkszaehler"]
 	path = roles_ypid/debops-contrib.volkszaehler
 	url = https://github.com/debops-contrib/ansible-volkszaehler.git
-[submodule "roles/debops.nsswitch"]
-	path = roles/debops.nsswitch
-	url = https://github.com/debops/ansible-nsswitch.git
-[submodule "roles/unverified_yet/debops.nfs_server"]
-	path = roles/unverified_yet/debops.nfs_server
-	url = https://github.com/debops/ansible-nfs_server.git
 [submodule "integration_testing/ganto"]
 	path = integration_testing/ganto
 	url = https://github.com/ganto/debops-test-suite
-[submodule "roles/unverified_yet/debops.avahi"]
-	path = roles/unverified_yet/debops.avahi
-	url = https://github.com/debops/ansible-avahi.git
 [submodule "roles_ypid/debops-contrib.homeassistant"]
 	path = roles_ypid/debops-contrib.homeassistant
 	url = https://github.com/debops-contrib/ansible-homeassistant.git
 [submodule "roles_ypid/debops-contrib.neurodebian"]
 	path = roles_ypid/debops-contrib.neurodebian
 	url = https://github.com/debops-contrib/ansible-neurodebian.git
-[submodule "roles/unverified_yet/debops.mosquitto"]
-	path = roles/unverified_yet/debops.mosquitto
-	url = https://github.com/debops/ansible-mosquitto.git
-[submodule "roles/unverified_yet/debops.elastic_co"]
-	path = roles/unverified_yet/debops.elastic_co
-	url = https://github.com/debops/ansible-elastic_co.git
 [submodule "roles_ypid/debops-contrib.bitcoind"]
 	path = roles_ypid/debops-contrib.bitcoind
 	url = https://github.com/debops-contrib/ansible-bitcoind.git
-[submodule "roles/debops.kibana"]
-	path = roles/unverified_yet/debops.kibana
-	url = https://github.com/debops/ansible-kibana.git
-[submodule "roles/debops.libvirtd_qemu"]
-	path = roles/debops.libvirtd_qemu
-	url = https://github.com/debops/ansible-libvirtd_qemu.git
-[submodule "roles/unverified_yet/debops.rabbitmq_management"]
-	path = roles/unverified_yet/debops.rabbitmq_management
-	url = https://github.com/debops/ansible-rabbitmq_management.git
-[submodule "roles/unverified_yet/debops.rabbitmq_server"]
-	path = roles/unverified_yet/debops.rabbitmq_server
-	url = https://github.com/debops/ansible-rabbitmq_server.git
-[submodule "roles/unverified_yet/debops.etc_aliases"]
-	path = roles/unverified_yet/debops.etc_aliases
-	url = https://github.com/debops/ansible-etc_aliases.git
 [submodule "roles/unverified_yet/debops-contrib.roundcube"]
 	path = roles/unverified_yet/debops-contrib.roundcube
 	url = https://github.com/debops-contrib/ansible-roundcube.git
-[submodule "roles/unverified_yet/debops.unbound"]
-	path = roles/unverified_yet/debops.unbound
-	url = https://github.com/debops/ansible-unbound.git
-[submodule "roles/unverified_yet/debops.ansible_plugins"]
-	path = roles/unverified_yet/debops.ansible_plugins
-	url = https://github.com/debops/ansible-ansible_plugins.git
-[submodule "roles/unverified_yet/debops.saslauthd"]
-	path = roles/unverified_yet/debops.saslauthd
-	url = https://github.com/debops/ansible-saslauthd.git
-[submodule "roles/unverified_yet/debops.postscreen"]
-	path = roles/unverified_yet/debops.postscreen
-	url = https://github.com/debops/ansible-postscreen.git
-[submodule "roles/unverified_yet/debops.postwhite"]
-	path = roles/unverified_yet/debops.postwhite
-	url = https://github.com/debops/ansible-postwhite.git
-[submodule "roles/unverified_yet/debops.postconf"]
-	path = roles/unverified_yet/debops.postconf
-	url = https://github.com/debops/ansible-postconf.git
-[submodule "roles/unverified_yet/debops.opendkim"]
-	path = roles/unverified_yet/debops.opendkim
-	url = https://github.com/debops/ansible-opendkim.git
 [submodule "roles/weareinteractive.apt"]
 	path = roles/weareinteractive.apt
 	url = https://github.com/weareinteractive/ansible-apt.git
