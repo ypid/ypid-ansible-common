@@ -25,9 +25,6 @@
 [submodule "playbooks/ansible-os-hardening"]
 	path = roles/dev-sec.os-hardening
 	url = https://github.com/hardening-io/ansible-os-hardening.git
-[submodule "playbooks/debops-playbooks"]
-	path = submodules/debops-playbooks
-	url = https://github.com/debops/debops-playbooks.git
 [submodule "roles/debops.contrib-checkmk_agent"]
 	path = roles/debops-contrib.checkmk_agent
 	url = https://github.com/debops-contrib/ansible-checkmk_agent.git
@@ -169,9 +166,6 @@
 [submodule "docs/debops.github.io"]
 	path = docs/debops.github.io
 	url = https://github.com/debops/debops.github.io
-[submodule "submodules/debops-api"]
-	path = submodules/debops-api
-	url = https://github.com/debops/debops-api.git
 [submodule "ansible/engine"]
 	path = ansible/engine
 	url = https://github.com/ansible/ansible.git
