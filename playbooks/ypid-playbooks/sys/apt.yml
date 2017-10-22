@@ -1,0 +1,10 @@
+---
+
+- name: 'apt update && apt upgrade'
+  hosts: 'ypid_apt'
+  become: True
+
+  roles:
+
+    - role: weareinteractive.apt
+      tags: [ 'role::apt' ]

@@ -647,3 +647,6 @@
 [submodule "roles/unverified_yet/debops.opendkim"]
 	path = roles/unverified_yet/debops.opendkim
 	url = https://github.com/debops/ansible-opendkim.git
+[submodule "roles/weareinteractive.apt"]
+	path = roles/weareinteractive.apt
+	url = https://github.com/weareinteractive/ansible-apt.git

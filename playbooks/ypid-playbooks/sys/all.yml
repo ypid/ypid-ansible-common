@@ -3,3 +3,4 @@
 - include: shutdown_if_battery_low.yml
 - include: file_attributes.yml
 - include: packages.yml
+- include: apt.yml
