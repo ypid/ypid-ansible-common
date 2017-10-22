@@ -59,7 +59,7 @@ do
 
 	echo "$git_repo_location"  >> "$git_repos_update_done_file"
 
-done 3< <(git submodule --quiet foreach pwd | grep --invert-match --extended-regexp 'roles/(:?deprecated|unverified_yet)')
+done 3< <(git submodule --quiet foreach pwd)
 # done < <(echo "$HOME/.ansible/ypid-ansible-common/template_READMEs/ansigenome")
 # done < <(echo "$HOME/.ansible/ypid-ansible-common/roles/debops.pki")
 # done < <(echo "$HOME/.ansible/ypid-ansible-common/roles_ypid/debops-contrib.btrfs/")
