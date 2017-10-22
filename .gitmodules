@@ -401,7 +401,7 @@
 	path = roles_ypid/debops.apt_cacher_ng
 	url = https://github.com/debops/ansible-apt_cacher_ng.git
 [submodule "submodules/debops"]
-	path = submodules/debops
+	path = submodules/debops-tools
 	url = https://github.com/debops/debops-tools.git
 [submodule "roles/unverified_yet/debops.gitlab_runner"]
 	path = roles/unverified_yet/debops.gitlab_runner
