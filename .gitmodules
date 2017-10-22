@@ -647,3 +647,6 @@
 [submodule "roles/weareinteractive.apt"]
 	path = roles/weareinteractive.apt
 	url = https://github.com/weareinteractive/ansible-apt.git
+[submodule "submodules/debops"]
+	path = submodules/debops
+	url = https://github.com/debops/debops.git
