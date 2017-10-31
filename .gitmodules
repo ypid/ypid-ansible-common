@@ -34,15 +34,9 @@
 [submodule "submodules/ansible-qubes"]
 	path = submodules/ansible-qubes
 	url = https://github.com/Rudd-O/ansible-qubes.git
-[submodule "roles_ypid/ypid.kernel_module"]
-	path = roles_ypid/debops-contrib.kernel_module
-	url = https://github.com/debops-contrib/ansible-kernel_module.git
 [submodule "roles_ypid/ypid.copy"]
 	path = roles_ypid/deprecated/ypid.copy
 	url = https://github.com/ypid/ansible-copy.git
-[submodule "roles_ypid/ypid.cryptsetup_remote_unlock"]
-	path = roles_ypid/debops-contrib.dropbear_initramfs
-	url = https://github.com/debops-contrib/ansible-dropbear_initramfs.git
 [submodule "roles_ypid/ypid.divert"]
 	path = roles_ypid/ypid.divert
 	url = https://github.com/ypid/ansible-divert.git
@@ -82,21 +76,6 @@
 [submodule "roles_ypid/ypid.psad"]
 	path = roles_ypid/ypid.psad
 	url = https://github.com/ypid/ansible-psad.git
-[submodule "roles_ypid/debops.contrib-foodsoft"]
-	path = roles_ypid/debops-contrib.foodsoft
-	url = https://github.com/debops-contrib/ansible-foodsoft.git
-[submodule "playbooks/debops-contrib-playbooks"]
-	path = playbooks/debops-contrib-playbooks
-	url = https://github.com/debops-contrib/debops-contrib-playbooks.git
-[submodule "roles_ypid/debops.contrib-etckeeper"]
-	path = roles_ypid/debops-contrib.etckeeper
-	url = https://github.com/debops-contrib/ansible-etckeeper.git
-[submodule "roles_ypid/debops.contrib-fuse"]
-	path = roles_ypid/debops-contrib.fuse
-	url = https://github.com/debops-contrib/ansible-fuse.git
-[submodule "roles_ypid/debops.contrib-apparmor"]
-	path = roles_ypid/debops-contrib.apparmor
-	url = https://github.com/debops-contrib/ansible-apparmor.git
 [submodule "roles/deprecated/silpion.etckeeper"]
 	path = roles/deprecated/silpion.etckeeper
 	url = https://github.com/silpion/ansible-etckeeper.git
@@ -112,9 +91,6 @@
 [submodule "roles_ypid/ypid.whereami"]
 	path = roles_ypid/ypid.whereami
 	url = https://github.com/ypid/ansible-whereami.git
-[submodule "roles_ypid/debops.contrib-snapshot_snapper"]
-	path = roles_ypid/debops-contrib.snapshot_snapper
-	url = https://github.com/debops-contrib/ansible-snapshot_snapper.git
 [submodule "docs/debops"]
 	path = docs/debops
 	url = https://github.com/debops/docs.git
@@ -130,12 +106,6 @@
 [submodule "roles_ypid/ypid.gdm"]
 	path = roles_ypid/ypid.dm
 	url = https://github.com/ypid/ansible-dm.git
-[submodule "roles_ypid/debops.contrib-btrfs"]
-	path = roles_ypid/debops-contrib.btrfs
-	url = https://github.com/debops-contrib/ansible-btrfs.git
-[submodule "roles_ypid/debops-contrib.x2go_server"]
-	path = roles_ypid/debops-contrib.x2go_server
-	url = https://github.com/debops-contrib/ansible-x2go_server.git
 [submodule "roles_ypid/ypid.opsi"]
 	path = roles_ypid/ypid.opsi
 	url = https://github.com/ypid/ansible-opsi.git
@@ -182,9 +152,6 @@
 [submodule "roles/dev-sec.apache-hardening"]
 	path = roles/dev-sec.apache-hardening
 	url = https://github.com/dev-sec/ansible-apache-hardening.git
-[submodule "roles_ypid/debops-contrib.firejail"]
-	path = roles_ypid/debops-contrib.firejail
-	url = https://github.com/debops-contrib/ansible-firejail
 [submodule "docs/debops-contrib"]
 	path = docs/debops-contrib
 	url = https://github.com/debops-contrib/docs.git
@@ -224,21 +191,9 @@
 [submodule "roles/geerlingguy.composer"]
 	path = roles/geerlingguy.composer
 	url = https://github.com/geerlingguy/ansible-role-composer.git
-[submodule "roles_ypid/debops-contrib.volkszaehler"]
-	path = roles_ypid/debops-contrib.volkszaehler
-	url = https://github.com/debops-contrib/ansible-volkszaehler.git
 [submodule "integration_testing/ganto"]
 	path = integration_testing/ganto
 	url = https://github.com/ganto/debops-test-suite
-[submodule "roles_ypid/debops-contrib.homeassistant"]
-	path = roles_ypid/debops-contrib.homeassistant
-	url = https://github.com/debops-contrib/ansible-homeassistant.git
-[submodule "roles_ypid/debops-contrib.neurodebian"]
-	path = roles_ypid/debops-contrib.neurodebian
-	url = https://github.com/debops-contrib/ansible-neurodebian.git
-[submodule "roles_ypid/debops-contrib.bitcoind"]
-	path = roles_ypid/debops-contrib.bitcoind
-	url = https://github.com/debops-contrib/ansible-bitcoind.git
 [submodule "roles/unverified_yet/debops-contrib.roundcube"]
 	path = roles/unverified_yet/debops-contrib.roundcube
 	url = https://github.com/debops-contrib/ansible-roundcube.git
@@ -248,3 +203,9 @@
 [submodule "submodules/debops"]
 	path = submodules/debops
 	url = https://github.com/debops/debops.git
+[submodule "roles/deprecated/debops.mysql"]
+	path = roles/deprecated/debops.mysql
+	url = https://github.com/debops/ansible-mysql.git
+[submodule "roles/deprecated/debops.php5"]
+	path = roles/deprecated/debops.php5
+	url = https://github.com/debops/ansible-php5.git
