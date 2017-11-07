@@ -209,3 +209,6 @@
 [submodule "roles/deprecated/debops.php5"]
 	path = roles/deprecated/debops.php5
 	url = https://github.com/debops/ansible-php5.git
+[submodule "submodules/--force"]
+	path = submodules/ansible-btrfs-subvolume
+	url = https://github.com/ypid/ansible-btrfs-subvolume.git
