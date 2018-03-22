@@ -6,5 +6,5 @@
 
   roles:
 
-    - role: debops-contrib.etckeeper
+    - role: debops.etckeeper
       tags: [ 'role::etckeeper' ]
