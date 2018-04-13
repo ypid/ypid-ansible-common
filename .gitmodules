@@ -117,7 +117,7 @@
 	url = https://github.com/ypid/ansible-wine.git
 [submodule "READMEs/ansigenome"]
 	path = template_READMEs/ansigenome
-	url = https://github.com/nickjj/ansigenome.git
+	url = https://github.com/ypid/ansigenome.git
 [submodule "docs/debops-policy"]
 	path = docs/debops-policy
 	url = https://github.com/debops/debops-policy.git
