@@ -191,9 +191,6 @@
 [submodule "roles/geerlingguy.composer"]
 	path = roles/geerlingguy.composer
 	url = https://github.com/geerlingguy/ansible-role-composer.git
-[submodule "integration_testing/ganto"]
-	path = integration_testing/ganto
-	url = https://github.com/ganto/debops-test-suite
 [submodule "roles/unverified_yet/debops-contrib.roundcube"]
 	path = roles/unverified_yet/debops-contrib.roundcube
 	url = https://github.com/debops-contrib/ansible-roundcube.git
