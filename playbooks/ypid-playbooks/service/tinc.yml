@@ -1,3 +1,3 @@
 ---
 
-- include: tinc-qubes_os.yml
+- import_playbook: tinc-qubes_os.yml

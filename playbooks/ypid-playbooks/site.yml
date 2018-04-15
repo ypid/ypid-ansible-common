@@ -1,15 +1,16 @@
 ---
 
-- include: service_early/all.yml
+- import_playbook: service_early/all.yml
 
-- include: debops.yml
+- import_playbook: debops.yml
+- import_playbook: ../debops-playbooks/service/debops_legacy.yml
 
   ## Ensure that packages are installed before debops-contrib.firejail.
-- include: sys/all.yml
+- import_playbook: sys/all.yml
 
-- include: ../debops-contrib-playbooks/service/all.yml
+- import_playbook: ../debops-contrib-playbooks/service/all.yml
 
-- include: common.yml
-- include: security/all.yml
-- include: net/all.yml
-- include: workstation/all.yml
+- import_playbook: common.yml
+- import_playbook: security/all.yml
+- import_playbook: net/all.yml
+- import_playbook: workstation/all.yml

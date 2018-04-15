@@ -1,6 +1,6 @@
 ---
 
-- include: shutdown_if_battery_low.yml
-- include: file_attributes.yml
-- include: packages.yml
-- include: apt.yml
+- import_playbook: shutdown_if_battery_low.yml
+- import_playbook: file_attributes.yml
+- import_playbook: packages.yml
+- import_playbook: apt.yml

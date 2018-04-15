@@ -1,4 +1,4 @@
 ---
 
-- include: linuxmuster_net_client.yml
-- include: epoptes.yml
+- import_playbook: linuxmuster_net_client.yml
+- import_playbook: epoptes.yml

@@ -13,5 +13,4 @@
     - role: tersmitten.updatedb
       tags: [ 'role::updatedb' ]
 
-    - role: ypid.divert
-      tags: [ 'role::divert' ]
+- import_playbook: service/divert.yml

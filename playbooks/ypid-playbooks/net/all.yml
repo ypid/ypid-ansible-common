@@ -1,8 +1,8 @@
 ---
 # .. vim: foldmarker=[[[,]]]:foldmethod=marker
 
-- include: dhclient.yml
-- include: dnsmasq.yml
-- include: tinc.yml
-- include: whereami.yml
-- include: vnstat.yml
+- import_playbook: dhclient.yml
+- import_playbook: dnsmasq.yml
+- import_playbook: tinc.yml
+- import_playbook: whereami.yml
+- import_playbook: vnstat.yml

@@ -1,10 +1,10 @@
 ---
 
-- include: sudo.yml
+- import_playbook: sudo.yml
 
-- include: initramfs_message.yml
+- import_playbook: initramfs_message.yml
 
 ## Incompatible with Ansible 2.1 because the `check_mode` keyword is used.
-# - include: ssh-hardening.yml
+# - import_playbook: ssh-hardening.yml
 
-- include: logcheck.yml
+- import_playbook: logcheck.yml
