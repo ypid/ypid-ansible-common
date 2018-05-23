@@ -1,0 +1,19 @@
+---
+
+- name: Show Ansible host inventory
+  hosts: [ 'all' ]
+  gather_facts: False
+  become: False
+
+  tasks:
+
+    - name: Show Ansible host inventory
+      command: |-
+        jq 'del(.groups, .group_names)'
+      args:
+        stdin: '{{ hostvars[inventory_hostname] | to_nice_json }}'
+      register: host_inventory
+      delegate_to: 'localhost'
+
+    - debug:
+        msg: '{{ host_inventory.stdout }}'
