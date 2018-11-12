@@ -1,1 +1,1 @@
-../../playbooks/debops-playbooks/callback_plugins/profile_tasks.py
+../../submodules/debops/ansible/plugins/callback_plugins/profile_tasks.py
