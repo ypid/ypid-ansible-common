@@ -5,7 +5,7 @@
 	path = roles/tersmitten.updatedb
 	url = https://github.com/Oefenweb/ansible-updatedb.git
 [submodule "roles/rvm_io.rvm1-ruby"]
-	path = roles/rvm_io.rvm1-ruby
+	path = roles/rvm.ruby
 	url = https://github.com/rvm/rvm1-ansible.git
 [submodule "roles/nusenu.relayor"]
 	path = roles/nusenu.relayor
@@ -16,9 +16,6 @@
 [submodule "roles/carlalexander.wordpress"]
 	path = roles/carlalexander.wordpress
 	url = https://github.com/carlalexander/debops-wordpress
-[submodule "roles/tersmitten.swapfile"]
-	path = roles/deprecated/tersmitten.swapfile
-	url = https://github.com/Oefenweb/ansible-swapfile.git
 [submodule "playbooks/debops-wordpress"]
 	path = submodules/debops-wordpress
 	url = https://github.com/carlalexander/debops-wordpress.git
@@ -41,7 +38,7 @@
 	path = roles_ypid/ypid.divert
 	url = https://github.com/ypid/ansible-divert.git
 [submodule "roles_ypid/ypid.docker-openvpn"]
-	path = roles_ypid/ypid.docker-openvpn
+	path = roles_ypid/deprecated/ypid.docker-openvpn
 	url = https://github.com/ypid/ansible-docker-openvpn.git
 [submodule "roles_ypid/ypid.import_pgp_public_keys"]
 	path = roles_ypid/ypid.import_pgp_public_keys
@@ -76,9 +73,6 @@
 [submodule "roles_ypid/ypid.psad"]
 	path = roles_ypid/ypid.psad
 	url = https://github.com/ypid/ansible-psad.git
-[submodule "roles/deprecated/silpion.etckeeper"]
-	path = roles/deprecated/silpion.etckeeper
-	url = https://github.com/silpion/ansible-etckeeper.git
 [submodule "ypid.udev-usbmon"]
 	path = roles_ypid/ypid.udev-usbmon
 	url = https://github.com/ypid/ansible-udev-usbmon
@@ -194,18 +188,9 @@
 [submodule "roles/unverified_yet/debops-contrib.roundcube"]
 	path = roles/unverified_yet/debops-contrib.roundcube
 	url = https://github.com/debops-contrib/ansible-roundcube.git
-[submodule "roles/weareinteractive.apt"]
-	path = roles/weareinteractive.apt
-	url = https://github.com/weareinteractive/ansible-apt.git
 [submodule "submodules/debops"]
 	path = submodules/debops
 	url = https://github.com/debops/debops.git
-[submodule "roles/deprecated/debops.mysql"]
-	path = roles/deprecated/debops.mysql
-	url = https://github.com/debops/ansible-mysql.git
-[submodule "roles/deprecated/debops.php5"]
-	path = roles/deprecated/debops.php5
-	url = https://github.com/debops/ansible-php5.git
 [submodule "submodules/--force"]
 	path = submodules/ansible-btrfs-subvolume
 	url = https://github.com/ypid/ansible-btrfs-subvolume.git
