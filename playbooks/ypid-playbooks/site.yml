@@ -2,6 +2,11 @@
 
 - import_playbook: service_early/all.yml
 
+
+  ## Ensure that hostname renaming only needs one site.yml run to fully
+  ## propagate by running debops.netbase before debops.core.
+- import_playbook: ../debops-playbooks/service/netbase.yml
+
 - import_playbook: debops.yml
 - import_playbook: ../debops-playbooks/service/debops_legacy.yml
 

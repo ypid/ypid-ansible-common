@@ -161,9 +161,6 @@
 [submodule "roles_ypid/ypid.plymouth"]
 	path = roles_ypid/ypid.plymouth
 	url = https://github.com/ypid/ansible-plymouth.git
-[submodule "submodules/ansible-lint"]
-	path = submodules/ansible-lint
-	url = https://github.com/willthames/ansible-lint.git
 [submodule "submodules/ansible-cmdb"]
 	path = submodules/ansible-cmdb
 	url = https://github.com/fboender/ansible-cmdb.git
@@ -194,3 +191,6 @@
 [submodule "submodules/--force"]
 	path = submodules/ansible-btrfs-subvolume
 	url = https://github.com/ypid/ansible-btrfs-subvolume.git
+[submodule "roles_ypid/debops-contrib.mandos"]
+	path = roles_ypid/debops-contrib.mandos
+	url = https://github.com/ypid/ansible-mandos.git
