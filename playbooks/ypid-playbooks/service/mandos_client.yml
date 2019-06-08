@@ -1,0 +1,34 @@
+---
+
+- hosts: 'all'
+  gather_facts: False
+
+  tasks:
+
+    - name: Fix ansible_virtualization_role for hosts where it it wrongly detected
+      set_fact:
+        ansible_virtualization_role: '{{ inventory__ansible_virtualization_role }}'
+      when: inventory__ansible_virtualization_role is defined
+
+- name: Setup the Mandos client
+  hosts: [ 'debops_service_mandos_client' ]
+  become: True
+
+  environment: '{{ inventory__environment | d({})
+                   | combine(inventory__group_environment | d({}))
+                   | combine(inventory__host_environment  | d({})) }}'
+
+  roles:
+
+    - role: debops.grub
+      grub_dependent_kernel_options: '{{ mandos_client__kernel_options }}'
+      tags: [ 'role::grub' ]
+
+  tasks:
+
+    - name: Install required packages
+      package:
+        name: '{{ item }}'
+        state: 'present'
+      with_flattened:
+        - 'mandos-client'

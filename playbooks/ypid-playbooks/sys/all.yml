@@ -1,6 +1,8 @@
 ---
 
-- import_playbook: shutdown_if_battery_low.yml
-- import_playbook: file_attributes.yml
-- import_playbook: packages.yml
 - import_playbook: apt.yml
+- import_playbook: file_attributes.yml
+- import_playbook: mandos.yml
+- import_playbook: mandos_client.yml
+- import_playbook: packages.yml
+- import_playbook: shutdown_if_battery_low.yml
