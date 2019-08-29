@@ -1,3 +1,14 @@
+# Legacy repos:
+[submodule "integration_testing/debops"]
+	path = integration_testing/debops
+	url = https://github.com/ypid/test-suite.git
+[submodule "integration_testing/ypid"]
+	path = integration_testing/ypid
+	url = https://github.com/ypid/test-suite.git
+[submodule "docs/debops.github.io"]
+	path = docs/debops.github.io
+	url = https://github.com/ypid/debops.github.io
+
 [submodule "roles/tersmitten.logcheck"]
 	path = roles/tersmitten.logcheck
 	url = https://github.com/Oefenweb/ansible-logcheck.git
@@ -88,9 +99,6 @@
 [submodule "docs/debops"]
 	path = docs/debops
 	url = https://github.com/debops/docs.git
-[submodule "integration_testing/debops"]
-	path = integration_testing/debops
-	url = https://github.com/debops/test-suite.git
 [submodule "roles_ypid/ypid.file_attributes"]
 	path = roles_ypid/ypid.file_attributes
 	url = https://github.com/ypid/ansible-file_attributes.git
@@ -121,15 +129,9 @@
 [submodule "submodules/debops-keyring"]
 	path = submodules/debops-keyring
 	url = https://github.com/debops/debops-keyring.git
-[submodule "integration_testing/ypid"]
-	path = integration_testing/ypid
-	url = https://github.com/ypid/test-suite.git
 [submodule "submodules/ansible-inventory-grapher"]
 	path = submodules/ansible-inventory-grapher
 	url = https://github.com/willthames/ansible-inventory-grapher.git
-[submodule "docs/debops.github.io"]
-	path = docs/debops.github.io
-	url = https://github.com/debops/debops.github.io
 [submodule "ansible/engine"]
 	path = ansible/engine
 	url = https://github.com/ansible/ansible.git
