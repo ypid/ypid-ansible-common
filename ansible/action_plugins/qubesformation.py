@@ -1,1 +1,1 @@
-../../submodules/ansible-qubes/ansible/action_plugins/qubesformation.py
+../../submodules/ansible-qubes/action_plugins/qubesformation.py

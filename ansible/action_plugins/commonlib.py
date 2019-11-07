@@ -1,1 +1,1 @@
-../../submodules/ansible-qubes/ansible/action_plugins/commonlib.py
+../../submodules/ansible-qubes/action_plugins/commonlib.py

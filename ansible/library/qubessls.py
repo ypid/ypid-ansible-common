@@ -1,1 +1,1 @@
-../../submodules/ansible-qubes/ansible/library/qubessls.py
+../../submodules/ansible-qubes/library/qubessls.py

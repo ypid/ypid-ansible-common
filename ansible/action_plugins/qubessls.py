@@ -1,1 +1,1 @@
-../../submodules/ansible-qubes/ansible/action_plugins/qubessls.py
+../../submodules/ansible-qubes/action_plugins/qubessls.py

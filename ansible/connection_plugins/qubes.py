@@ -1,1 +1,1 @@
-../../submodules/ansible-qubes/ansible/connection_plugins/qubes.py
+../../submodules/ansible-qubes/connection_plugins/qubes.py
