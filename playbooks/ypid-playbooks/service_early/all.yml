@@ -1,7 +1,6 @@
 ---
 
 - import_playbook: ../../debops-playbooks/service/apt_proxy.yml
-- import_playbook: ../../debops-playbooks/service/etckeeper.yml
 - import_playbook: fuse.yml
 - import_playbook: divert.yml
 - import_playbook: btrfs.yml
