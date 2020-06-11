@@ -1,6 +1,7 @@
 ---
 
 - name: Package management aware renaming of files
+  collections: [ 'debops.debops' ]
   hosts: [ 'ypid_common', 'ypid_service_divert' ]
   become: True
 

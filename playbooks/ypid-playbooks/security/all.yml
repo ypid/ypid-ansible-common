@@ -1,7 +1,5 @@
 ---
 
-- import_playbook: sudo.yml
-
 - import_playbook: initramfs_message.yml
 
 ## Incompatible with Ansible 2.1 because the `check_mode` keyword is used.

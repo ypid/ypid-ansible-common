@@ -1,0 +1,1 @@
+../../submodules/debops/ansible/roles/ansible_plugins/library/dpkg_divert.py

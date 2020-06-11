@@ -1,6 +1,7 @@
 ---
 
 - name: Common configuration for all hosts
+  collections: [ 'debops.debops' ]
   hosts: [ 'ypid_common', 'ypid_service_packages' ]
   become: True
 
@@ -10,7 +11,7 @@
 
   roles:
 
-    - role: debops.apt_preferences
+    - role: apt_preferences
       tags: [ 'role::packages', 'role::apt_preferences' ]
 
     - role: ypid.packages

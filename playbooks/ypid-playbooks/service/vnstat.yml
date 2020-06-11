@@ -1,6 +1,7 @@
 ---
 
 - name: Configure vnStat
+  collections: [ 'debops.debops' ]
   hosts: [ 'debops_service_vnstat' ]
   become: True
 

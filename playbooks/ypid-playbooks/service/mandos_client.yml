@@ -11,6 +11,7 @@
       when: inventory__ansible_virtualization_role is defined
 
 - name: Setup the Mandos client
+  collections: [ 'debops.debops' ]
   hosts: [ 'debops_service_mandos_client' ]
   become: True
 
@@ -20,8 +21,8 @@
 
   roles:
 
-    - role: debops.grub
-      grub_dependent_kernel_options: '{{ mandos_client__kernel_options }}'
+    - role: grub
+      grub__dependent_configuration: '{{ mandos_client__grub__dependent_configuration }}'
       tags: [ 'role::grub' ]
 
   tasks:
