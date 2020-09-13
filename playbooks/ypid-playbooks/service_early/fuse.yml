@@ -10,5 +10,5 @@
 
   roles:
 
-    - role: debops-contrib.fuse
+    - role: fuse
       tags: [ 'role::fuse' ]

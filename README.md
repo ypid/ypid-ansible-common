@@ -12,9 +12,6 @@ this for the following reasons:
 
 Note that this does not include the CM engine (Ansible).
 Ansible core is trusted.
-Components in
-[ansible-modules-extras](https://github.com/ansible/ansible-modules-extras)
-might receive a review when it feels appropriate.
 
 ## How it works
 
@@ -35,4 +32,4 @@ ypid uses a [shell script called "update_submodules"](https://github.com/ypid/yp
 
 ## Refs
 
-* https://wiki.debops.org/wiki:user:ypid
+* https://docs.debops.org/en/master/meta/philosophy.html#robin-ypid-schneider
