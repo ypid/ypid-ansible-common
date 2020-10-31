@@ -197,7 +197,7 @@
 	path = submodules/netbox-joined-inventory
 	url = https://github.com/Sidarion/netbox-joined-inventory.git
 [submodule "roles/unverified_yet/githubixx.wireguard"]
-	path = roles/unverified_yet/githubixx.wireguard
+	path = roles_ypid/wireguard
 	url = https://github.com/githubixx/ansible-role-wireguard.git
 [submodule "submodules/streisand"]
 	path = submodules/streisand
