@@ -10,7 +10,8 @@
     # - role: ypid.rsyslog
     #   tags: [ 'role::ypid.rsyslog' ]
 
-    - role: tersmitten.updatedb
-      tags: [ 'role::updatedb' ]
+    ## TODO: Broken?
+    # - role: tersmitten.updatedb
+    #   tags: [ 'role::updatedb' ]
 
 - import_playbook: service/divert.yml

@@ -30,15 +30,9 @@
 [submodule "playbooks/debops-wordpress"]
 	path = submodules/debops-wordpress
 	url = https://github.com/carlalexander/debops-wordpress.git
-[submodule "playbooks/ansible-os-hardening"]
-	path = roles/dev-sec.os-hardening
-	url = https://github.com/hardening-io/ansible-os-hardening.git
 [submodule "roles/debops.contrib-checkmk_agent"]
 	path = roles/debops-contrib.checkmk_agent
 	url = https://github.com/debops-contrib/ansible-checkmk_agent.git
-[submodule "roles/hardening.ssh-hardening"]
-	path = roles/dev-sec.ssh-hardening
-	url = https://github.com/hardening-io/ansible-ssh-hardening.git
 [submodule "submodules/ansible-qubes"]
 	path = submodules/ansible-qubes
 	url = https://github.com/Rudd-O/ansible-qubes.git
@@ -202,3 +196,21 @@
 [submodule "submodules/streisand"]
 	path = submodules/streisand
 	url = https://github.com/StreisandEffect/streisand.git
+[submodule "submodules/ansible_modules"]
+	path = submodules/netbox-community/ansible_modules
+	url = https://github.com/netbox-community/ansible_modules.git
+[submodule "submodules/ansible-collection-hardening"]
+	path = submodules/ansible-collection-hardening
+	url = https://github.com/dev-sec/ansible-collection-hardening.git
+[submodule "submodules/xsrv"]
+	path = submodules/xsrv
+	url = https://github.com/nodiscc/xsrv.git
+[submodule "roles/ansible-opnsense"]
+	path = roles/opnsense
+	url = https://github.com/naturalis/ansible-opnsense.git
+[submodule "submodules/oss-network-demo"]
+	path = submodules/oss-network-demo
+	url = https://github.com/naturalis/oss-network-demo.git
+[submodule "submodules/jq-filter"]
+	path = submodules/jq-filter
+	url = https://github.com/moreati/jq-filter.git

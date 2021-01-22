@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2015-2021 Robin Schneider <ypid@riseup.net>
+
+SPDX-License-Identifier: CC-BY-SA-4.0
+-->
+
 # ypid-ansible-common
 
 This git repository is tying together ypid’s Ansible building blocks using git submodules.
