@@ -214,3 +214,12 @@
 [submodule "submodules/jq-filter"]
 	path = submodules/jq-filter
 	url = https://github.com/moreati/jq-filter.git
+[submodule "submodules/hp1820-cli"]
+	path = submodules/hp1820-cli
+	url = https://github.com/BookGin/hp1820-cli.git
+[submodule "submodules/JJC1138/generate-cloud-init-ssh-host-keys"]
+	path = submodules/JJC1138/generate-cloud-init-ssh-host-keys
+	url = https://github.com/JJC1138/generate-cloud-init-ssh-host-keys
+[submodule "submodules/JJC1138/ssh-import-known-hosts-cloud-init"]
+	path = submodules/JJC1138/ssh-import-known-hosts-cloud-init
+	url = https://github.com/JJC1138/ssh-import-known-hosts-cloud-init.git

@@ -1,0 +1,5 @@
+---
+
+- import_playbook: ../service/packages.yml
+- import_playbook: ../service/opnsense.yml
+- import_playbook: ../../debops-playbooks/service/resources.yml

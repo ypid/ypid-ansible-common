@@ -1,6 +1,10 @@
 ---
 
 - import_playbook: ../../debops-playbooks/service/apt_proxy.yml
+
+# Ensure APT is configured after cloud-init (`apt update` has run).
+- import_playbook: ../../debops-playbooks/service/apt.yml
+
 - import_playbook: fuse.yml
 - import_playbook: divert.yml
 - import_playbook: btrfs.yml

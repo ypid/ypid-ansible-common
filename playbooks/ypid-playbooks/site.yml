@@ -14,6 +14,7 @@
 - import_playbook: sys/all.yml
 
 - import_playbook: ../debops-contrib-playbooks/service/all.yml
+- import_playbook: service/checkmk_agent.yml
 
 - import_playbook: common.yml
 - import_playbook: security/all.yml

@@ -13,6 +13,7 @@
 
     - role: apt_preferences
       tags: [ 'role::packages', 'role::apt_preferences' ]
+      when: ansible_pkg_mgr == 'apt'
 
     - role: ypid.packages
       tags: [ 'role::packages', 'role::packages:only' ]
