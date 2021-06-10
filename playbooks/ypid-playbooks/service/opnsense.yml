@@ -2,14 +2,20 @@
 
 - name: Manage opnSense Firewall
   hosts: [ 'platform_opnsense' ]
-  gather_facts: false
+  gather_facts: True
   become: False
 
   environment: '{{ inventory__environment | d({})
                    | combine(inventory__group_environment | d({}))
                    | combine(inventory__host_environment  | d({})) }}'
 
+  pre_tasks:
+
+    - name: Update Ansible facts
+      setup:
+      tags: ['facts']
+
   roles:
 
     - role: opnsense
-      tags: [ 'role::opnsense' ]
+      tags: ['role::opnsense']

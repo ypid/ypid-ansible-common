@@ -223,3 +223,9 @@
 [submodule "submodules/JJC1138/ssh-import-known-hosts-cloud-init"]
 	path = submodules/JJC1138/ssh-import-known-hosts-cloud-init
 	url = https://github.com/JJC1138/ssh-import-known-hosts-cloud-init.git
+[submodule "submodules/ansible-checkmk"]
+	path = submodules/ansible-checkmk
+	url = https://github.com/tribe29/ansible-checkmk.git
+[submodule "roles/gantsign.keyboard"]
+	path = roles/gantsign.keyboard
+	url = https://github.com/gantsign/ansible-role-keyboard.git

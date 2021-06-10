@@ -2,6 +2,7 @@
 
 - import_playbook: service_early/all.yml
 
+- import_playbook: sys/packages.yml
 
   ## Ensure that hostname renaming only needs one site.yml run to fully
   ## propagate by running debops.netbase before debops.core.
@@ -9,6 +10,9 @@
 
 - import_playbook: debops.yml
 - import_playbook: ../debops-playbooks/service/debops_legacy.yml
+
+  # Rerun PKI role to ensure ACME certificates are enrolled after Nginx has been installed.
+- import_playbook: ../debops-playbooks/service/pki.yml
 
   ## Ensure that packages are installed before debops-contrib.firejail.
 - import_playbook: sys/all.yml

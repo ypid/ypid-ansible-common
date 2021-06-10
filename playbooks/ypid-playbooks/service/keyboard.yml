@@ -1,0 +1,14 @@
+---
+
+- name: Configure keyboard
+  hosts: [ 'ypid_common', 'ypid_service_keyboard' ]
+  become: True
+
+  environment: '{{ inventory__environment | d({})
+                   | combine(inventory__group_environment | d({}))
+                   | combine(inventory__host_environment  | d({})) }}'
+
+  roles:
+
+    - role: gantsign.keyboard
+      tags: [ 'role::keyboard' ]
