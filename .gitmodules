@@ -87,9 +87,6 @@
 [submodule "roles_ypid/ypid.whereami"]
 	path = roles_ypid/ypid.whereami
 	url = https://github.com/ypid/ansible-whereami.git
-[submodule "docs/debops"]
-	path = docs/debops
-	url = https://github.com/debops/docs.git
 [submodule "roles_ypid/ypid.file_attributes"]
 	path = roles_ypid/ypid.file_attributes
 	url = https://github.com/ypid/ansible-file_attributes.git
