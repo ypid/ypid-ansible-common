@@ -226,3 +226,6 @@
 [submodule "roles/gantsign.keyboard"]
 	path = roles/gantsign.keyboard
 	url = https://github.com/gantsign/ansible-role-keyboard.git
+[submodule "submodules/ansible-openwrt"]
+	path = submodules/ansible-openwrt
+	url = https://github.com/gekmihesg/ansible-openwrt.git

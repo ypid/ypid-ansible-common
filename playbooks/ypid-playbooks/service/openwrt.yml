@@ -1,0 +1,15 @@
+---
+
+- name: Manage OpenWRT device
+  hosts: [ 'platform_openwrt' ]
+  gather_facts: False
+  become: False
+
+  environment: '{{ inventory__environment | d({})
+                   | combine(inventory__group_environment | d({}))
+                   | combine(inventory__host_environment  | d({})) }}'
+
+  roles:
+
+    - role: gekmihesg.openwrt
+      tags: ['role::openwrt']
