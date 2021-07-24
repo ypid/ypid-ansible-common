@@ -9,9 +9,6 @@
 	path = docs/debops.github.io
 	url = https://github.com/ypid/debops.github.io
 
-[submodule "roles/tersmitten.logcheck"]
-	path = roles/tersmitten.logcheck
-	url = https://github.com/Oefenweb/ansible-logcheck.git
 [submodule "roles/tersmitten.updatedb"]
 	path = roles/tersmitten.updatedb
 	url = https://github.com/Oefenweb/ansible-updatedb.git

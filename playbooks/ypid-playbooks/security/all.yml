@@ -4,5 +4,3 @@
 
 ## Incompatible with Ansible 2.1 because the `check_mode` keyword is used.
 # - import_playbook: ssh-hardening.yml
-
-- import_playbook: logcheck.yml
