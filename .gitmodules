@@ -226,3 +226,12 @@
 [submodule "submodules/ansible-openwrt"]
 	path = submodules/ansible-openwrt
 	url = https://github.com/gekmihesg/ansible-openwrt.git
+[submodule "roles/geerlingguy.glusterfs"]
+	path = roles/geerlingguy.glusterfs
+	url = https://github.com/geerlingguy/ansible-role-glusterfs.git
+[submodule "submodules/gluster-ansible-cluster"]
+	path = submodules/gluster-ansible-cluster
+	url = https://github.com/gluster/gluster-ansible-cluster.git
+[submodule "submodules/gluster-ansible-infra"]
+	path = submodules/gluster-ansible-infra
+	url = https://github.com/gluster/gluster-ansible-infra.git

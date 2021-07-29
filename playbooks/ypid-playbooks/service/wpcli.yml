@@ -1,0 +1,14 @@
+---
+
+- name: Install WP-CLI
+  hosts: [ 'ypid_service_wpcli' ]
+  become: True
+
+  environment: '{{ inventory__environment | d({})
+                   | combine(inventory__group_environment | d({}))
+                   | combine(inventory__host_environment  | d({})) }}'
+
+  roles:
+
+    - role: wpcli
+      tags: [ 'role::wpcli' ]

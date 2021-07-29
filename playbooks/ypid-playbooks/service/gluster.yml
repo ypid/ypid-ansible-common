@@ -1,0 +1,40 @@
+---
+
+- name: Setup and Manage GlusterFS
+  hosts: [ 'ypid_service_gluster' ]
+  become: True
+
+  environment: '{{ inventory__environment | d({})
+                   | combine(inventory__group_environment | d({}))
+                   | combine(inventory__host_environment  | d({})) }}'
+
+  tasks:
+
+    - name: Install required packages
+      package:
+        name:
+          - 'glusterfs-server'
+        state: 'present'
+      register: etesync__register_packages
+      until: etesync__register_packages is succeeded
+
+    - name: Start glusterd
+      service:
+        state: 'started'
+        name: 'glusterd'
+        enabled: True
+
+    - name: Create a volume
+      gluster_volume:
+            state: "{{ gluster_cluster_state | default('present') }}"
+            volume: "{{ gluster_cluster_volume }}"
+            bricks: "{{ gluster_cluster_bricks }}"
+            cluster: "{{ gluster_cluster_hosts }}"
+            transport: "{{ gluster_cluster_transport | default('tcp') }}"
+            replicas: "{{ gluster_cluster_replica_count | default(0) }}"
+            arbiters: "{{ gluster_cluster_arbiter_count | default(0) }}"
+            disperses: "{{ gluster_cluster_disperse_count | default(0) }}"
+            redundancies: "{{ gluster_cluster_redundancy_count | default(0) }}"
+            force: "{{ gluster_cluster_force | default('no') }}"
+            options: "{{ gluster_cluster_options | default({}) }}"
+      run_once: true
