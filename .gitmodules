@@ -21,12 +21,9 @@
 [submodule "roles/aeriscloud.disk"]
 	path = roles/aeriscloud.disk
 	url = https://github.com/AerisCloud/ansible-disk.git
-[submodule "roles/carlalexander.wordpress"]
-	path = roles/carlalexander.wordpress
-	url = https://github.com/carlalexander/debops-wordpress
 [submodule "playbooks/debops-wordpress"]
 	path = submodules/debops-wordpress
-	url = https://github.com/carlalexander/debops-wordpress.git
+	url = https://github.com/ypid/debops-wordpress.git
 [submodule "roles/debops.contrib-checkmk_agent"]
 	path = roles/debops-contrib.checkmk_agent
 	url = https://github.com/debops-contrib/ansible-checkmk_agent.git
