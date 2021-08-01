@@ -21,5 +21,6 @@
 - import_playbook: common.yml
 - import_playbook: security/all.yml
 - import_playbook: net/all.yml
+- import_playbook: app/all.yml
 - import_playbook: workstation/all.yml
 - import_playbook: save_ansible_facts.yml
