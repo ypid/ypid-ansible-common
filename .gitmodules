@@ -232,3 +232,6 @@
 [submodule "submodules/gluster-ansible-infra"]
 	path = submodules/gluster-ansible-infra
 	url = https://github.com/gluster/gluster-ansible-infra.git
+[submodule "roles/nut"]
+	path = roles/nut
+	url = https://gitlab.com/ciphermail/debops.nut.git
