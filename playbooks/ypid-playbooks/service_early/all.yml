@@ -2,6 +2,9 @@
 
 - import_playbook: ../../debops-playbooks/service/apt_proxy.yml
 
+# Ensure core Ansible local facts are updated after a dist-upgrade and before running the apt role.
+- import_playbook: ../../debops-playbooks/service/core.yml
+
 # Ensure APT is configured after cloud-init (`apt update` has run).
 - import_playbook: ../../debops-playbooks/service/apt.yml
 
