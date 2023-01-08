@@ -199,9 +199,6 @@
 [submodule "roles/ansible-opnsense"]
 	path = roles/opnsense
 	url = https://github.com/naturalis/ansible-opnsense.git
-[submodule "submodules/oss-network-demo"]
-	path = submodules/oss-network-demo
-	url = https://github.com/naturalis/oss-network-demo.git
 [submodule "submodules/jq-filter"]
 	path = submodules/jq-filter
 	url = https://github.com/moreati/jq-filter.git
@@ -214,9 +211,6 @@
 [submodule "submodules/JJC1138/ssh-import-known-hosts-cloud-init"]
 	path = submodules/JJC1138/ssh-import-known-hosts-cloud-init
 	url = https://github.com/JJC1138/ssh-import-known-hosts-cloud-init.git
-[submodule "submodules/ansible-checkmk"]
-	path = submodules/ansible-checkmk
-	url = https://github.com/tribe29/ansible-checkmk.git
 [submodule "roles/gantsign.keyboard"]
 	path = roles/gantsign.keyboard
 	url = https://github.com/gantsign/ansible-role-keyboard.git
