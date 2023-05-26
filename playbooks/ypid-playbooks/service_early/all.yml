@@ -8,6 +8,10 @@
 # Ensure APT is configured after cloud-init (`apt update` has run).
 - import_playbook: ../../debops-playbooks/service/apt.yml
 
+  ## Ensure that hostname renaming only needs one site.yml run to fully
+  ## propagate by running debops.netbase before debops.core.
+- import_playbook: ../../debops-playbooks/service/netbase.yml
+
 - import_playbook: fuse.yml
 - import_playbook: divert.yml
 - import_playbook: btrfs.yml

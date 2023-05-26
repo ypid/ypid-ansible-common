@@ -1,0 +1,36 @@
+---
+
+- name: Configure Polkit
+  hosts: [ 'ypid_service_polkit' ]
+  become: True
+
+  environment: '{{ inventory__environment | d({})
+                   | combine(inventory__group_environment | d({}))
+                   | combine(inventory__host_environment  | d({})) }}'
+
+  tasks:
+
+    - name: Create package-management-without-password.pkla file
+      copy:
+        # https://askubuntu.com/questions/98006/how-do-i-prevent-policykit-from-asking-for-a-password/98032#98032
+        content: |
+          # {{ ansible_managed }}
+
+          [Install package file]
+          Identity=unix-group:package-install-remove
+          Action=org.debian.apt.install-file;org.debian.apt.update-cache;org.debian.apt.install-or-remove-packages;org.debian.apt.upgrade-packages
+          ResultActive=yes
+
+          [Install package synaptic]
+          Identity=unix-group:package-install-remove
+          Action=com.ubuntu.pkexec.synaptic
+          ResultActive=yes
+
+          [Change add repo]
+          Identity=unix-group:package-install-remove
+          Action=com.ubuntu.softwareproperties.applychanges;org.debian.apt.change-repository
+          ResultActive=yes
+        dest: '/etc/polkit-1/localauthority/50-local.d/package-management-without-password.pkla'
+        owner: 'root'
+        group: 'root'
+        mode: '0644'

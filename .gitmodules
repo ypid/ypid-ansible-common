@@ -229,3 +229,6 @@
 [submodule "roles/nut"]
 	path = roles/nut
 	url = https://gitlab.com/ciphermail/debops.nut.git
+[submodule "roles_ypid/ypid.rustdesk"]
+	path = roles_ypid/ypid.rustdesk
+	url = https://github.com/ypid/ansible-rustdesk.git

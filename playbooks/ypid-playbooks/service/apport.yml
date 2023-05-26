@@ -1,0 +1,27 @@
+---
+
+- name: Disable apport
+  hosts: [ 'ypid_service_apport' ]
+  become: True
+
+  environment: '{{ inventory__environment | d({})
+                   | combine(inventory__group_environment | d({}))
+                   | combine(inventory__host_environment  | d({})) }}'
+
+  tasks:
+
+    # Actually `rm /var/crash/rustdesk.0.crash` solved the problem for me.
+    - name: Create /etc/default/apport
+      copy:
+        # https://askubuntu.com/questions/98006/how-do-i-prevent-policykit-from-asking-for-a-password/98032#98032
+        content: |
+          # {{ ansible_managed }}
+
+          # set this to 0 to disable apport, or to 1 to enable it
+          # you can temporarily override this with
+          # sudo service apport start force_start=1
+          enabled=0
+        dest: '/etc/default/apport'
+        owner: 'root'
+        group: 'root'
+        mode: '0644'

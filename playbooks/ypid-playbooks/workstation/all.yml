@@ -4,3 +4,5 @@
 - import_playbook: dm.yml
 - import_playbook: dotfiles.yml
 - import_playbook: plymouth.yml
+- import_playbook: ../service/rustdesk.yml
+- import_playbook: ../service/polkit.yml
