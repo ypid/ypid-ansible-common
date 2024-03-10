@@ -198,7 +198,7 @@
 	url = https://github.com/nodiscc/xsrv.git
 [submodule "roles/ansible-opnsense"]
 	path = roles/opnsense
-	url = https://github.com/naturalis/ansible-opnsense.git
+	url = https://github.com/ypid/ansible-opnsense.git
 [submodule "submodules/jq-filter"]
 	path = submodules/jq-filter
 	url = https://github.com/moreati/jq-filter.git
