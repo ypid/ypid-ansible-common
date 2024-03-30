@@ -3,6 +3,7 @@
 - name: Manage opnSense Firewall
   hosts: [ 'platform_opnsense' ]
   gather_facts: True
+  strategy: 'linear'
   become: False
 
   environment: '{{ inventory__environment | d({})
