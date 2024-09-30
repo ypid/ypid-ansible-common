@@ -1,6 +1,6 @@
 ---
 
-- name: Manage opnSense Firewall
+- name: Manage OPNsense firewall
   hosts: [ 'platform_opnsense' ]
   gather_facts: True
   strategy: 'linear'
@@ -20,3 +20,6 @@
 
     - role: opnsense
       tags: ['role::opnsense']
+
+    - role: opnsense_plugpack
+      tags: ['role::opnsense_plugpack']

@@ -232,3 +232,6 @@
 [submodule "roles_ypid/ypid.rustdesk"]
 	path = roles_ypid/ypid.rustdesk
 	url = https://github.com/ypid/ansible-rustdesk.git
+[submodule "roles/opnsense_plugpack"]
+	path = roles/opnsense_plugpack
+	url = https://github.com/Rosa-Luxemburgstiftung-Berlin/ansible-opnsense-plugpack.git
